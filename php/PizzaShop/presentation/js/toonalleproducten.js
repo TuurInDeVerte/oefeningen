@@ -3,6 +3,16 @@ var winkelmandje = [
 var aantalBesteldePizza = 0;
 var aantalBesteldeDrank = 0;
 
+function naarDeKassa(){
+	var eContentUitFocus = document.getElementById("productenlijst");
+	var eFilterBoxUitFocus = document.getElementById("filterBox");
+	var eWinkelmandje = document.getElementById("winkelmandje");
+	eContentUitFocus.className += " toBlur";
+	eFilterBoxUitFocus.className += " toBlur";
+	eWinkelmandje.className += " toonMandje";
+	window.scrollTo(0, 0);
+
+}
 function pizzaBestellen(){
 	aantalBesteldePizza = aantalBesteldePizza + 1;
 	deKnop = event.target;
@@ -467,6 +477,8 @@ window.onload = function(){
 		var eFilter = eProductFilter[i];														// selecteer 1 radiobutton
 		eFilter.addEventListener("click", function(){toonAlleProducten(producten)});			// set eventlistener voor radiobutton
 	}
+	var eNaarDeKassa = document.getElementById("naarDeKassa");
+	eNaarDeKassa.addEventListener("click", function(){naarDeKassa()});
 
 
 } // einde window.onload

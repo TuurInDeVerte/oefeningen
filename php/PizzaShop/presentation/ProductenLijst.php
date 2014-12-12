@@ -35,7 +35,7 @@
 					<div id="pizzaMandje" data-aantalPizza="0"><div id="aantalPizza"></div><img src="presentation/images/Pizza.png"></div><br>
 					<div id="drankMandje" data-aantalDrank="0"><div id="aantalDrank"></div><img src="presentation/images/soda.png"></div>
 				</div>
-				<button>Naar de kassa</button>
+				<button id="naarDeKassa">Naar de kassa</button>
 			</div>
 		</div>
 		<section id="productenlijst" class="content">

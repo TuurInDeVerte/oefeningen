@@ -39,6 +39,10 @@ h2, h1, h3, h4 {
 	position: relative;
 }
 
+.toBlur {
+	-webkit-filter: blur(5px);
+}
+
 .zetInBox {
 	box-sizing: border-box;
 	-moz-border-radius:5px;
@@ -242,6 +246,15 @@ h2, h1, h3, h4 {
 	top:1px;
 }
 button:focus {outline:0;}
+
+.toonMandje {
+/*	position: absolute;
+*/
+  	position: absolute;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
 
 
 
