@@ -74,15 +74,18 @@ h2, h1, h3, h4 {
 	margin-left: 65%;
 	padding: 0.5%;
 }
-#aantalPizza{
+#aantalPizza, #aantalDrank {
 	font-family: Impact, Charcoal, sans-serif;
 	float: left;
 	font-size: 2.5em;
 	margin-top: 2%;
+	padding-left: 1%;
 }
-#pizzaMandje {
+#pizzaMandje, #drankMandje {
 	float: right;
 }
+
+
 
 .toppingContainer {
 	width: 100%;
@@ -117,6 +120,10 @@ h2, h1, h3, h4 {
 	margin-bottom: 1%;
 }
 
+.drankBestellenKnop {
+
+}
+
 .toppingBestelKnop {
 	cursor:pointer;
 	float: right;
@@ -139,7 +146,7 @@ h2, h1, h3, h4 {
 	margin-bottom: 0;
 }
 
-.pizzaBestellenKnop {
+.pizzaBestellenKnop, .drankBestellenKnop {
 	box-sizing: border-box;
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f24537), color-stop(1, #c62d1f));
 	background:-moz-linear-gradient(top, #f24537 5%, #c62d1f 100%);
@@ -163,7 +170,7 @@ h2, h1, h3, h4 {
 	margin-bottom: 1%;
 	margin-top: 1%;
 }
-.pizzaBestellenKnop:hover {
+.pizzaBestellenKnop:hover, .drankBestellenKnop:hover {
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #f24537));
 	background:-moz-linear-gradient(top, #c62d1f 5%, #f24537 100%);
 	background:-webkit-linear-gradient(top, #c62d1f 5%, #f24537 100%);
@@ -173,7 +180,7 @@ h2, h1, h3, h4 {
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c62d1f', endColorstr='#f24537',GradientType=0);
 	background-color:#c62d1f;
 }
-.pizzaBestellenKnop:active {
+.pizzaBestellenKnop:active, .drankBestellenKnop:active {
 	position:relative;
 	top:1px;
 }

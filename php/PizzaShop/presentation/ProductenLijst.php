@@ -29,12 +29,13 @@
 					<input class="productFilter" type="radio" name="filter" value="drank">Drinken<br>
 				</form>
 			</div>
-			<div class="zetInBox sidebarRight" id="winkelmandje">
+			<div class="zetInBox sidebarRight" id="winkelmandje" style="display: none;">
 				<h3>Winkelmandje</h3>
 				<div class="onTheSide">
 					<div id="pizzaMandje" data-aantalPizza="0"><div id="aantalPizza"></div><img src="presentation/images/Pizza.png"></div><br>
 					<div id="drankMandje" data-aantalDrank="0"><div id="aantalDrank"></div><img src="presentation/images/soda.png"></div>
 				</div>
+				<button>Naar de kassa</button>
 			</div>
 		</div>
 		<section id="productenlijst" class="content">

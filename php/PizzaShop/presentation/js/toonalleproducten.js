@@ -1,6 +1,7 @@
 var winkelmandje = [
 ];
 var aantalBesteldePizza = 0;
+var aantalBesteldeDrank = 0;
 
 function pizzaBestellen(){
 	aantalBesteldePizza = aantalBesteldePizza + 1;
@@ -10,6 +11,8 @@ function pizzaBestellen(){
 	var pizzaBestellenKnop = document.getElementById("pizzaBestellenKnop_" + pizzaIdTeBestellen);
 	var pizzaMandje = document.getElementById("pizzaMandje");
 	var eAantalPizza = document.getElementById("aantalPizza");
+	var eWinkelmandje = document.getElementById("winkelmandje");
+	eWinkelmandje.style.display = "";
 	var bestelknopPizzaId = document.getElementById("bestelknopPizzaID_" + pizzaIdTeBestellen);
 	var pizzaHeeftToppings = bestelknopPizzaId.getAttribute("data-topping");
 	var besteldePizza = [];
@@ -27,7 +30,6 @@ function pizzaBestellen(){
 	winkelmandje.push(besteldePizza);
 	pizzaMandje.setAttribute("data-aantalBesteldePizza", aantalBesteldePizza);
 
-
 	$(toppingContainer).hide( "slide", { direction: "right" }, "slow" );
 	$(pizzaMandje).hide("slide", { direction: "right" }, "slow");
 
@@ -37,7 +39,30 @@ function pizzaBestellen(){
 	pizzaBestellenKnop.innerHTML = "Nog zo'n pizza bestellen";
 	pizzaBestellenKnop.setAttribute("data-besteld", 1);
 
+	console.log(winkelmandje);
+}
 
+function drankBestellen(){
+	aantalBesteldeDrank = aantalBesteldeDrank + 1;
+	deKnop = event.target;
+	var besteldeDrankId = deKnop.getAttribute("data-productID");
+	var eWinkelmandje = document.getElementById("winkelmandje");
+	var eDrankMandje = document.getElementById("drankMandje");
+	var eDrankContainer = document.getElementById("arrayID_" + besteldeDrankId);
+	var eAantalDrank = document.getElementById("aantalDrank");
+	var besteldeDrank = [];
+	besteldeDrank.push(besteldeDrankId);
+	winkelmandje.push(besteldeDrank);
+
+	eWinkelmandje.style.display = "";
+	$(eDrankContainer).hide( "slide", { direction: "right" }, "slow" );
+	$(drankMandje).hide("slide", { direction: "right" }, "slow");
+
+	$(drankMandje).show( "bounce", { times: 3 }, "slow");
+	setTimeout(function(){eAantalDrank.innerHTML = aantalBesteldeDrank; }, 500);
+	$(eDrankContainer).show( "slide", { direction: "left" }, "slow" );
+
+	console.log(winkelmandje);
 }
 
 
@@ -171,7 +196,7 @@ function toonAlleProducten(objArray){
 		if(objArray[i]['type'] == 'pizza' || objArray[i]['type'] == 'drank'){
 			var eProductContainer = document.createElement("div");											// maak 1 div per product
 			eProductContainer.className += " productContainer zetInBox cf " + objArray[i]['type'];			// set className voor div
-			eProductContainer.setAttribute("id", "arrayID_" + i);									// set id element op productId
+			eProductContainer.setAttribute("id", "arrayID_" + i);											// set id element op productId
 			var eProductTitel = document.createElement("h2");												// maak h2 voor producttitel
 			var tProductTitel = document.createTextNode(objArray[i]['naam']);								// set tekst voor h2 producttitel
 			eProductTitel.appendChild(tProductTitel);														// set tekst voor h2 producttitel
@@ -349,7 +374,7 @@ function toonAlleProducten(objArray){
 				eBestelKnopPizza.setAttribute("id", "bestelknopPizzaID_" + i);
 				eBestelKnopPizza.setAttribute("data-topping", "geenTopping");
 				eBestelKnopPizza.setAttribute("data-pizzaID", i);
-				var tBestelKnopPizza = document.createTextNode("Bestel pizza \"" + objArray[i]['naam'] + "\" (€ " + tPizzaPrijs + ")");
+				var tBestelKnopPizza = document.createTextNode("Pizza \"" + objArray[i]['naam'] + "\" (€ " + tPizzaPrijs + ") in winkelmandje");
 				eBestelKnopPizza.appendChild(tBestelKnopPizza);
 				var eBr = document.createElement("br");
 				eBestelKnopPizza.appendChild(eBr);
@@ -365,9 +390,19 @@ function toonAlleProducten(objArray){
 				eToppingToevoegen.appendChild(eToppingContainer);
 				eProductContainer.appendChild(eToppingToevoegen);											// zet 2de div element in productcontainer
 			} // einde toppings toevoegen product = pizza
-
-
 			eProductenlijst.appendChild(eProductContainer);													// zet div met alle childs in section productenlijst
+
+			if (objArray[i]['type'] == "drank"){
+				var eDrankBestellenKnop = document.createElement("button");														// maak een button element
+				eDrankBestellenKnop.className += "drankBestellenKnop";																// set className voor button
+				eDrankBestellenKnop.setAttribute("id", "drankBestellenKnop_" + i);
+				eDrankBestellenKnop.setAttribute("data-productId", i);																// maak data-productID
+				//eDrankBestellenKnop.setAttribute("data-drankPrijs", tPizzaPrijs);
+				var tDrankBestellenKnop = document.createTextNode("Toevoegen aan winkelmandje");												// set tekst voor button element
+				eDrankBestellenKnop.addEventListener("click", function(){drankBestellen()});
+				eDrankBestellenKnop.appendChild(tDrankBestellenKnop);
+				eProductContainer.appendChild(eDrankBestellenKnop);
+			}
 		}
 		}
 
