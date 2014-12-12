@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS PF taak: kindergeld</title>
+<style media="screen" type="text/css">
+<!--
+label {
+	display:inline-block;
+	width:100px;
+}
+div.vb {
+	background-color:#CCFFCC;
+	padding:1em;
+}
+-->
+</style>
+
+<script type="text/javascript">
+    window.onload = function() {
+        /* Validatie invoer aantal kinderen */
+        var eKinderen = document.querySelector('#kinderen');
+        eKinderen.onblur = function(){
+            var nAantKind = parseInt(eKinderen.value);
+            if (nAantKind <= 0) {
+                eKinderen.value = "";
+                document.frmKindergeld.kinderen.focus();
+                var eOutput = document.querySelector('#output'); // resultaat van evt vorige deling weg
+                eOutput.innerHTML = "";
+                alert("Aantal kinderen mag niet kleiner of gelijk aan 0 zijn");
+            }
+        }
+        /* Validatie invoer maandloon */
+        var eMaandloon = document.querySelector('#maandloon');
+        eMaandloon.onblur = function(){
+            var nMaandloon = parseInt(eMaandloon.value);
+            if (nMaandloon <= 0) {
+                eMaandloon.value = "";
+                document.frmKindergeld.maandloon.focus();
+                var eOutput = document.querySelector('#output'); // resultaat van evt vorige deling weg
+                eOutput.innerHTML = "";
+                alert("Maandloon mag (gelukkig) niet kleiner of gelijk aan 0 zijn");
+            }
+        }
+
+
+        /* Berekenen kindergeld */
+        var eKnop     = document.querySelector('#deKnop');
+        eKnop.onclick = bereken_kindergeld;
+        function bereken_kindergeld () {
+            /* nodige variabelen */
+            var nStandaardKindergeld    = 25;
+            var nToeslag1VanafKind      = 3;
+            var nToeslag1               = 12.5;
+            var nToeslag2VanafKind      = 5;
+            var nToeslag2               = 7.5;
+            var nMinMaandloon           = 500;
+            var nToeslagMinMaandloon    = 25;
+            var nMaxMaandloon           = 2000;
+            var nAftrekMaxMaandloon     = 45;
+            var nAantKind               = parseInt(eKinderen.value);
+            var nMaandloon              = parseInt(eMaandloon.value);
+
+            /* Kindergeld zonder toeslag */
+            var nKindergeld             = nStandaardKindergeld * nAantKind;
+            /* toeslag bij 3 of meer kinderen */
+            if (nAantKind >= nToeslag1VanafKind) {
+                nKindergeld         = ((nAantKind - (nToeslag1VanafKind - 1)) * nToeslag1)+ nKindergeld;
+            }
+            /* extra toeslag bij 5 of meer kinderen */
+            if (nAantKind >= nToeslag2VanafKind) {
+                nKindergeld         = ((nAantKind - (nToeslag2VanafKind - 1)) * nToeslag2)+ nKindergeld;
+            }
+            /* toeslag bij maandloon <= 500 */
+            if (nMaandloon <= nMinMaandloon) {
+                nKindergeld         = ((nKindergeld / 100) * nToeslagMinMaandloon) + nKindergeld;
+            }
+            /* aftrek bij maandloon > 2000 */
+            if (nMaandloon > nMaxMaandloon) {
+                nKindergeld         = nKindergeld - ((nKindergeld / 100) * nAftrekMaxMaandloon);
+            }
+            /* minimum kindergeld */
+            if (nKindergeld < (nStandaardKindergeld * nAantKind)) {
+                nKindergeld         = nStandaardKindergeld * nAantKind
+            }
+            /* Resultaat tonen */
+            var sBericht = "Kindergeld: € " + nKindergeld; // opbouw boodschap resultaat
+            var eOutput = document.querySelector('#output'); // resultaat tonen
+            eOutput.innerHTML = sBericht;
+        }
+
+    };
+</script>
+
+
+</head>
+<body>
+<h1>Javascript PF taak: kindergeld</h1>
+
+<h3>Opdracht: </h3>
+<ul>
+  <li>Een moeder heeft recht op &euro; 25,00 kindergeld per kind. Voor het       derde kind (en elk volgend kind) krijgt ze een toeslag van &euro; 12,50. Voor       het vijfde (en elk volgend) kind krijgt ze nog eens een toeslag van &euro;       7,50.</li>
+  <li>Als het maandloon van de moeder kleiner is dan of gelijk aan &euro;       500,00, dan krijgt ze 25% toeslag op het kindergeld. Maar als haar       maandloon groter is dan    &euro; 2000,00, dan krijgt ze 45% minder kindergeld.</li>
+  <li> Minimaal heeft een moeder altijd recht op &euro; 25,00 per kind.</li>
+  <li>Vul aantal kinderen en maandloon in, en <i>toon in het outputelement</i> het kindergeld waar de moeder recht op heeft. </li>
+  <li>indien een 0 of een negatief getal wordt ingevuld voor kinderen of maandloon, <em>waarschuw in een berichtenvenster</em></li>
+  <li>Bijv. : 6 kinderen en &euro; 1 500,00 maandloon &agrave; &euro; 215,00 kindergeld</li>
+  <li>validatie van getallen mag ook hier nog achterwege blijven</li>
+</ul>
+
+<h3>Geteste topics</h3>
+<ul>
+  <li>programmatielogica : selectie</li>
+</ul>
+<h3>Oplossing: </h3>
+
+<form name="frmKindergeld" id="frmKindergeld" method="get" action="">
+<p>
+<label for="kinderen">aantal kinderen</label>
+<input type="text" name="kinderen" id="kinderen">
+</p>
+<p>
+<label for="maandloon">maandloon</label>
+<input type="text" name="maandloon" id="maandloon">
+</p>
+<p>
+<button type="button" id="deKnop">Bereken kindergeld</button>
+</p>
+</form> 
+
+<div class="vb" id="output"></div>
+</body>
+</html>

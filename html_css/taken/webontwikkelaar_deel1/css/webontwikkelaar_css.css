@@ -1,0 +1,278 @@
+@charset "utf-8";
+/* CSS Document voor taak Webontwikkelaar deel 1 (webontwikkelaar_home.html) */ 
+
+/**** NORMALIZE ****/
+
+html, body, div, section, article, aside, nav {
+  margin: 0;
+  padding: 0;
+}
+img {
+  border: none;
+  float: left;
+  margin: 0 1.25em 0.5em 0;
+}
+
+
+
+
+/**** ALGEMENE OPMAAK/STRUCTUUR ****/
+/* content 80% van venster, max 1120px */
+.content {
+  width: 80%;
+  margin: auto;
+  max-width: 1120px;
+}
+
+/* OPMAAK - Login     */
+.login_menu {
+  padding: 0.2em;
+}
+
+/* OPMAAK - Header    */
+header {
+  height: 7em; 
+}
+header {
+  padding-top: 1%;
+}
+
+/* OPMAAK - Hoofdmenu */
+.hoofdmenu {
+  float: right;
+  margin-top: 7.5%;
+}
+.hoofdmenu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.hoofdmenu ul li {
+  display:inline;
+}
+.hoofdmenu ul li a {
+  display:inline-block;
+  width:7em;
+  padding:0.2em;
+}
+
+/* OPMAAK - Deel 1    */
+
+/* OPMAAK - Deel 2    */
+.deel2 {
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+.deel2 ul {
+  float: left;
+  list-style-image: url(../img/check.png);
+}
+.deel2 ul li {
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 31%;
+  margin-right: 2%;
+  min-width: 250px;
+}
+
+
+/* OPMAAK - Deel 3    */
+#nws_123, #nws_456, #nws_789 {
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 31%;
+  margin-right: 2%;
+  min-width: 250px;
+}
+
+/* OPMAAK - Footer    */
+
+
+
+
+
+/**** TEKSTOPMAAK ****/
+/* (tekst)opmaak - algemeen (wrapper) */
+.wrapper {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #665950;
+}
+
+/* (tekst)opmaak - Login  */
+.login_menu {
+  text-align: right;
+  color: white;
+}
+input[type="submit"] {
+  background-color: green;
+  color: white;
+  border-color: transparent;
+}
+
+/* (tekst)opmaak - Hoofdmenu */
+.hoofdmenu {
+  text-align:right;
+}
+.hoofdmenu ul li a {
+  color:#665950;
+  text-decoration: none;
+  font-weight: bold;
+}
+.hoofdmenu ul li a:hover, .hoofdmenu ul li a:active {
+  color:#058;
+  text-decoration:none;
+}
+
+/* (tekst)opmaak - Deel 1 */ 
+h1 {
+  font-size: 3em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  color: #7EA107;
+  font-weight: bold;
+}
+.deel1 h2 {
+  font-style: italic;
+  color: #52463f;
+}
+.deel1 h3 {
+  color: #52463f;
+}
+
+/* (tekst)opmaak - Deel 2 */
+.deel2 h2 {
+  color: #7EA107;
+  font-weight: bold;
+  font-size: 1.6em;
+}
+.tekst_groter {        /* inleiding in deel 2 ("De VDAB opleidingen zijn...) */
+  font-size: 1.3em;
+}
+.deel2 em {
+  color: #9A3098;
+  font-style: normal;
+  font-weight: bold;
+}
+
+
+/* (tekst)opmaak - Deel 3 */
+.deel3 h2 {
+  color: #7EA107;
+  font-weight: bold;
+}
+
+/* opmaak - Links */
+section a {
+  color: #4C86CF;
+  font-weight: bold;
+  text-decoration: none;
+}
+section a:active, section a:hover {
+  color: #058;
+}
+
+
+/* (tekst)opmaak - Footer */
+footer {
+  font-size: 0.9em;
+}
+
+/* (tekst)opmaak - Overig */
+time {
+  font-size: 0.8em;
+}
+code {
+  color: #8B1C00;
+  font-size: 1.5em;
+}
+.disclaimer {
+  font-style: italic;
+  font-size: 0.8em;
+}
+
+
+
+
+
+
+
+/**** KLEUREN ****/
+.bg_groen {
+  background-color: #7EA107;
+}
+
+.bg_lichtgrijs {
+  background-color: #FCFAF8;
+}
+
+.bg_donkergrijs {
+  background-color: #EBE8E5;
+}
+
+/* Donkere lijn onder hoofdblokken */
+.bg_lichtgrijs, .bg_donkergrijs {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #DCDAD8;
+}
+
+
+
+/**** OPMAAK IMAGES (deels responsive) ****/
+
+#web-developer_img {
+  width: 35%;
+  float:right;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  max-width: 480px;  
+ }
+#responsive_img {
+  float:left;
+  margin-right: 2%;
+  width: 40%;
+  max-width: 240px;
+}
+#logo {
+  width: 15%;
+}
+#logo_html5 {
+  float: right;
+  width: 7.5%;
+  margin-right: 2.5%;
+}
+#logo>img, #logo_html5 > img {
+  width: auto;
+  height: auto;
+  max-height: 100%;
+  max-width: 100%; 
+}
+#responsive_img > img, #web-developer_img > img  {
+  border-style: solid;
+  border-width: 5px;
+  border-color: #E9DCE9;
+  width: auto;
+  height: auto;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+
+/* clearFix Hack */
+.clearFix:before, .clearFix:after {
+  content:" ";
+  display:table;
+}
+.clearFix:after {
+  clear: both;
+}
+/* enkel voor IE6 en IE7 */
+.clearFix {
+  *zoom: 1;
+}
+
+

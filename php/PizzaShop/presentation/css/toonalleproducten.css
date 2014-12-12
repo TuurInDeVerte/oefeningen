@@ -1,0 +1,271 @@
+body {
+	background-color: #B2AFAF;
+	font-family: Verdana, Geneva, sans-serif;
+}
+
+h2, h1, h3, h4 {
+	margin-top: 1%;
+	margin-bottom: 1%;
+	padding-left: 1%;
+	padding-bottom: 1%;
+}
+
+
+.productContainer {
+	width: 100%;
+	height: 10%;
+	padding: 1%;
+}
+
+.productImage {
+	width: 30%;
+	height: 20%;
+	float: left;
+}
+
+.productBeschrijving {
+	width: 90%;
+}
+
+.productPrijs {
+	float: right;
+}
+
+.content {
+	width: 60%;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+}
+
+.zetInBox {
+	box-sizing: border-box;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	border:1px solid grey;
+	background-color: #FFFAFA;
+	margin-bottom: 1%;
+	padding: 1%;
+}
+
+.zetLinks {
+	float: left;
+}
+
+.onTheSide img {
+	width: 30%;
+	padding-left: 10%;
+
+}
+
+.boxInBox {
+	display: inline;
+	width: 30%;
+	float: right;
+	padding: 0.5%;
+	margin: 0;
+}
+
+.sidebarRight{
+	width: 20%;
+	position: fixed;
+	margin-left: 65%;
+	padding: 0.5%;
+}
+#aantalPizza{
+	font-family: Impact, Charcoal, sans-serif;
+	float: left;
+	font-size: 2.5em;
+	margin-top: 2%;
+}
+#pizzaMandje {
+	float: right;
+}
+
+.toppingContainer {
+	width: 100%;
+	height: 100%;
+	background: Gainsboro;
+	border: 1px solid grey;
+	float: left;
+}
+
+.toppingElement {
+	width: 100%;
+	float: left;
+	padding-top: auto;
+	padding-bottom: auto;
+}
+
+.toppingTitel {
+	color: red;
+	display: inline-block;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.toppingPrijsContainer {
+	color: red;
+	display: inline;
+	font-size: 0.9em;
+}
+
+.toppingContainerTitel {
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+
+.toppingBestelKnop {
+	cursor:pointer;
+	float: right;
+	background-color:#c62d1f;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	border:1px solid #d02718;
+	color:#ffffff;
+}
+.toppingBestelKnop:hover{
+	background-color:#811D14;
+	border-color: #811D14;
+}
+
+
+.toppingItem pre {
+	display: inline-block;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.pizzaBestellenKnop {
+	box-sizing: border-box;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f24537), color-stop(1, #c62d1f));
+	background:-moz-linear-gradient(top, #f24537 5%, #c62d1f 100%);
+	background:-webkit-linear-gradient(top, #f24537 5%, #c62d1f 100%);
+	background:-o-linear-gradient(top, #f24537 5%, #c62d1f 100%);
+	background:-ms-linear-gradient(top, #f24537 5%, #c62d1f 100%);
+	background:linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f24537', endColorstr='#c62d1f',GradientType=0);
+	background-color:#f24537;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	border:1px solid #d02718;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:verdana;
+	font-size:130%;
+	padding:0.5em 31px;
+	text-decoration:none;
+	margin-bottom: 1%;
+	margin-top: 1%;
+}
+.pizzaBestellenKnop:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #f24537));
+	background:-moz-linear-gradient(top, #c62d1f 5%, #f24537 100%);
+	background:-webkit-linear-gradient(top, #c62d1f 5%, #f24537 100%);
+	background:-o-linear-gradient(top, #c62d1f 5%, #f24537 100%);
+	background:-ms-linear-gradient(top, #c62d1f 5%, #f24537 100%);
+	background:linear-gradient(to bottom, #c62d1f 5%, #f24537 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c62d1f', endColorstr='#f24537',GradientType=0);
+	background-color:#c62d1f;
+}
+.pizzaBestellenKnop:active {
+	position:relative;
+	top:1px;
+}
+
+.prijsPizza {
+	box-sizing: border-box;
+	width: 60%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1%;
+	margin-bottom: 1%;
+	font-weight: bold;
+	padding:0.5em;
+	background-color:#447CE6;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	border:1px solid #2347C5;
+	text-align: center;
+}
+
+.bestelKnopPizza {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f24537), color-stop(1, #c62d1f));
+	background:-moz-linear-gradient(top, #f24537 5%, #c62d1f 100%);
+	background:-webkit-linear-gradient(top, #f24537 5%, #c62d1f 100%);
+	background:-o-linear-gradient(top, #f24537 5%, #c62d1f 100%);
+	background:-ms-linear-gradient(top, #f24537 5%, #c62d1f 100%);
+	background:linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f24537', endColorstr='#c62d1f',GradientType=0);
+	background-color:#f24537;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	border:1px solid #d02718;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:110%;
+	padding:0.5em;
+	text-decoration:none;
+	display: block;
+	width: 60%;
+	margin-top: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+.bestelKnopPizza:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #f24537));
+	background:-moz-linear-gradient(top, #c62d1f 5%, #f24537 100%);
+	background:-webkit-linear-gradient(top, #c62d1f 5%, #f24537 100%);
+	background:-o-linear-gradient(top, #c62d1f 5%, #f24537 100%);
+	background:-ms-linear-gradient(top, #c62d1f 5%, #f24537 100%);
+	background:linear-gradient(to bottom, #c62d1f 5%, #f24537 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c62d1f', endColorstr='#f24537',GradientType=0);
+	background-color:#c62d1f;
+}
+.bestelKnopPizza:active {
+	position:relative;
+	top:1px;
+}
+button:focus {outline:0;}
+
+
+
+
+
+
+
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}

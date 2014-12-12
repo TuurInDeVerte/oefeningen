@@ -1,0 +1,327 @@
+@charset "utf-8";
+
+/*  CSS voor plantenshop, een responsive, Mobile first oefening  */
+
+/***** ALGEMEEN + MOBILE FIRST *****/
+
+body, div, article, section {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font: 16px/1.4 "lucida Grande", Sans-serif;         /*   1em = 16px   */
+  color: #333333;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+h1, h2 {
+  font-size: 1.125em;         /* 18px  */
+  padding: 0 0.3333em;        /* 6px   */
+}
+header {
+  position: relative;
+}
+section {
+  clear: both;
+}
+p {
+  margin-left: 0.375em;       /*  6px  */
+}
+.container {
+  overflow: auto;
+}
+
+/* kop phone: titel bovenaan met lijn eronder */
+header h1 {
+  margin: 0.2222em;           /*  4px  */
+}
+#kopnav {
+  border-top: 1px solid grey;
+  padding-top: 0.6em;
+  margin: 0;
+}
+
+
+/***** Hoofdmenu - Mobile First *****/
+/* Vertikaal menu
+   container bepaalt breedte van list */
+
+#hoofdmenu {
+  list-style: none;
+  font-size: 0.875em;          /* 14px = 1em  */
+  font-weight: bold;
+  padding: 0;
+  margin: 0 1em;
+  width: auto;
+}
+#hoofdmenu li {
+  display: block;         /* onder elkaar */
+  margin: 0;
+  padding: 0.4286em 1.1428em;
+  border-bottom: 1px solid silver;
+  border-left: 1px solid silver;
+  border-right: 1px solid silver;
+}
+#hoofdmenu li:first-child {
+  border-top: 1px solid silver;
+}
+#hoofdmenu a {
+  display: inline;
+  cursor: pointer;
+}
+#hoofdmenu li:hover {
+  color: white;
+  background-color: darkseagreen;
+}
+
+
+/* Helper classes */
+
+.phone-only     {  display: block;}
+.klein-tablet   {  display: none; }
+.groter-tablet  {  display: none; }
+.desktop        {  display: none; }
+
+.hide-on-phone  {  display: none; }
+
+/***** thumbnaillist - Mobile First *****/
+/*
+Mobile: bollets enkel titel, geen foto, geen tekst  */
+.thumbnaillist {
+  list-style-type: none;
+  font-size: 0.9em;
+  width: 100%;
+  margin: 0;
+  padding: 0.5em 0;
+  background: lavender;
+}
+
+.thumbnaillist li {
+  padding: 0 0 0.9em 3em;
+  margin: 0.5em;
+  background: transparent url(../img/flower.png) 0 0 no-repeat;
+}
+
+.thumbnaillist h4 {
+  font-size: 1.125em;
+  color: #6666ff;
+  margin: 0;
+  padding-top: 0.2em;
+}
+
+.thumbnaillist img {
+  display: none;
+}
+
+
+/* TABLETS */
+@media screen and (min-width:361px) {
+  /* helper classes */
+  .phone-only     {    display: none;   }
+  .klein-tablet   {    display: block;  }
+  .groter-tablet  {    display: none;   }
+  .desktop        {    display: none;   }
+  
+  .hide-on-phone  {    display: block;   }
+  /* TABLET LAY-OUT */
+  /* Hoofdmenu bovenaan
+     3 items naast elkaar: totaal=26.8% + 3% + 1px border
+     grotere header, titel onder menu
+     toon figuren in de lijst, met titels  */
+  .container {
+    width: 94%;
+    margin: 0 auto;
+  }
+  header {
+    height: 10em;
+    background: darkseagreen;
+  }
+  header h1 {
+    font-size: 2em;
+    position: absolute;
+    top: 3.5em;
+    left: 0;
+    margin: 0 0.5em;
+  }
+  #kopnav {
+    border: none;
+    padding: 0;
+  }
+  #inhoud h2 {
+    font-size: 1.25em;
+    padding: 0;
+  }
+  
+  /* hoofdmenu */
+  #hoofdmenu {
+    margin: 0;
+    overflow: visible;
+  }
+  #hoofdmenu li {
+    font-size: 1.2em;
+    width: 26.8%;
+    float: left;
+    border-top: none;
+    border-left: none;
+    border-bottom: 1px solid darkslategray;
+    border-right: 1px solid darkslategray;
+    padding: 0.8em 3%;
+  }
+  #hoofdmenu li:first-child, #hoofdmenu li:nth-child(4) {
+    border-top: none;
+    border-left: 1px solid darkslategray;    
+  }
+  #hoofdmenu li:hover {
+    color: white;
+    background-color: darkslategray;
+  }
+  
+  /* thumblist tablet 
+     geen bullet, image zichtbaar, titel bovenop beeld, eerste tekst zichtbaar */
+  .thumbnaillist li {
+    position: relative;
+    background: none;
+    border: none;
+    padding: 1%;
+    margin: 1%;
+    overflow: hidden;
+    height: 6.3333em;
+  }
+  .thumbnaillist h4 {
+    position: absolute;
+    bottom: 0.2em;
+    left: 0.2em;
+    display: block;
+    margin-left: 0.4em;
+    color: #00FFFF;
+    width: 38%;
+  }
+  .thumbnaillist img {
+    display: inline-block;
+    float: left;
+    margin-right: 0.5em;
+    max-width: 40%;
+    min-width: 10em;
+  }
+  .thumbnaillist p {
+    margin: 0;
+  }
+}
+/* GROTERE TABLET */
+@media screen and (min-width: 600px) {
+/* helper classes */
+  .phone-only     {    display: none;   }
+  .klein-tablet   {    display: block;  }
+  .groter-tablet  {    display: block;   }
+  .desktop        {    display: none;   }
+  
+  .hide-on-phone  {    display: block   }
+}
+
+
+/* DESKTOPS */
+@media screen and (min-width:780px) {
+  /* helper classes */
+  .phone-only     {    display: none;   }
+  .klein-tablet   {    display: block;  }
+  .groter-tablet  {    display: none;   }
+  .desktop        {    display: none;   }
+  
+  .hide-on-phone  {    display: block   }  
+  
+  /* Titel bovenaan 
+   alle items naast elkaar: totaal =  +  border
+   grotere header, titel onder menu */
+  .container {
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    height: 100%;  
+  }
+  header {
+    height: 10em;
+  }
+  header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    position: static;
+  }
+  #inhoud h2 {
+    font-size: 1.375em;
+  }
+  #kopnav {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  
+  /* twee kol layout      25 + 72 = 99  */
+  aside {              /* 25 + 2  = 27  */
+    float: left;
+    width: 25%;
+    padding: 0 1%;
+  }
+  .kolom {             /*  72 = 72  */
+    float: left;
+    width: 72%;
+    padding: 0 0 1em 0;
+  }
+  p {
+    margin: 0;
+  }
+  
+  /* Hoofdmenu */
+  #hoofdmenu li:nth-child(1n+0) {
+    width: 16.4%;
+    padding: 0.3em 0;
+    border-top: 1px solid lavenderblush;
+    border-right: 1px solid lavenderblush;
+    border-bottom: none;
+    border-left: none;
+    text-align: center;
+  }
+  #hoofdmenu li:first-child {
+    border-left: 1px solid lavenderblush;
+  }
+  
+  /* Thumbnaillist */
+  .thumbnaillist {
+    padding: 0;
+    overflow: auto;
+  }
+  .thumbnaillist li {
+    float: left;
+    width: 48%;
+    height: 36em;
+    padding: 0;
+  }
+  .thumbnaillist h4 {
+    position: static;
+    color: darkgreen;
+    margin: 0;
+    padding: 5px 0 0 0;
+    width: 100%;
+  }
+  .thumbnaillist img {
+    float: none;
+    margin: 0;
+    max-width: 90%;
+    border: 5px solid snow;
+    border-radius: 0.2em;
+  }
+}     /* Einde 800px MQ  */
+
+/***** GROTERE SCHERMEN *****/
+@media screen and (min-width:960px) {
+  .thumbnaillist li {
+    width: 31%;
+    height: 36em;
+  }
+  .thumbnaillist img {
+    max-width: 95%;
+  }
+}

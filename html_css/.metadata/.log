@@ -1,0 +1,18 @@
+!SESSION 2014-08-26 13:47:07.004 -----------------------------------------------
+eclipse.buildId=3.6.0.201407100658
+java.version=1.7.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=nl_BE
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY com.aptana.editor.common 4 0 2014-08-26 13:48:22.034
+!MESSAGE (Build 3.6.0.201407100658) [ERROR]  The input of the content provider should be the IParseRootNode, not the editor!
+
+!ENTRY com.aptana.editor.common 4 0 2014-08-26 13:48:22.036
+!MESSAGE (Build 3.6.0.201407100658) [ERROR]  The input of the content provider should be the IParseRootNode, not the editor!
+
+!ENTRY com.aptana.editor.common 4 0 2014-08-26 13:48:22.038
+!MESSAGE (Build 3.6.0.201407100658) [ERROR]  The input of the content provider should be the IParseRootNode, not the editor!
+
+!ENTRY com.aptana.editor.common 4 0 2014-08-26 13:48:22.038
+!MESSAGE (Build 3.6.0.201407100658) [ERROR]  The input of the content provider should be the IParseRootNode, not the editor!

@@ -1,0 +1,111 @@
+@charset "utf-8";
+/* desertlife_menu.css dropdownmenu
+   een horizontaal dropdownmenu, enkel met CSS3 */
+
+/* Hoofdmenu Styles */
+.hor_dropdown_menu {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 1em;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  background: #e570e7;
+  
+  /* Gradient */
+background: #8fc800; /* Old browsers */
+background: -moz-linear-gradient(top, #8fc800 0%, #8fc800 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#8fc800), color-stop(100%,#8fc800)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #8fc800 0%,#8fc800 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #8fc800 0%,#8fc800 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #8fc800 0%,#8fc800 100%); /* IE10+ */
+background: linear-gradient(to bottom, #8fc800 0%,#8fc800 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8fc800', endColorstr='#8fc800',GradientType=0 ); /* IE6-9 */
+
+box-shadow: 0 0.25em 0.375em rgba(0,0,0, .5);
+-moz-box-shadow: 0 0.25em 0.375em rgba(0,0,0, .5);
+-webkit-box-shadow: 0 0.25em 0.375em rgba(0,0,0, .5);
+}
+/* Hoofdniveau */
+.hor_dropdown_menu li {
+  list-style: none;
+  float: left;
+  position: relative;
+  margin: 0;
+}
+.hor_dropdown_menu a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 0.6em 1.25em;
+}
+/* Submenu's */
+.hor_dropdown_menu ul {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  padding: 0;
+  width: 12em;
+  background: #D566D5;
+  
+  /* Gradient */
+background: #8fc800; /* Old browsers */
+background: -moz-linear-gradient(top, #8fc800 0%, #8fc800 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#8fc800), color-stop(100%,#8fc800)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #8fc800 0%,#8fc800 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #8fc800 0%,#8fc800 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #8fc800 0%,#8fc800 100%); /* IE10+ */
+background: linear-gradient(to bottom, #8fc800 0%,#8fc800 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8fc800', endColorstr='#8fc800',GradientType=0 ); /* IE6-9 */
+
+box-shadow: 0 0.25em 0.375em rgba(0,0,0, .5);
+-moz-box-shadow: 0 0.25em 0.375em rgba(0,0,0, .5);
+-webkit-box-shadow: 0 0.25em 0.375em rgba(0,0,0, .5);
+  
+box-shadow: 0 0.25em 0.375em rgba(0,0,0, .5);
+-moz-box-shadow: 0 0.25em 0.375em rgba(0,0,0, .5);
+-webkit-box-shadow: 0 0.25em 0.375em rgba(0,0,0, .5);
+
+/* Transition */
+-moz-transition: opacity .25s linear, visibility .1s linear .1s;
+-webkit-transition: opacity .25s linear, visibility .1s linear .1s;
+-o-transition: opacity .25s linear, visibility .1s linear .1s;
+transition: opacity .25s linear, visibility .1s linear .1s;
+
+}
+.hor_dropdown_menu ul li {
+  float: none;
+  margin: 0;
+}
+/* SubSubmenu */
+.hor_dropdown_menu ul ul {
+  top: 0.6em;
+  left: 13em;
+  /* transition */
+  -moz-transition: opacity .25s linear, visibility .1s linear .1s, left .25s linear;
+  -webkit-transition: opacity .25s linear, visibility .1s linear .1s, left .25s linear;
+  -o-transition: opacity .25s linear, visibility .1s linear .1s, left .25s linear;
+  transition: opacity .25s linear, visibility .1s linear .1s, left .25s linear;
+}
+/* Dropdown effect voor alle menu's */
+.hor_dropdown_menu li:hover > ul {
+  opacity: 1;
+  visibility: visible;
+}
+/* geselecteerd menu element en hovereffect */
+.hor_dropdown_menu .actief > a, .hor_dropdown_menu li:hover > a {
+  background: #b4df5b; /* Old browsers */
+background: -moz-linear-gradient(top, #b4df5b 0%, #b4df5b 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b4df5b), color-stop(100%,#b4df5b)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #b4df5b 0%,#b4df5b 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #b4df5b 0%,#b4df5b 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #b4df5b 0%,#b4df5b 100%); /* IE10+ */
+background: linear-gradient(to bottom, #b4df5b 0%,#b4df5b 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4df5b', endColorstr='#b4df5b',GradientType=0 ); /* IE6-9 */
+}
+
+.hor_dropdown_menu ul li:hover > ul {
+  /* enkel nodig voor extra transition effectje subsub: beweging left */
+  left: 11em;
+}
+

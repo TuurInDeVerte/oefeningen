@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+/***** Stylesheet voor oefeningen.html *****/
+
+/* inhoud op 80% van breedte */
+.content {
+  width: 80%;
+  margin: auto;
+}

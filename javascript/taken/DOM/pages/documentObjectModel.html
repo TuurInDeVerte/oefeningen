@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>JS PF project: het Document Object Model</title>
+<style type="text/css" media="all">
+body{
+	font-family:Verdana, Geneva, sans-serif;
+	color:#333;
+	}
+img{
+	float:right;
+	}
+</style>
+
+<script type="text/javascript">
+  window.onload = function(){
+    /* wijzig de titel */
+    var eTitel        =     document.getElementById('kop'); // referentie naar node
+    eTitel.innerHTML  =     "De document tree";
+    
+    /* wijzig de tekst van het tweede list item */
+    var eBolletjes    = document.getElementsByTagName('li');
+    var eAantal       = eBolletjes.length;
+    var e2deItem      = eBolletjes[1]; // tweede item
+    e2deItem.removeChild(e2deItem.childNodes[0]);
+    var sTekst        = document.createTextNode('C#');
+    e2deItem.appendChild(sTekst);
+    
+    /* een nieuw item toevoegen achteraan de lijst */
+    var eLijst        = document.getElementsByTagName('ul')[0];
+    var eItem         = document.createElement('li');
+    var sTekst        = document.createTextNode('Perl');
+    eItem.appendChild(sTekst);
+    eLijst.appendChild(eItem);
+    
+    /* attributen zetten en wijzigen */
+    var eImg      = document.getElementsByTagName('img')[0];
+    eImg.src      = "../img/elise.jpg";
+    var sTooltip  = "Elise, system engineer";
+    eImg.setAttribute("alt",sTooltip);
+    eImg.setAttribute("title",sTooltip);
+
+
+
+/*** TAAK 2.1.1 Document Tree wijzigen ***/
+    
+    /* Tekst vervangen dmv innerHTML */
+      /* selecteer element met te vervangen tekst */
+        var eTeVervangenTekst       = document.getElementById('te-vervangen-tekst');
+      /* vervang tekst */
+        eTeVervangenTekst.innerHTML = '<img src="../img/elise.jpg" alt="Elise, system engineer" title="Elise, system engineer" />De meeste programmeurs <em>leven</em> op koffie en <em>chocolade</em>';
+    
+    
+    /* div toevoegen in div#container */
+      /* nieuwe div maken */
+        var eNieuweDiv            = document.createElement("div");
+      /* id geven aan div */
+        eNieuweDiv.setAttribute("id", "footer");
+      /* content toevoegen aan nieuwe div */
+        eNieuweDiv.innerHTML      = '\< je vind een job op de <a href="http://www.vdab.be">vdab</a> website \>';
+      /* div op pagina plaatsen */
+        var eContainer            = document.getElementById('container');
+        eContainer.appendChild(eNieuweDiv);
+    
+    
+    /* linkadres aanpassen */
+      /* link selecteren */
+        eSienceFiction              = document.getElementById('sience-fiction');
+      /* linkadres veranderen */
+        eSienceFiction.setAttribute('href', 'https://www.google.be/search?q=science+fiction&espv=2&source=lnms&tbm=isch&sa=X&ei=zsr-U-LwINHlaNf3gOAK&ved=0CAYQ_AUoAQ&biw=944&bih=1047');
+      /* openen in nieuw venster/tabblad */
+        eSienceFiction.setAttribute('target', 'blank');
+    
+  };
+  
+</script>
+
+</head>
+<body>
+<div id="container">
+  <h1 id="kop">Het Document Object Model</h1>
+  <!-- dit is HTML commentaar onzichtbaar in het beeld-->
+  <p id="te-vervangen-tekst"><img src="../img/linda.jpg" alt="Linda, een front-end programmeur" />De meeste programmeurs <em>leven</em> op koffie</p>
+  <p>Veel programmeurs zijn liefhebbers van <a id="sience-fiction" href="http://en.wikipedia.org/wiki/Science-fiction">science-fiction</a></p>
+  <div class="menu">
+    <h2>Onze programmeertalen</h2>
+    <ul>
+      <li>Javascript</li>
+      <li>PHP</li>
+      <li>ASP.Net</li>
+      <li>Java</li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

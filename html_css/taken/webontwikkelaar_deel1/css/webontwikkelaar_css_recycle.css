@@ -1,0 +1,119 @@
+@charset "utf-8";
+/* CSS Document voor taak Webontwikkelaar deel 1 (webontwikkelaar_home.html) */ 
+
+/**** NORMALIZE ****/
+/**** ALGEMENE STRUCTUUR ****/
+/* content 80% van venster, max 1120px */
+/* OPMAAK BLOK waarom */
+/* OPMAAK BLOK nieuws */
+/* OPMAAK HOOFDMENU */
+
+
+/**** TEKSTOPMAAK ****/
+/* tekstopmaak algemeen */
+.wrapper {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #665950;
+}
+
+/* (tekst)opmaak login */
+
+
+/* (tekst)opmaak hoofdmenu */
+
+
+/* opmaak inleiding */ 
+
+
+/* opmaak waarom */
+
+
+
+
+
+/* opmaak nieuws en footer */
+
+
+/**** KLEUREN ****/
+/* achtergrondkleur + donkere lijn onderaan hoofdblokken */
+.wrapper {
+  background-color: #FCFAF8;
+}
+header {
+  background-color: #FCFAF8;
+}
+.login_bg {
+  background-color: #7EA107;
+}
+.volledige_bg_donker {
+  background-color: #EBE8E5;
+}
+.volledige_bg_donker, .volledige_bg_licht, .nieuws_bg, inleiding_bg {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #DCDAD8;
+}
+
+
+
+/**** OPMAAK IMAGES ****/
+
+#web-developer_img {
+  width: 35%;
+  float:right;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  max-width: 480px; 
+  min-width: 200px;
+ }
+  
+#responsive_img {
+  float:left;
+  margin-right: 2%;
+  width: 40%;
+  max-width: 240px;
+  min-width: 150px;
+}
+#logo {
+  width: 20%;
+  min-width: 100px;
+  max-width: 200px;
+}
+#logo_html5 {
+  float: right;
+  width: 7.5%;
+  margin-right: 2.5%;
+}
+
+#logo>img, #logo_html5>img {
+  width: auto;
+  height: auto;
+  max-height: 100%;
+  max-width: 100%; 
+}
+
+#responsive_img>img, #web-developer_img>img  {
+  border-style: solid;
+  border-width: 5px;
+  border-color: #E9DCE9;
+  width: auto;
+  height: auto;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+
+
+
+/* clearFix Hack */
+.clearFix:before, .clearFix:after {
+  content:" ";
+  display:table;
+}
+.clearFix:after {
+  clear: both;
+}
+/* enkel voor IE6 en IE7 */
+.clearFix {
+  *zoom:1;
+}

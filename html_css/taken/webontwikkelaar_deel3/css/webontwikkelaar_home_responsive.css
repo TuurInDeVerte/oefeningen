@@ -1,0 +1,478 @@
+@charset "utf-8";
+/* CSS Document voor taak Webontwikkelaar deel 3 (Responsive) */ 
+/* WEBFONT */
+@import url('http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,700,300');
+
+
+/***** Mobile First *****/
+/*** HelperClass voor (heel) klein scherm ***/
+.hide-on-phone {  display: none;  }
+
+
+/* loginmenu (mobile) */
+#aanmelden {
+  width: 30%;
+  max-width: 100px;
+  margin-top: 1%;
+}
+.loginwrapper {
+  background-color: #00952e;
+}
+.loginmenu {
+  text-align: right;
+  color: gainsboro;
+  padding-bottom: 0.5%;
+  padding-right: 2%;
+}
+.loginmenu input[type="submit"] {
+  background-color: #084502;
+  color: lightgrey;
+  border-color: transparent;
+}
+.loginmenu input, .loginmenu label {
+  margin-bottom: 1%;
+}
+
+/* login tonen bij klik/hover */
+.extra-op-mobile, .login-op-mobile {
+  display: none;
+}
+.loginmenu:hover .login-op-mobile,
+.loginmenu:focus .login-op-mobile  {
+  display: block;
+}
+
+/* Tekst opmaak */
+  .tekst-gr {
+    font-size: 1.2em;
+  }  
+
+/* hoofdmenu (mobile) - header */
+#hoofdmenu {
+  font-weight: bold;
+  float: right;
+  width: 50%;
+}
+#hoofdmenu ul {
+  list-style: none;
+}
+#hoofdmenu li a {        
+  border-bottom: 1px solid #16295a;
+  border-left: 1px solid #16295a;
+  border-right: 1px solid #16295a;
+  width: 90%;
+}
+#hoofdmenu li:first-child a {
+  border-top: 1px solid #16295a;
+  -webkit-border-top-left-radius: 10px;
+  -moz-border-top-left-radius: 10px;
+   border-top-left-radius: 10px;
+  -webkit-border-top-right-radius: 10px;
+  -moz-border-top-right-radius: 10px;
+   border-top-right-radius: 10px;
+}
+#hoofdmenu li:last-child a {
+  -webkit-border-bottom-left-radius: 10px;
+  -moz-border-bottom-left-radius: 10px;
+   border-bottom-left-radius: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  -moz-border-bottom-right-radius: 10px;
+   border-bottom-right-radius: 10px;
+}
+#hoofdmenu ul a {
+  display: block; /* onder elkaar */
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+  color: #16295a;
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+#hoofdmenu li a:hover {
+  background-color: #16295a;
+}
+#hoofdmenu li a:hover {
+   color: #f7f7f7;
+}
+#hoofdmenu .actief a {
+  background-color: #16295a;
+}
+#hoofdmenu .actief a {
+  color: #f7f7f7;
+}
+#logo { /* logo in header */
+  padding-top: 2%;
+  margin-bottom: 0;
+  float: left;
+  width: 50%;
+}
+
+/* Opsomming met vinkje */
+.opsomming-met-vinkje {
+  float: left;
+  list-style-image: url(../img/check.png);
+}
+
+/* Achtergronden */
+.bg-lichtgrijs {
+  background-color: #f7f7f7;
+}
+.bg-donkergrijs {
+  background-color: #d8d8d8;
+}
+
+/* Donkere lijn onder hoofdblokken + schaduwrand */
+.bg-lichtgrijs, .bg-donkergrijs {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #DCDAD8;
+  
+  -webkit-box-shadow: 0px 5px 20px 0px grey;
+  -moz-box-shadow:    0px 5px 20px 0px grey;
+  box-shadow:         0px 5px 20px 0px grey;
+}
+
+/* Breedte van de inhoudsblokken */
+.content {
+width: 95%;
+margin: auto;
+}
+
+/* Nieuwsartikels standaard verborgen op mobile */
+.nieuws:hover .extra-op-mobile,
+.nieuws:active .extra-op-mobile {
+  display: block;
+}
+.toon {
+  float: right;
+  margin-right: 10%;
+  padding-top: 2%;
+}
+.nieuws-titel h3 {
+  float: left;
+  margin-bottom: 0.5%;
+}
+.nieuws p {
+  margin-top: 0.5%;
+}
+.nieuws p:last-child {
+  margin-bottom: 5%;
+}
+
+/*** Tekstopmaak ***/
+.wrapper {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #665950;
+}
+h1 {
+  font-size: 2em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  color: #7EA107;
+  font-weight: bold;
+}
+h2 {
+  font-size: 1.5em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  color: #7EA107;
+  font-weight: bold;
+}
+.cursief {
+  font-style: italic;
+}
+
+/* opmaak van de links */
+section a, footer a {
+  color: #4C86CF;
+  font-weight: bold;
+  text-decoration: none;
+}
+section a:active, section a:hover, footer a:active, footer a:hover {
+  color: #058;
+}
+
+/* opmaak datums */
+time {
+  font-size: 0.8em;
+}
+.nieuws h3 {      /* datum dichter bij titel */
+  margin-top: 0.5%;
+}
+
+/* opmaak tekst in code-tag */
+code {
+  color: #8B1C00;
+  font-size: 1.2em;
+}
+
+/* opmaak disclaimer (in footer) */
+.disclaimer {
+font-style: italic;
+font-size: 0.8em;
+}
+
+/* opmaak voor vette, paarse tekst */
+.paars-vet {
+  color: #9A3098;
+  font-style: normal;
+  font-weight: bold;
+}
+
+/*** OPMAAK IMAGES ***/
+.resp-img {
+  max-width: 100%;
+}
+.boxed-img img {  
+  border-style: solid;
+  border-width: 3px;
+  border-color: #E9DCE9;
+  
+  box-shadow: 0 0.5em 1.1em rgba(0,0,0, .3);
+  -moz-box-shadow: 0 0.5em 1.1em rgba(0,0,0, .3);
+  -webkit-box-shadow: 0 0.5em 1.1em rgba(0,0,0, .3);
+}
+/* Afbeelding draaien MetWijzersMee */
+.afb-mwm {
+ -moz-transform:    skew(-5deg, 5deg);
+ -webkit-transform: skew(-5deg, 5deg);
+ -o-transform:      skew(-5deg, 5deg);
+  transform:        skew(-5deg, 5deg);
+}
+/* Afbeelding draaien TegenWijzersIn */
+.afb-twi {
+ -moz-transform:    skew(5deg, -5deg);
+ -webkit-transform: skew(5deg, -5deg);
+ -o-transform:      skew(5deg, -5deg);
+  transform:        skew(5deg, -5deg); 
+}
+
+
+/***** TABLETS *****/
+@media screen and (min-width:390px) {
+  /* helper classes */
+  .extra-op-mobile {  display: block; } 
+  .toon            {  display: none;  } /* "lezen" verbergen bij nieuws */
+  
+  /*** HelperClass voor (heel) klein scherm ***/
+    .hide-on-phone  {  display: block;  }
+    .hide-on-tablet {  display: none;  }
+
+  /*** OPMAAK IMAGES ***/
+  #web-developer {
+    float: right;
+    width: 35%;
+    max-width: 320px;
+    margin-top: 6%;
+    margin-right: 4.6%;
+  }
+  #logo-html5 {
+    float: right;
+    width: 30%;
+    margin-right: 5%;
+  }
+
+  /* Aangepaste opmaak hoofdmenu */
+  #logo {
+    width: 35%;
+  }
+  #hoofdmenu {
+    width: 60%;
+  }
+}  
+ 
+
+
+/* TABLET */
+@media screen and (min-width: 484px) {
+  /*** Helper classes ***/
+  .login-op-mobile {  display: block; } 
+  
+  /* Aangepast aanmelden (standaard direct zichtbaar en op 1 rij) */
+  #aanmelden { display: none; } /* aanmeld icoon niet meer tonen */
+  .loginmenu form * {
+    display: inline;
+    margin-bottom: 0.3%;
+  }
+  .loginmenu form {
+    margin-top: 1%;
+  }
+  .loginmenu input {
+    margin-top: 1%;
+  }
+  .loginmenu form {
+    margin-top: 0;
+  }
+  
+    /*** opmaak in 2 kolommen ***/
+  .kolom2-3 {
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 46%;
+  }
+  .opsomming-met-vinkje {
+    padding-left: 2%;
+  }
+  .opsomming-met-vinkje .kolom2-3 {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  .opsomming-met-vinkje li {
+    padding-right: 2%;
+  }
+  
+  /* hoofdmenu verkleinen */
+  #hoofdmenu {
+    width: 45%;
+  }
+} 
+
+
+
+/* TABLET hoge resolutie */
+@media screen and (min-width:685px) {
+  /* helper class */
+  .hide-on-tablet {  display: block;  }
+  
+  /* Hoofdmenu op 1 lijn ipv onder elkaar (met aangepaste border) */
+  #hoofdmenu {
+    width: 68%;
+  }
+  #hoofdmenu li {
+    display: inline;
+  }
+  #hoofdmenu ul {
+    margin: 0;
+  }
+  #hoofdmenu li a {
+    padding: 0;
+    margin: 0;
+    -webkit-border-top-left-radius: 10px;
+    -moz-border-top-left-radius: 10px;
+     border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -moz-border-top-right-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 0;
+  }
+  #hoofdmenu li:last-child a {
+    -webkit-border-bottom-left-radius: 0px;
+    -moz-border-bottom-left-radius: 0px;
+     border-bottom-left-radius: 0px;
+    -webkit-border-bottom-right-radius: 0px;
+    -moz-border-bottom-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  #hoofdmenu li a {  
+    padding-bottom: 0;
+  }
+  #hoofdmenu ul a {
+    display: inline; /* naast elkaar */
+  }
+  #hoofdmenu ul a {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+    padding-bottom: 0.3%;
+  }
+
+
+  /* positie afb "responsive-design.jpg" */
+  #responsive-design img {
+    margin-bottom: 2%;
+  }
+  #responsive-design {
+    width: 30%;
+    max-width: 240px;
+    float: left;
+    margin-right: 3%;
+  }
+  
+  /* Tekst iets kleiner */
+  .wrapper {
+    font-size: 0.9em;  
+  }
+  .tekst-gr {
+    font-size: 1.1em;
+  }  
+}
+
+
+
+/* DESKTOPS */
+@media screen and (min-width:780px) {
+  /* content iets smaller */
+  .content {
+    width: 90%;
+  }
+  
+  /* OPMAAK in 3 kolommen (en van 2 naar 3 kolommen) */
+  .kolom3 {
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 30%;
+    margin-right: 3%;
+  }
+  .kolom2-3 {
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 30%;
+    margin-right: 3%;
+  }
+  .opsomming-met-vinkje .kolom2-3 {
+    margin-left: 0;
+  }
+} 
+  
+
+
+/***** GROTERE SCHERMEN *****/
+@media screen and (min-width:960px) {
+  /* smallere content met max breedte */
+  .content {
+    width: 80%;
+    max-width: 780px;
+  }
+  .loginmenu form {
+    width: 70%;
+    margin: auto;
+    max-width: 800px;
+  }
+
+}
+  
+  
+  
+/*** ClearFix Hack ***/
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+.cf:after {
+    clear: both;
+}
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
