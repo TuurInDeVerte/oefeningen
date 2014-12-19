@@ -23,7 +23,7 @@
 	<body>
 		<div class="content" id="filterBoxContainer">
 			<div id="filterBox" class="zetInBox cf">
-				<h1 class="zetLinks">Productenlijst</h1>
+				<h1 class="zetLinks" id="menuTitel">Menu</h1>
 				<form class="zetInBox boxInBox" id="filter">
 					<h3>Filter producten</h3>
 					<input class="productFilter" type="radio" name="filter" value="alle" checked>Alle Producten<br>

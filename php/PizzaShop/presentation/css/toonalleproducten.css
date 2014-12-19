@@ -1,3 +1,7 @@
+
+
+
+
 body {
 	background-color: #B2AFAF;
 	font-family: Verdana, Geneva, sans-serif;
@@ -33,6 +37,7 @@ h2, h1, h3, h4 {
 
 .content {
 	width: 60%;
+	max-width: 750px;
 	height: 100%;
 	margin-left: auto;
 	margin-right: auto;
@@ -50,7 +55,7 @@ h2, h1, h3, h4 {
 	-webkit-border-radius:5px;
 	border-radius:5px;
 	border:1px solid grey;
-	background-color: #FFFAFA;
+	background-color: #F1F2F1;
 	margin-bottom: 1%;
 	padding: 1%;
 }
@@ -112,19 +117,19 @@ h2, h1, h3, h4 {
 .toppingElement {
 	width: 100%;
 	float: left;
-	padding-top: auto;
-	padding-bottom: auto;
+/*	padding-top: auto;
+	padding-bottom: auto;*/
 }
 
 .toppingTitel {
-	color: red;
+	color: #CE2B37;
 	display: inline-block;
 	margin-top: 0;
 	margin-bottom: 0;
 }
 
 .toppingPrijsContainer {
-	color: red;
+	color: #CE2B37;
 	display: inline;
 	font-size: 0.9em;
 }
@@ -138,20 +143,81 @@ h2, h1, h3, h4 {
 
 }
 
-.toppingBestelKnop {
+.toppingBestelKnop, .terugKnop {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #CE2B37), color-stop(1, #c62d1f));
+	background:-moz-linear-gradient(top, #CE2B37 5%, #c62d1f 100%);
+	background:-webkit-linear-gradient(top, #CE2B37 5%, #c62d1f 100%);
+	background:-o-linear-gradient(top, #CE2B37 5%, #c62d1f 100%);
+	background:-ms-linear-gradient(top, #CE2B37 5%, #c62d1f 100%);
+	background:linear-gradient(to bottom, #CE2B37 5%, #c62d1f 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#CE2B37', endColorstr='#c62d1f',GradientType=0);
+	background-color:#CE2B37;
 	cursor:pointer;
-	float: right;
-	background-color:#c62d1f;
 	-moz-border-radius:5px;
 	-webkit-border-radius:5px;
 	border-radius:5px;
 	border:1px solid #d02718;
-	color:#ffffff;
+	color:#F1F2F1;
 }
-.toppingBestelKnop:hover{
-	background-color:#811D14;
-	border-color: #811D14;
+
+
+.bestellenKnop, #naarDeKassa {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #009246), color-stop(1, #00924B));
+	background:-moz-linear-gradient(top, #009246 5%, #00924B 100%);
+	background:-webkit-linear-gradient(top, #009246 5%, #00924B 100%);
+	background:-o-linear-gradient(top, #009246 5%, #00924B 100%);
+	background:-ms-linear-gradient(top, #009246 5%, #00924B 100%);
+	background:linear-gradient(to bottom, #009246 5%, #00924B 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#009246', endColorstr='#00924B',GradientType=0);
+	background-color:#009246;
+	cursor:pointer;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	border:1px solid #128D1C;
+	color:#F1F2F1;
 }
+
+/*.promo {
+	border: 2px solid #CE2B37;
+}*/
+
+.bestellenKnop:hover, #naarDeKassa:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #00924B), color-stop(1, #008000));
+	background:-moz-linear-gradient(top, #00924B 5%, #008000 100%);
+	background:-webkit-linear-gradient(top, #00924B 5%, #008000 100%);
+	background:-o-linear-gradient(top, #00924B 5%, #008000 100%);
+	background:-ms-linear-gradient(top, #00924B 5%, #008000 100%);
+	background:linear-gradient(to bottom, #00924B 5%, #008000 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#00924B', endColorstr='#008000',GradientType=0);
+	background-color:#00924B;
+}
+
+#naarDeKassa {
+	font-size: 90%;
+	font-weight: bolder;
+	width: 50%;
+	margin-top: 5%;
+	padding-top: 5%;
+	padding-bottom: 5%;
+}
+
+.bestellenKnop, .toppingBestelKnop {
+	float: right;
+}
+
+.bestellenKnop, .terugKnop {
+	font-size: 100%;
+	font-weight: bold;
+	width: 30%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+.terugKnop {
+	float: left;
+}
+
 
 
 .toppingItem pre {
@@ -162,21 +228,21 @@ h2, h1, h3, h4 {
 
 .pizzaBestellenKnop, .drankBestellenKnop {
 	box-sizing: border-box;
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f24537), color-stop(1, #c62d1f));
-	background:-moz-linear-gradient(top, #f24537 5%, #c62d1f 100%);
-	background:-webkit-linear-gradient(top, #f24537 5%, #c62d1f 100%);
-	background:-o-linear-gradient(top, #f24537 5%, #c62d1f 100%);
-	background:-ms-linear-gradient(top, #f24537 5%, #c62d1f 100%);
-	background:linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f24537', endColorstr='#c62d1f',GradientType=0);
-	background-color:#f24537;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #CE2B37), color-stop(1, #c62d1f));
+	background:-moz-linear-gradient(top, #CE2B37 5%, #c62d1f 100%);
+	background:-webkit-linear-gradient(top, #CE2B37 5%, #c62d1f 100%);
+	background:-o-linear-gradient(top, #CE2B37 5%, #c62d1f 100%);
+	background:-ms-linear-gradient(top, #CE2B37 5%, #c62d1f 100%);
+	background:linear-gradient(to bottom, #CE2B37 5%, #c62d1f 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#CE2B37', endColorstr='#c62d1f',GradientType=0);
+	background-color:#CE2B37;
 	-moz-border-radius:5px;
 	-webkit-border-radius:5px;
 	border-radius:5px;
 	border:1px solid #d02718;
 	display:inline-block;
 	cursor:pointer;
-	color:#ffffff;
+	color:#F1F2F1;
 	font-family:verdana;
 	font-size:130%;
 	padding:0.5em 31px;
@@ -184,7 +250,7 @@ h2, h1, h3, h4 {
 	margin-bottom: 1%;
 	margin-top: 1%;
 }
-.pizzaBestellenKnop:hover, .drankBestellenKnop:hover {
+.pizzaBestellenKnop:hover, .drankBestellenKnop:hover, .toppingBestelKnop:hover, .terugKnop:hover {
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #c62d1f), color-stop(1, #f24537));
 	background:-moz-linear-gradient(top, #c62d1f 5%, #f24537 100%);
 	background:-webkit-linear-gradient(top, #c62d1f 5%, #f24537 100%);
@@ -199,7 +265,13 @@ h2, h1, h3, h4 {
 	top:1px;
 }
 
+
+
+
+
+
 .prijsPizza {
+	color: #F1F2F1;
 	box-sizing: border-box;
 	width: 60%;
 	display: block;
@@ -209,23 +281,23 @@ h2, h1, h3, h4 {
 	margin-bottom: 1%;
 	font-weight: bold;
 	padding:0.5em;
-	background-color:#447CE6;
+	background-color:#009246;
 	-moz-border-radius:5px;
 	-webkit-border-radius:5px;
 	border-radius:5px;
-	border:1px solid #2347C5;
+	border:1px solid #00924B;
 	text-align: center;
 }
 
 .bestelKnopPizza {
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f24537), color-stop(1, #c62d1f));
-	background:-moz-linear-gradient(top, #f24537 5%, #c62d1f 100%);
-	background:-webkit-linear-gradient(top, #f24537 5%, #c62d1f 100%);
-	background:-o-linear-gradient(top, #f24537 5%, #c62d1f 100%);
-	background:-ms-linear-gradient(top, #f24537 5%, #c62d1f 100%);
-	background:linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f24537', endColorstr='#c62d1f',GradientType=0);
-	background-color:#f24537;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #CE2B37), color-stop(1, #c62d1f));
+	background:-moz-linear-gradient(top, #CE2B37 5%, #c62d1f 100%);
+	background:-webkit-linear-gradient(top, #CE2B37 5%, #c62d1f 100%);
+	background:-o-linear-gradient(top, #CE2B37 5%, #c62d1f 100%);
+	background:-ms-linear-gradient(top, #CE2B37 5%, #c62d1f 100%);
+	background:linear-gradient(to bottom, #CE2B37 5%, #c62d1f 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#CE2B37', endColorstr='#c62d1f',GradientType=0);
+	background-color:#CE2B37;
 	-moz-border-radius:5px;
 	-webkit-border-radius:5px;
 	border-radius:5px;
@@ -278,6 +350,13 @@ button:focus {outline:0;}
 	font-size: 110%;
 }
 
+#menuTitel{
+	margin: 0;
+	padding: 0;
+	color: #009246;
+	font-size: 500%;
+}
+
 .kleiner {
 	font-size: 80%;
 }
@@ -291,28 +370,36 @@ button:focus {outline:0;}
 	display: table-cell;
 }
 
+/*.vuilbakje {
+	width: 3000%;
+}*/
+
 
 .kolomLinks{
 /*	float: left;
-*/	width: 70%;
+*/	width: 55%;
+	box-sizing: border-box;
+	padding-right: 2%;
 }
 .kolomRechts{
 /*	float: right;
 */	width: 15%;
+	box-sizing: border-box;
+	padding-left: 2%;
 }
 .kolomMidden{
 /*	display: inline-block;
-*/	width: 15%;
+*/	width: 30%;
+	box-sizing: border-box;
 }
 
 .breedte40 {
-	width: 40%;
+	width: 15%;
 }
 
 .inHetRood {
-	color: red;
+	color: #CE2B37;
 }
-
 
 
 

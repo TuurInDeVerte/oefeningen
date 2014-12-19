@@ -53,10 +53,19 @@ function naarDeKassa(producten){
 			eTicketMandje.appendChild(eHorLijn);
 		}
 		var eKnopTerug = document.createElement("button");
+		eKnopTerug.className += " terugKnop";
 		var tKnopTerug = document.createTextNode("Nog pizza's bestellen!");
 		eKnopTerug.appendChild(tKnopTerug);
 		eKnopTerug.addEventListener("click", function(){verderBestellen()});
 		eTicketMandje.appendChild(eKnopTerug);
+
+		var eKnopDoorgaan = document.createElement("button");
+		eKnopDoorgaan.className += " bestellenKnop";
+		var tKnopDoorgaan = document.createTextNode("Bestelling afrekenen");
+		eKnopDoorgaan.appendChild(tKnopDoorgaan);
+		eKnopDoorgaan.addEventListener("click", function(){alert('komt zo snel mogelijk')});
+		eTicketMandje.appendChild(eKnopDoorgaan);
+
 		eContentUitFocus.className += " toBlur";
 		eFilterBoxUitFocus.className += " toBlur";
 		eWinkelmandje.style.display = "none";
@@ -98,6 +107,7 @@ function maakRij(producten, winkelmandje, i){
 	eRijBeschrijving.appendChild(eRijNaam);
 	if(producten[winkelmandje[i]['productId']]['type'] == "pizza"){
 		if(winkelmandje[i]['lijstToppingIds'] == "geen"){
+
 			eRijTopping = document.createElement("div");
 			eRijTopping.className += " naastElkaar kleiner";
 			tRijTopping = document.createTextNode(" (zonder extra toppings)");
@@ -177,10 +187,15 @@ function maakRij(producten, winkelmandje, i){
 	eRij.appendChild(eBr);*/
 	var eRijAantal = document.createElement("form");
 	eRijAantal.className += " kolomMidden";
+
+	var rijAantalContainer = document.createElement("div");
 	var tRijAantal = document.createTextNode("Aantal: ");
-	eRijAantal.appendChild(tRijAantal);
+	rijAantalContainer.className += " naastElkaar";
+	rijAantalContainer.appendChild(tRijAantal);
+	eRijAantal.appendChild(rijAantalContainer);
+
 	var eRijAantalInput = document.createElement("input");
-	eRijAantalInput.className += " breedte40";
+	eRijAantalInput.className += " breedte40 naastElkaar";
 	eRijAantalInput.setAttribute("type", "number");
 	eRijAantalInput.setAttribute("name", "aantal");
 	eRijAantalInput.setAttribute("size", "1");
@@ -224,9 +239,9 @@ function maakRij(producten, winkelmandje, i){
 	eRij.appendChild(eRijPrijs);
 
 	//knop om product te verwijderen
-	var eKnopVerwijderen = document.createElement("button");
-	var tKnopVerwijderen = document.createTextNode("Rij verwijderen");
-	eKnopVerwijderen.appendChild(tKnopVerwijderen);
+	var eKnopVerwijderen = document.createElement("img");
+	eKnopVerwijderen.className += " vuilbakje";
+	eKnopVerwijderen.src = "presentation/images/vuilbakje.png";
 
 	eKnopVerwijderen.addEventListener("click", function(){verwijderUitMandje(i)});
 	eRij.appendChild(eKnopVerwijderen);
@@ -472,6 +487,11 @@ function toppingToevoegen(objArray, arrayID){
 	var tTotaalprijsPizza = eTotaalprijsPizza.getAttribute("data-totaalPrijs");
 	tTotaalprijsPizza = parseFloat(tTotaalprijsPizza);
 
+
+	var eBlauwPrijsVeld = document.getElementById("totaalprijsPizzaID_" + pizzaId);
+	console.log(eBlauwPrijsVeld);
+	var tBlauwPrijsVeld = eBlauwPrijsVeld.lastChild;
+
 	var eBestelknop = document.getElementById("bestelknopPizzaID_" + pizzaId);
 	var tBestelknop = eBestelknop.lastChild;
 
@@ -483,22 +503,35 @@ function toppingToevoegen(objArray, arrayID){
 			var eersteToppingRij = document.getElementById("toppingRijen_" + pizzaId);
 			eersteToppingRij.innerHTML = "";
 			var eExtraLijn = document.createElement("div");
-			var tExtraLijn = document.createTextNode("+ " + toppingNaam + " (€ " + toppingPrijs.toFixed(2) + ")");
+			if (toppingPrijs == 0.00){
+				tekstToppingPrijs = " (GRATIS)";
+			}
+			else {
+				tekstToppingPrijs = " (€ " + toppingPrijs.toFixed(2) + ")";
+			}
+			var tExtraLijn = document.createTextNode("+ " + toppingNaam + tekstToppingPrijs);
 			eExtraLijn.appendChild(tExtraLijn);
 			eExtraLijn.setAttribute("id", "gekozenToppingID_" + toppingId);
 			eExtraLijn.setAttribute("data-pizzaID", pizzaId);
 			eExtraLijn.setAttribute("data-toppingID", toppingId);
-			tBestelknop.appendChild(eExtraLijn);
+			eersteToppingRij.appendChild(eExtraLijn);
 			eBestelknop.setAttribute("data-topping", "welTopping");
 		}
 		else {
+			var eersteToppingRij = document.getElementById("toppingRijen_" + pizzaId);
 			var eExtraLijn = document.createElement("div");
-			var tExtraLijn = document.createTextNode("+ " + toppingNaam + " (€ " + toppingPrijs.toFixed(2) + ")");
+			if (toppingPrijs == 0.00){
+				tekstToppingPrijs = " (GRATIS)";
+			}
+			else {
+				tekstToppingPrijs = " (€ " + toppingPrijs.toFixed(2) + ")";
+			}
+			var tExtraLijn = document.createTextNode("+ " + toppingNaam + tekstToppingPrijs);
 			eExtraLijn.appendChild(tExtraLijn);
 			eExtraLijn.setAttribute("id", "gekozenToppingID_" + toppingId);
 			eExtraLijn.setAttribute("data-pizzaID", pizzaId);
 			eExtraLijn.setAttribute("data-toppingID", toppingId);
-			tBestelknop.appendChild(eExtraLijn);
+			eersteToppingRij.appendChild(eExtraLijn);
 			eBestelknop.setAttribute("data-topping", "welTopping");
 		}
 	}
@@ -516,7 +549,7 @@ function toppingToevoegen(objArray, arrayID){
 	}
 	nieuwePrijs = nieuwePrijs.toFixed(2);
 	eTotaalprijsPizza.setAttribute("data-totaalPrijs", nieuwePrijs);
-	eTotaalprijsPizza.innerHTML = "Totaalprijs pizza: € " + nieuwePrijs;
+	//eTotaalprijsPizza.innerHTML = "Totaalprijs pizza: € " + nieuwePrijs;
 }
 
 
@@ -595,17 +628,28 @@ function toonAlleProducten(objArray){
 					eInputFilterPromo.setAttribute("type", "radio");
 					eInputFilterPromo.setAttribute("name", "filter");
 					eInputFilterPromo.setAttribute("value", "promo");
+
+					var eFilterBox = document.createElement("div");
+					eFilterBox.className += " inHetRood naastElkaar";
 					tInputFilterPromo = document.createTextNode("Promoties");
+					eFilterBox.appendChild(tInputFilterPromo);
 					eFilter.appendChild(eInputFilterPromo);
-					eFilter.appendChild(tInputFilterPromo);
+					eFilter.appendChild(eFilterBox);
 				}
 			}
 			eProductPrijs.appendChild(tProductPrijs);														// set tekst voor div prijs
 			eProductContainer.appendChild(eProductPrijs);													// zet div met prijs in div productcontainer
+
+			var eProductImageLink = document.createElement("a");
+			eProductImageLink.setAttribute("href", objArray[i]['afbeelding']);
+				eProductImageLink.setAttribute("data-lightbox", objArray[i]['naam'] + "_" + dataLightboxHelper);
+				dataLightboxHelper++;
+				eProductImageLink.setAttribute("data-title", objArray[i]['naam'] + "<br>" + objArray[i]['beschrijving']);
 			var eProductImage = document.createElement("img");												// maak 1 img element voor image product
 			eProductImage.className += " productImage";														// set className voor img product
 			eProductImage.src = objArray[i]['afbeelding'];													// set source voor img product element
-			eProductContainer.appendChild(eProductImage);													// zet img product element in div
+			eProductImageLink.appendChild(eProductImage);
+			eProductContainer.appendChild(eProductImageLink);													// zet img product element in div
 			var eProductBeschrijving = document.createElement("p");											// maak p element voor productbeschrijving
 			eProductBeschrijving.className += " productBeschrijving";										// set classname voor productbeschrijving
 			var tProductBeschrijving = document.createTextNode(objArray[i]['beschrijving']);				// set tekst voor p element
@@ -724,10 +768,21 @@ function toonAlleProducten(objArray){
 				tPrijsPizza = tPrijsPizza.toFixed(2);
 				ePrijsPizza.setAttribute("data-totaalPrijs", tPrijsPizza);
 				tPrijsPizza = "€ " + tPrijsPizza;
-				tPrijsPizza = document.createTextNode("Totaalprijs pizza: " + tPrijsPizza);
-				ePrijsPizza.appendChild(tPrijsPizza);
-				eToppingContainer.appendChild(ePrijsPizza);
+				tPrijsPizza = document.createTextNode("Pizza \"" + objArray[i]['naam'] + "\" (€ " + tPizzaPrijs + ")");
+				var extraDiv = document.createElement("div");
+				extraDiv.appendChild(tPrijsPizza)
+				ePrijsPizza.appendChild(extraDiv);
 
+				/*var eBr = document.createElement("br");
+				ePrijsPizza.appendChild(eBr);*/
+				var eSmall = document.createElement("small");
+				eSmall.setAttribute("id", "toppingRijen_" + i);
+				eSmall.setAttribute("data-pizzaID", i);
+				var tSmall = document.createTextNode("Zonder extra topping");
+				eSmall.appendChild(tSmall);
+				ePrijsPizza.appendChild(eSmall);
+
+				eToppingContainer.appendChild(ePrijsPizza);
 
 				// Bestelknop pizza + eventuele toppings
 				var eBestelKnopPizza = document.createElement("button");
@@ -737,16 +792,9 @@ function toonAlleProducten(objArray){
 				eBestelKnopPizza.setAttribute("id", "bestelknopPizzaID_" + i);
 				eBestelKnopPizza.setAttribute("data-topping", "geenTopping");
 				eBestelKnopPizza.setAttribute("data-pizzaID", i);
-				var tBestelKnopPizza = document.createTextNode("Pizza \"" + objArray[i]['naam'] + "\" (€ " + tPizzaPrijs + ") in winkelmandje");
+				var tBestelKnopPizza = document.createTextNode("Deze pizza toevoegen aan winkelmandje");
+				//var tBestelKnopPizza = document.createTextNode("Pizza \"" + objArray[i]['naam'] + "\" (€ " + tPizzaPrijs + ") in winkelmandje");
 				eBestelKnopPizza.appendChild(tBestelKnopPizza);
-				var eBr = document.createElement("br");
-				eBestelKnopPizza.appendChild(eBr);
-				var eSmall = document.createElement("small");
-				eSmall.setAttribute("id", "toppingRijen_" + i);
-				eSmall.setAttribute("data-pizzaID", i);
-				var tSmall = document.createTextNode("Zonder extra topping");
-				eSmall.appendChild(tSmall);
-				eBestelKnopPizza.appendChild(eSmall);
 				eToppingContainer.appendChild(eBestelKnopPizza);
 				eBestelKnopPizza.addEventListener("click", function(){pizzaBestellen()});
 
