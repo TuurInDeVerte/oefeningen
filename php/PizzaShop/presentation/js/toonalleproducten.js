@@ -1,21 +1,243 @@
-var winkelmandje = [
-];
-var aantalBesteldePizza = 0;
-var aantalBesteldeDrank = 0;
+var winkelmandje = new Array;
 
-function naarDeKassa(){
+function verwijderUitMandje(index){
+	if(index != -1){
+		winkelmandje.splice(index, 1);
+		naarDeKassa(producten);
+		updateMandje();
+	}
+}
+
+function isInteger(possibleInteger) {
+        return Object.prototype.toString.call(possibleInteger) !== "[object Array]" && /^[\d]+$/.test(possibleInteger);
+}
+
+function valideerAantal(){
+	var inputFieldAantal = event.target || event.srcElement;
+	var ingegevenAantal = inputFieldAantal.value;
+	var winkelmandjeId = inputFieldAantal.getAttribute("data-winkelmandjeId");
+	if(isInteger(ingegevenAantal) && ingegevenAantal > 0){
+		winkelmandje[winkelmandjeId]['aantal'] = ingegevenAantal;
+		var teWijzigenTotaal = document.getElementById("winkelmandjeId_" + winkelmandjeId);
+		var totaalPerStuk = teWijzigenTotaal.getAttribute("data-totaalPerStuk");
+		var nieuwTotaal = ingegevenAantal * totaalPerStuk;
+		nieuwTotaal = parseFloat(nieuwTotaal);
+		nieuwTotaal = nieuwTotaal.toFixed(2);
+		teWijzigenTotaal.innerHTML = "€ " + nieuwTotaal;
+		console.log(teWijzigenTotaal);
+	}
+	else {
+		alert('Het ingegeven aantal is niet correct');
+		inputFieldAantal.focus();
+	}
+}
+
+
+
+function naarDeKassa(producten){
 	var eContentUitFocus = document.getElementById("productenlijst");
 	var eFilterBoxUitFocus = document.getElementById("filterBox");
 	var eWinkelmandje = document.getElementById("winkelmandje");
-	eContentUitFocus.className += " toBlur";
-	eFilterBoxUitFocus.className += " toBlur";
-	eWinkelmandje.className += " toonMandje";
-	window.scrollTo(0, 0);
-
+	var eTicketMandje = document.getElementById("ticketMandje");
+	eTicketMandje.innerHTML = "";
+	var eTitelMandje = document.createElement("h2");
+	var tTitelMandje = document.createTextNode("Details Winkelmandje");
+	eTitelMandje.appendChild(tTitelMandje);
+	eTicketMandje.appendChild(eTitelMandje);
+	var aantalProductenInMandje = winkelmandje.length;
+	if(winkelmandje.length > 0){
+		for(i=0; i<aantalProductenInMandje; i++){
+			var nieuweRij = maakRij(producten, winkelmandje, i);
+			eTicketMandje.appendChild(nieuweRij);
+			eHorLijn = document.createElement("hr");
+			eTicketMandje.appendChild(eHorLijn);
+		}
+		var eKnopTerug = document.createElement("button");
+		var tKnopTerug = document.createTextNode("Nog pizza's bestellen!");
+		eKnopTerug.appendChild(tKnopTerug);
+		eKnopTerug.addEventListener("click", function(){verderBestellen()});
+		eTicketMandje.appendChild(eKnopTerug);
+		eContentUitFocus.className += " toBlur";
+		eFilterBoxUitFocus.className += " toBlur";
+		eWinkelmandje.style.display = "none";
+		$('#ticketMandje').lightbox_me({
+			closeClick: false,
+			closeEsc: false
+		});
+	}
+	else{
+		verderBestellen();
+	}
 }
+
+function verderBestellen(){
+	var eContentUitFocus = document.getElementById("productenlijst");
+	var eFilterBoxUitFocus = document.getElementById("filterBox");
+	var eWinkelmandje = document.getElementById("winkelmandje");
+	eContentUitFocus.classList.remove("toBlur");
+	eFilterBoxUitFocus.classList.remove("toBlur");
+
+	//eContentUitFocus.onclick = function(){return false;};
+	//eFilterBoxUitFocus.onclick = function(){return false;};
+	//eContentUitFocus.classList.remove("nietKlikbaar");
+	//eFilterBoxUitFocus.classList.remove("nietKlikbaar");
+	eWinkelmandje.style.display = "";
+	$('#ticketMandje').trigger('close');
+	updateMandje();
+}
+
+function maakRij(producten, winkelmandje, i){
+	var eRij = document.createElement("div");
+	eRij.className += " eRij cf";
+	var eRijBeschrijving = document.createElement("div");
+	eRijBeschrijving.className += " kolomLinks";
+	var eRijNaam = document.createElement("div");
+	eRijNaam.className += " naastElkaar duidelijker";
+	var tRijNaam = document.createTextNode(producten[winkelmandje[i]['productId']]['naam']);
+	eRijNaam.appendChild(tRijNaam);
+	eRijBeschrijving.appendChild(eRijNaam);
+	if(producten[winkelmandje[i]['productId']]['type'] == "pizza"){
+		if(winkelmandje[i]['lijstToppingIds'] == "geen"){
+			eRijTopping = document.createElement("div");
+			eRijTopping.className += " naastElkaar kleiner";
+			tRijTopping = document.createTextNode(" (zonder extra toppings)");
+			eRijTopping.appendChild(tRijTopping);
+			eRijBeschrijving.appendChild(eRijTopping);
+		}
+		else {
+			//console.log('MET TOPPINGS');
+			var eRijBeschrijvingPrijs = document.createElement("div");
+
+			eRijBeschrijvingPrijs.className += " naastElkaar kleiner";
+			if(producten[winkelmandje[i]['productId']]['inPromotie'] == 1){
+				var tekstRijPrijs = producten[winkelmandje[i]['productId']]['eenheidsprijsKorting'];
+				tekstRijPrijs = parseFloat(tekstRijPrijs);
+				tekstRijPrijs = tekstRijPrijs.toFixed(2);
+				tekstRijPrijs = " (€ " + tekstRijPrijs + ")";
+			}
+			else{
+				var tekstRijPrijs = producten[winkelmandje[i]['productId']]['eenheidsprijsStandaard'];
+				tekstRijPrijs = parseFloat(tekstRijPrijs);
+				tekstRijPrijs = tekstRijPrijs.toFixed(2);
+				tekstRijPrijs = " (€ " + tekstRijPrijs + ")";
+			}
+			var tRijBeschrijvingPrijs = document.createTextNode(tekstRijPrijs);
+			eRijBeschrijvingPrijs.appendChild(tRijBeschrijvingPrijs);
+			eRijBeschrijving.appendChild(eRijBeschrijvingPrijs);
+
+			var eBr = document.createElement("br");
+			eRijBeschrijving.appendChild(eBr);
+			var aToppingIds = winkelmandje[i]['lijstToppingIds'];
+			var totaalPrijsToppings = 0;
+			for(j=0; j<aToppingIds.length; j++){
+				var eToppingRij = document.createElement("div");
+				//kolom links
+				var eToppingRijNaam = document.createElement("div");
+				eToppingRijNaam.className += " naastElkaar";
+				var tToppingRijNaam = document.createTextNode("+ " + producten[aToppingIds[j]]['naam']);
+				eToppingRijNaam.appendChild(tToppingRijNaam);
+				eToppingRij.appendChild(eToppingRijNaam);
+				//kolom midden
+				var eToppingRijPrijs = document.createElement("div");
+				eToppingRijPrijs.className += " naastElkaar kleiner";
+				if (producten[aToppingIds[j]]['inPromotie'] == 1){
+					var tekstToppingRijPrijs = producten[aToppingIds[j]]['eenheidsprijsKorting'];
+					//console.log(tekstToppingRijPrijs);
+					if (tekstToppingRijPrijs > 0){
+						tekstToppingRijPrijs = parseFloat(tekstToppingRijPrijs);
+						totaalPrijsToppings = totaalPrijsToppings + tekstToppingRijPrijs;
+						tekstToppingRijPrijs = tekstToppingRijPrijs.toFixed(2);
+						tekstToppingRijPrijsMetEuro = " (€ " + tekstToppingRijPrijs + ")";
+					}
+					else {
+						tekstToppingRijPrijsMetEuro = " (GRATIS)"
+					}
+				}
+				else {
+					var tekstToppingRijPrijs = producten[aToppingIds[j]]['eenheidsprijsStandaard'];
+					//console.log(tekstToppingRijPrijs);
+					tekstToppingRijPrijs = parseFloat(tekstToppingRijPrijs);
+					totaalPrijsToppings = totaalPrijsToppings + tekstToppingRijPrijs;
+					tekstToppingRijPrijs = tekstToppingRijPrijs.toFixed(2);
+					tekstToppingRijPrijsMetEuro = " (€ " + tekstToppingRijPrijs + ")";
+				}
+				var tToppingRijPrijs = document.createTextNode(tekstToppingRijPrijsMetEuro);
+				eToppingRijPrijs.appendChild(tToppingRijPrijs);
+				eToppingRij.appendChild(eToppingRijPrijs);
+				//kolom rechts
+/*				var eToppingRijLeeg = document.createElement("div");
+				eToppingRijLeeg.className += "kolomRechts";
+				eToppingRij.appendChild(eToppingRijLeeg);*/
+				eRijBeschrijving.appendChild(eToppingRij);
+			}
+		}
+	}
+	eRij.appendChild(eRijBeschrijving);
+/*	var eBr = document.createElement("br");
+	eRij.appendChild(eBr);*/
+	var eRijAantal = document.createElement("form");
+	eRijAantal.className += " kolomMidden";
+	var tRijAantal = document.createTextNode("Aantal: ");
+	eRijAantal.appendChild(tRijAantal);
+	var eRijAantalInput = document.createElement("input");
+	eRijAantalInput.className += " breedte40";
+	eRijAantalInput.setAttribute("type", "number");
+	eRijAantalInput.setAttribute("name", "aantal");
+	eRijAantalInput.setAttribute("size", "1");
+	eRijAantalInput.setAttribute("value", winkelmandje[i]['aantal']);
+	eRijAantalInput.setAttribute("data-winkelmandjeId", i);
+	eRijAantalInput.onblur = function(){valideerAantal()};
+	eRijAantal.appendChild(eRijAantalInput);
+/*	var tRijAantal = document.createTextNode("Aantal: " + winkelmandje[i]['aantal']);
+	eRijAantal.appendChild(tRijAantal);*/
+	eRij.appendChild(eRijAantal);
+
+
+	var eRijPrijs = document.createElement("div");
+	eRijPrijs.className += " kolomRechts";
+	eRijPrijs.setAttribute("id", "winkelmandjeId_" + i);
+	if(producten[winkelmandje[i]['productId']]['inPromotie'] == 1){
+		var stukPrijs = producten[winkelmandje[i]['productId']]['eenheidsprijsKorting'];
+	}
+	else{
+		var stukPrijs = producten[winkelmandje[i]['productId']]['eenheidsprijsStandaard'];
+	}
+	stukPrijs = parseFloat(stukPrijs);
+
+	// hier totaalprijs pizza met toppings
+	if(totaalPrijsToppings > 0){
+		var totaalPerStuk = stukPrijs + totaalPrijsToppings;
+	}
+	else{
+		var totaalPerStuk = stukPrijs;
+	}
+
+	tekstAantal = parseFloat(winkelmandje[i]['aantal']);
+	tekstRijPrijs = totaalPerStuk * tekstAantal;
+	tekstRijPrijs = tekstRijPrijs.toFixed(2);
+
+	tekstRijPrijs = parseFloat(tekstRijPrijs);
+	tekstRijPrijs = tekstRijPrijs.toFixed(2);
+	var tRijPrijs = document.createTextNode("€ " + tekstRijPrijs);
+	eRijPrijs.setAttribute("data-totaalPerStuk", totaalPerStuk);
+	eRijPrijs.appendChild(tRijPrijs);
+	eRij.appendChild(eRijPrijs);
+
+	//knop om product te verwijderen
+	var eKnopVerwijderen = document.createElement("button");
+	var tKnopVerwijderen = document.createTextNode("Rij verwijderen");
+	eKnopVerwijderen.appendChild(tKnopVerwijderen);
+
+	eKnopVerwijderen.addEventListener("click", function(){verwijderUitMandje(i)});
+	eRij.appendChild(eKnopVerwijderen);
+
+	return eRij;
+}
+
+
 function pizzaBestellen(){
 	aantalBesteldePizza = aantalBesteldePizza + 1;
-	deKnop = event.target;
+	var deKnop = event.target || event.srcElement;
 	var pizzaIdTeBestellen = deKnop.getAttribute("data-pizzaid");
 	var toppingContainer = document.getElementById("containerPizzaID_" + pizzaIdTeBestellen);
 	var pizzaBestellenKnop = document.getElementById("pizzaBestellenKnop_" + pizzaIdTeBestellen);
@@ -25,54 +247,184 @@ function pizzaBestellen(){
 	eWinkelmandje.style.display = "";
 	var bestelknopPizzaId = document.getElementById("bestelknopPizzaID_" + pizzaIdTeBestellen);
 	var pizzaHeeftToppings = bestelknopPizzaId.getAttribute("data-topping");
-	var besteldePizza = [];
-	besteldePizza.push(pizzaIdTeBestellen);
-
-	var toppingRijen = document.getElementById("toppingRijen_" + pizzaIdTeBestellen);
+	var besteldePizza = {};
+	if (pizzaHeeftToppings === "geenTopping"){
+		if(winkelmandje.length > 0){
+			var nogNietInMandje = true;
+			in_mandje:
+			for(i=0; i<winkelmandje.length; i++){
+				if(winkelmandje[i]["productId"] === pizzaIdTeBestellen && winkelmandje[i]['lijstToppingIds'] == "geen"){
+					//console.log('nieuwe pizza zat al in mandje (aantal + 1)');
+					winkelmandje[i]['aantal'] = winkelmandje[i]['aantal'] + 1;
+					nogNietInMandje = false;
+					break in_mandje;
+				}
+			}
+			if(nogNietInMandje){
+				//console.log('nieuwe pizza zat nog niet in mandje (in mandje stoppen)');
+				besteldePizza['productId'] = pizzaIdTeBestellen;
+				besteldePizza['aantal'] = 1;
+				besteldePizza['lijstToppingIds'] = "geen";
+				winkelmandje.push(besteldePizza)
+			}
+		}
+		else {
+			//console.log('nog niets in mandje');
+			besteldePizza['productId'] = pizzaIdTeBestellen;
+			besteldePizza['aantal'] = 1;
+			besteldePizza['lijstToppingIds'] = "geen";
+			winkelmandje.push(besteldePizza);
+		}
+	}
 	if(pizzaHeeftToppings == "welTopping"){
+		var lijstBesteldeToppings = [];
+		var toppingRijen = document.getElementById("toppingRijen_" + pizzaIdTeBestellen);
 		var besteldeToppings = toppingRijen.childNodes;
 		var aantalToppings = besteldeToppings.length;
 		for (i=0; i<aantalToppings; i++) {
 			var besteldeToppingId = besteldeToppings[i].getAttribute("data-toppingID");
-			besteldePizza.push(besteldeToppingId);
-		};
+			lijstBesteldeToppings.push(besteldeToppingId);
+		}
+		lijstBesteldeToppings.sort();
+		if(winkelmandje.length > 0){
+			var nogNietInMandje = true;
+			in_mandje:
+			for(i=0; i<winkelmandje.length; i++){
+				if(winkelmandje[i]['productId'] === pizzaIdTeBestellen){
+					//console.log('wel al zelfde pizza (miss andere topping?)');
+					var toppingsPizzaInMandje = winkelmandje[i]['lijstToppingIds'];
+					if(toppingsPizzaInMandje.length == lijstBesteldeToppings.length){
+						for(j=0; j<lijstBesteldeToppings.length; j++){
+							if(toppingsPizzaInMandje[j] == lijstBesteldeToppings[j]){
+								var dezelfdeToppings = true;
+							}
+							if(toppingsPizzaInMandje[j] != lijstBesteldeToppings[j]){
+								var dezelfdeToppings = false;
+							}
+						}
+					}
+					if (dezelfdeToppings){
+						//console.log('nieuwe pizza zat al in mandje (aantal + 1)');
+						winkelmandje[i]['aantal'] = winkelmandje[i]['aantal'] + 1;
+						nogNietInMandje = false;
+						break in_mandje;
+					}
+				}
+			}
+			if(nogNietInMandje){
+				//console.log('nieuwe pizza zat nog niet in mandje (in mandje stoppen)');
+				besteldePizza['productId'] = pizzaIdTeBestellen;
+				besteldePizza['aantal'] = 1;
+				besteldePizza['lijstToppingIds'] = lijstBesteldeToppings;
+				winkelmandje.push(besteldePizza)
+			}
+		}
+		else {
+			//console.log('nog niets in mandje');
+			besteldePizza['productId'] = pizzaIdTeBestellen;
+			besteldePizza['aantal'] = 1;
+			besteldePizza['lijstToppingIds'] = lijstBesteldeToppings;
+			winkelmandje.push(besteldePizza);
+		}
 	}
-	winkelmandje.push(besteldePizza);
+	var aantalBesteldePizza = 0;
+		for(k=0; k<winkelmandje.length; k++){
+			if(producten[winkelmandje[k]['productId']]['type'] == "pizza"){
+				aantalBesteldePizza = aantalBesteldePizza + 1;
+			}
+		}
+
 	pizzaMandje.setAttribute("data-aantalBesteldePizza", aantalBesteldePizza);
 
 	$(toppingContainer).hide( "slide", { direction: "right" }, "slow" );
 	$(pizzaMandje).hide("slide", { direction: "right" }, "slow");
 
 	$(pizzaMandje).show( "bounce", { times: 3 }, "slow");
-	setTimeout(function(){eAantalPizza.innerHTML = aantalBesteldePizza;}, 500);
+	setTimeout(function(){updateMandje()}, 500);
 
 	pizzaBestellenKnop.innerHTML = "Nog zo'n pizza bestellen";
 	pizzaBestellenKnop.setAttribute("data-besteld", 1);
-
-	console.log(winkelmandje);
 }
 
+
+function updateMandje(){
+	var aantalBesteldePizza = 0;
+	var aantalBesteldeDrank = 0;
+		for(k=0; k<winkelmandje.length; k++){
+			if(producten[winkelmandje[k]['productId']]['type'] == "pizza"){
+				aantalBesteldePizza = parseFloat(aantalBesteldePizza);
+				winkelmandje[k]['aantal'] = parseFloat(winkelmandje[k]['aantal']);
+				aantalBesteldePizza = aantalBesteldePizza + winkelmandje[k]['aantal'];
+			}
+			if(producten[winkelmandje[k]['productId']]['type'] == "drank"){
+				aantalBesteldeDrank = parseFloat(aantalBesteldeDrank);
+				winkelmandje[k]['aantal'] = parseFloat(winkelmandje[k]['aantal']);
+				aantalBesteldeDrank = aantalBesteldeDrank = winkelmandje[k]['aantal'];
+			}
+		}
+	var eAantalPizza = document.getElementById("aantalPizza");
+	var eAantalDrank = document.getElementById("aantalDrank");
+	var eWinkelmandje = document.getElementById("winkelmandje");
+	if(aantalBesteldeDrank == 0 && aantalBesteldePizza == 0){
+		eWinkelmandje.style.display = "none";
+	}
+	if(aantalBesteldePizza == 0){
+		eAantalPizza.innerHTML = "";
+	}
+	if(aantalBesteldePizza > 0){
+		eAantalPizza.innerHTML = aantalBesteldePizza;
+	}
+	if(aantalBesteldeDrank == 0){
+		eAantalDrank.innerHTML = "";
+	}
+	if(aantalBesteldeDrank > 0){
+		eAantalDrank.innerHTML = aantalBesteldeDrank
+	}
+}
+
+
+
 function drankBestellen(){
-	aantalBesteldeDrank = aantalBesteldeDrank + 1;
-	deKnop = event.target;
+	deKnop = event.target || event.srcElement;
 	var besteldeDrankId = deKnop.getAttribute("data-productID");
 	var eWinkelmandje = document.getElementById("winkelmandje");
 	var eDrankMandje = document.getElementById("drankMandje");
 	var eDrankContainer = document.getElementById("arrayID_" + besteldeDrankId);
 	var eAantalDrank = document.getElementById("aantalDrank");
 	var besteldeDrank = [];
-	besteldeDrank.push(besteldeDrankId);
-	winkelmandje.push(besteldeDrank);
 
+	if(winkelmandje.length > 0){
+		var nogNietInMandje = true;
+		in_mandje:
+		for(i=0; i<winkelmandje.length; i++){
+			if(winkelmandje[i]["productId"] === besteldeDrankId){
+				winkelmandje[i]['aantal'] = winkelmandje[i]['aantal'] + 1;
+				nogNietInMandje = false;
+				break in_mandje;
+			}
+		}
+		if(nogNietInMandje){
+			besteldeDrank['productId'] = besteldeDrankId;
+			besteldeDrank['aantal'] = 1;
+			besteldeDrank['lijstToppingIds'] = "geen";
+			winkelmandje.push(besteldeDrank)
+		}
+	}
+	else {
+		besteldeDrank['productId'] = besteldeDrankId;
+		besteldeDrank['aantal'] = 1;
+		besteldeDrank['lijstToppingIds'] = "geen";
+		winkelmandje.push(besteldeDrank);
+	}
 	eWinkelmandje.style.display = "";
 	$(eDrankContainer).hide( "slide", { direction: "right" }, "slow" );
 	$(drankMandje).hide("slide", { direction: "right" }, "slow");
 
 	$(drankMandje).show( "bounce", { times: 3 }, "slow");
-	setTimeout(function(){eAantalDrank.innerHTML = aantalBesteldeDrank; }, 500);
+	setTimeout(updateMandje(), 500);
 	$(eDrankContainer).show( "slide", { direction: "left" }, "slow" );
 
-	console.log(winkelmandje);
+	//console.log(winkelmandje);
 }
 
 
@@ -185,7 +537,7 @@ function getAantalItemsInArray(arr){
 function welkeRadioSelectie(nameRadioButtonsGroup){
 	var radio = document.getElementsByName(nameRadioButtonsGroup)
 	var aantalRadios = radio.length;
-	for(var i=0; i<aantalRadios; i++){
+	for(i=0; i<aantalRadios; i++){
 		if(radio[i].checked){
 			return radio[i].value;
 			break;
@@ -202,7 +554,7 @@ function toonAlleProducten(objArray){
 	while(eProductenlijst.firstChild){																// wis alle producten in section productenlijst
 		eProductenlijst.removeChild(eProductenlijst.firstChild);										// wis alle producten in section productenlijst
 	}
-	for (var i=0; i<aantalObjectenInArray; i++) {													// DOORLOOP ALLE OBJECTEN IN ARRAY
+	for (i=0; i<aantalObjectenInArray; i++) {													// DOORLOOP ALLE OBJECTEN IN ARRAY
 		if(objArray[i]['type'] == 'pizza' || objArray[i]['type'] == 'drank'){
 			var eProductContainer = document.createElement("div");											// maak 1 div per product
 			eProductContainer.className += " productContainer zetInBox cf " + objArray[i]['type'];			// set className voor div
@@ -225,6 +577,7 @@ function toonAlleProducten(objArray){
 			}
 			if(objArray[i]['inPromotie'] == 1){																// is product wel in promotie?
 				var eStandaardPrijs = document.createElement("strike");											// maak strike element (doorstreepte tekst) voor standaardprijs
+				eStandaardPrijs.className += " inHetRood";
 				var tStandaardPrijs = document.createTextNode("€ " + eenheidsprijsStandaard);
 				eStandaardPrijs.appendChild(tStandaardPrijs);
 				var eBr = document.createElement("br");
@@ -478,7 +831,7 @@ window.onload = function(){
 		eFilter.addEventListener("click", function(){toonAlleProducten(producten)});			// set eventlistener voor radiobutton
 	}
 	var eNaarDeKassa = document.getElementById("naarDeKassa");
-	eNaarDeKassa.addEventListener("click", function(){naarDeKassa()});
+	eNaarDeKassa.addEventListener("click", function(){naarDeKassa(producten)});
 
 
 } // einde window.onload

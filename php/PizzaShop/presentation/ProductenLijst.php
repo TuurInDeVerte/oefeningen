@@ -14,19 +14,21 @@
 		<script src="presentation/js/jquery-2.1.1.js"></script>
 		<script src="presentation/js/jquery-ui-1.11.2/jquery-ui.min.js"></script>
 		<script src="presentation/lightbox/js/lightbox.min.js"></script>
+		<script src="presentation/js/jquery.lightbox_me.js"></script>
 		<script src="presentation/js/toonalleproducten.js"></script>
-		<link rel="stylesheet" type="text/css" href="presentation/css/toonalleproducten.css">
+<!-- 		<link rel="stylesheet" type="text/css" href="presentation/css/normalize.css">
+ -->		<link rel="stylesheet" type="text/css" href="presentation/css/toonalleproducten.css">
 		<link rel="stylesheet" type="text/css" href="presentation/lightbox/css/lightbox.css">
 	</head>
 	<body>
-		<div class="content">
+		<div class="content" id="filterBoxContainer">
 			<div id="filterBox" class="zetInBox cf">
 				<h1 class="zetLinks">Productenlijst</h1>
 				<form class="zetInBox boxInBox" id="filter">
 					<h3>Filter producten</h3>
 					<input class="productFilter" type="radio" name="filter" value="alle" checked>Alle Producten<br>
 					<input class="productFilter" type="radio" name="filter" value="pizza">Pizza<br>
-					<input class="productFilter" type="radio" name="filter" value="drank">Drinken<br>
+					<input class="productFilter" type="radio" name="filter" value="drank">Dranken<br>
 				</form>
 			</div>
 			<div class="zetInBox sidebarRight" id="winkelmandje" style="display: none;">
@@ -36,6 +38,9 @@
 					<div id="drankMandje" data-aantalDrank="0"><div id="aantalDrank"></div><img src="presentation/images/soda.png"></div>
 				</div>
 				<button id="naarDeKassa">Naar de kassa</button>
+			</div>
+			<div class="zetInBox" id="ticketMandje">
+				<h2>Details Winkelmandje</h2>
 			</div>
 		</div>
 		<section id="productenlijst" class="content">

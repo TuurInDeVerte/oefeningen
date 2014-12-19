@@ -41,6 +41,7 @@ h2, h1, h3, h4 {
 
 .toBlur {
 	-webkit-filter: blur(5px);
+	position: relative;
 }
 
 .zetInBox {
@@ -63,10 +64,19 @@ h2, h1, h3, h4 {
 	padding-left: 10%;
 
 }
+#ticketMandje {
+	display: none;
+	width: 60%;
+}
+
+#ticketMandje h2 {
+	margin-left: 0;
+	padding-left: 0;
+}
 
 .boxInBox {
-	display: inline;
-	width: 30%;
+/*	display: inline;
+*/	width: 30%;
 	float: right;
 	padding: 0.5%;
 	margin: 0;
@@ -248,14 +258,60 @@ h2, h1, h3, h4 {
 button:focus {outline:0;}
 
 .toonMandje {
-/*	position: absolute;
-*/
   	position: absolute;
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 }
 
+#filterBox{
+	margin-top: 2%;
+}
+
+.naastElkaar {
+	display: inline;
+	width: 24%;
+}
+
+.duidelijker {
+	font-weight: bold;
+	font-size: 110%;
+}
+
+.kleiner {
+	font-size: 80%;
+}
+
+
+.eRij {
+	display: table;
+}
+
+.kolomLinks, .kolomRechts, .kolomMidden {
+	display: table-cell;
+}
+
+
+.kolomLinks{
+/*	float: left;
+*/	width: 70%;
+}
+.kolomRechts{
+/*	float: right;
+*/	width: 15%;
+}
+.kolomMidden{
+/*	display: inline-block;
+*/	width: 15%;
+}
+
+.breedte40 {
+	width: 40%;
+}
+
+.inHetRood {
+	color: red;
+}
 
 
 
