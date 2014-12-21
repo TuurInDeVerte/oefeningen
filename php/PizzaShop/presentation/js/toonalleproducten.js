@@ -639,15 +639,15 @@ function toonAlleProducten(objArray){
 			}
 			eProductPrijs.appendChild(tProductPrijs);														// set tekst voor div prijs
 			eProductContainer.appendChild(eProductPrijs);													// zet div met prijs in div productcontainer
-
+			var preAfbeeldingLink = "http://localhost/WebLeren/oefeningen/php/";
 			var eProductImageLink = document.createElement("a");
-			eProductImageLink.setAttribute("href", objArray[i]['afbeelding']);
+			eProductImageLink.setAttribute("href", preAfbeeldingLink + objArray[i]['afbeelding']);
 				eProductImageLink.setAttribute("data-lightbox", objArray[i]['naam'] + "_" + dataLightboxHelper);
 				dataLightboxHelper++;
 				eProductImageLink.setAttribute("data-title", objArray[i]['naam'] + "<br>" + objArray[i]['beschrijving']);
 			var eProductImage = document.createElement("img");												// maak 1 img element voor image product
 			eProductImage.className += " productImage";														// set className voor img product
-			eProductImage.src = objArray[i]['afbeelding'];													// set source voor img product element
+			eProductImage.src = preAfbeeldingLink + objArray[i]['afbeelding'];													// set source voor img product element
 			eProductImageLink.appendChild(eProductImage);
 			eProductContainer.appendChild(eProductImageLink);													// zet img product element in div
 			var eProductBeschrijving = document.createElement("p");											// maak p element voor productbeschrijving
