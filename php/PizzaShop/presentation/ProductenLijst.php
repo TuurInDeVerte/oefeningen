@@ -4,11 +4,14 @@
 		<meta charset='utf-8'>
 		<title>Productenlijst</title>
 		<link rel ="stylesheet" href="presentation/js/jquery-ui-1.11.2/jquery-ui.min.css">
+		<!-- <link rel="stylesheet" type="text/css" href="presentation/css/normalize.css"> -->
+ 		<link rel="stylesheet" type="text/css" href="presentation/css/toonalleproducten.css">
+		<link rel="stylesheet" type="text/css" href="presentation/lightbox/css/lightbox.css">
 		<script type="text/javascript" id="test">
 		<?php
 			$producten_js = json_encode($producten, JSON_FORCE_OBJECT);
 			echo "var producten = " . $producten_js . ";";
-			?>
+		?>
 		</script>
 
 		<script src="presentation/js/jquery-2.1.1.js"></script>
@@ -16,9 +19,7 @@
 		<script src="presentation/lightbox/js/lightbox.min.js"></script>
 		<script src="presentation/js/jquery.lightbox_me.js"></script>
 		<script src="presentation/js/toonalleproducten.js"></script>
-<!-- 		<link rel="stylesheet" type="text/css" href="presentation/css/normalize.css">
- -->		<link rel="stylesheet" type="text/css" href="presentation/css/toonalleproducten.css">
-		<link rel="stylesheet" type="text/css" href="presentation/lightbox/css/lightbox.css">
+
 	</head>
 	<body>
 		<div class="content" id="filterBoxContainer">

@@ -38,6 +38,7 @@ h2, h1, h3, h4 {
 .content {
 	width: 60%;
 	max-width: 750px;
+	min-width: 380px;
 	height: 100%;
 	margin-left: auto;
 	margin-right: auto;
@@ -90,7 +91,7 @@ h2, h1, h3, h4 {
 .sidebarRight{
 	width: 20%;
 	position: fixed;
-	margin-left: 65%;
+	margin-left: 60%;
 	padding: 0.5%;
 }
 #aantalPizza, #aantalDrank {
@@ -196,7 +197,7 @@ h2, h1, h3, h4 {
 #naarDeKassa {
 	font-size: 90%;
 	font-weight: bolder;
-	width: 50%;
+	width: 40%;
 	margin-top: 5%;
 	padding-top: 5%;
 	padding-bottom: 5%;

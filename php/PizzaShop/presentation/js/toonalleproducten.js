@@ -1,3 +1,13 @@
+/*
+TO DO's:
+- totaalprijs (details winkelmandje)
+- winkelmandje (volledig) leegmaken
+- drank totaal (bij drankbeker) is niet juist
+*/
+
+
+
+
 var winkelmandje = new Array;
 
 function verwijderUitMandje(index){
@@ -871,6 +881,7 @@ function toonAlleProducten(objArray){
 
 
 window.onload = function(){
+	
 	// toon alle producten
 	toonAlleProducten(producten);
 	var eProductFilter = document.querySelectorAll('.productFilter');							// selecteer alle radiobuttons
@@ -880,7 +891,6 @@ window.onload = function(){
 	}
 	var eNaarDeKassa = document.getElementById("naarDeKassa");
 	eNaarDeKassa.addEventListener("click", function(){naarDeKassa(producten)});
-
 
 } // einde window.onload
 
