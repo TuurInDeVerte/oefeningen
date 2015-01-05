@@ -109,8 +109,9 @@ function naarDeKassa(producten){
 function bestellingAfrekenen(){
 	if(typeof(Storage) !== "undefined"){
 		console.log('geklikt');
-		var phpWinkelmandje = JSON.stringify(winkelmandje);
-		$.cookie('Winkelmandje', phpWinkelmandje);
+		//var phpWinkelmandje = JSON.stringify(winkelmandje);
+		$.cookie('Winkelmandje', JSON.stringify(winkelmandje));
+		window.location.href = "toonbestelling.php";
 
 		//localStorage.setItem("winkelmandje", JSON.stringify(winkelmandje));
 
@@ -945,7 +946,7 @@ function toonAlleProducten(objArray){
 
 
 window.onload = function(){
-	
+
 	// toon alle producten
 	toonAlleProducten(producten);
 	var eProductFilter = document.querySelectorAll('.productFilter');							// selecteer alle radiobuttons

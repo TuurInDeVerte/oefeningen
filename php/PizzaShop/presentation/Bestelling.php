@@ -9,23 +9,18 @@
 		<script src="presentation/js/bestelling.js"></script>
 
 
-
-<script> 
-
-var winkelmandje = localStorage.getItem("winkelmandje");
-winkelmandje = JSON.parse(winkelmandje);
-winkelmandje = JSON.stringify(winkelmandje);
-</script>
-
-
-
 	</head>
 	<body>
 		<h1>Winkelmandje</h1>
 
 		<?php
-		$winkelmandje = json_decode($winkelmandje);
-		var_dump($winkelmandje);
+		if(!isset($_COOKIE["Winkelmandje"])){
+			print('geen cookie');
+		}
+		else {
+			$winkelmandje = $_COOKIE["Winkelmandje"];
+			var_dump(json_decode($winkelmandje));
+		}
 		?>
 
 	</body>

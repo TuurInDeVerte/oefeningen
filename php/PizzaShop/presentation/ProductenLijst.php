@@ -15,6 +15,7 @@
 		</script>
 
 		<script src="presentation/js/jquery-2.1.1.js"></script>
+		<script src="presentation/js/carhartl-jquery-cookie/jquery.cookie.js"></script>
 		<script src="presentation/js/jquery-ui-1.11.2/jquery-ui.min.js"></script>
 		<script src="presentation/lightbox/js/lightbox.min.js"></script>
 		<script src="presentation/js/jquery.lightbox_me.js"></script>
