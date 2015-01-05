@@ -376,6 +376,18 @@ button:focus {outline:0;}
 }*/
 
 
+#titelMandje {
+	display: inline;
+}
+
+#linkMandjeLeegmaken{
+	color: #c62d1f;
+	display: inline;
+	float: right;
+}
+
+
+
 .kolomLinks{
 /*	float: left;
 */	width: 55%;

@@ -41,7 +41,7 @@
 				<button id="naarDeKassa">Naar de kassa</button>
 			</div>
 			<div class="zetInBox" id="ticketMandje">
-				<h2>Details Winkelmandje</h2>
+				<!-- <h2>Details Winkelmandje</h2> -->
 			</div>
 		</div>
 		<section id="productenlijst" class="content">

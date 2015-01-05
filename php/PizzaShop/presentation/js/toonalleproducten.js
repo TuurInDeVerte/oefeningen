@@ -1,14 +1,5 @@
-/*
-TO DO's:
-- totaalprijs (details winkelmandje)
-- winkelmandje (volledig) leegmaken
-- drank totaal (bij drankbeker) is niet juist
-*/
-
-
-
-
 var winkelmandje = new Array;
+var totaalprijsMandje = 0;
 
 function verwijderUitMandje(index){
 	if(index != -1){
@@ -42,6 +33,15 @@ function valideerAantal(){
 	}
 }
 
+function winkelmandjeLeegmaken(){
+	var leegmaken = confirm("Wilt u het winkelmandje leegmaken?");
+	if (leegmaken == true){
+		while(winkelmandje.length > 0){
+			winkelmandje.pop();
+		}
+		naarDeKassa();
+	}
+}
 
 
 function naarDeKassa(producten){
@@ -50,10 +50,22 @@ function naarDeKassa(producten){
 	var eWinkelmandje = document.getElementById("winkelmandje");
 	var eTicketMandje = document.getElementById("ticketMandje");
 	eTicketMandje.innerHTML = "";
+
 	var eTitelMandje = document.createElement("h2");
 	var tTitelMandje = document.createTextNode("Details Winkelmandje");
+	eTitelMandje.setAttribute("id", "titelMandje");
 	eTitelMandje.appendChild(tTitelMandje);
 	eTicketMandje.appendChild(eTitelMandje);
+
+	var eLinkMandjeLeegmaken = document.createElement("a");
+	eLinkMandjeLeegmaken.setAttribute("id", "linkMandjeLeegmaken");
+	eLinkMandjeLeegmaken.setAttribute("href", "#");
+	eLinkMandjeLeegmaken.addEventListener("click", function(){winkelmandjeLeegmaken()});
+	var tLinkMandjeLeegmaken = document.createTextNode("(winkelmandje leegmaken)");
+	eLinkMandjeLeegmaken.appendChild(tLinkMandjeLeegmaken);
+	eTicketMandje.appendChild(eLinkMandjeLeegmaken);
+
+
 	var aantalProductenInMandje = winkelmandje.length;
 	if(winkelmandje.length > 0){
 		for(i=0; i<aantalProductenInMandje; i++){
@@ -73,6 +85,11 @@ function naarDeKassa(producten){
 		eKnopDoorgaan.className += " bestellenKnop";
 		var tKnopDoorgaan = document.createTextNode("Bestelling afrekenen");
 		eKnopDoorgaan.appendChild(tKnopDoorgaan);
+		eKnopDoorgaan.appendChild(document.createElement("br"));
+		var eTotaalprijsKnopDoorgaan = document.createElement("small");
+		var tTotaalprijsKnopDoorgaan = document.createTextNode("Totaalprijs: € " + totaalprijsMandje);
+		eTotaalprijsKnopDoorgaan.appendChild(tTotaalprijsKnopDoorgaan);
+		eKnopDoorgaan.appendChild(eTotaalprijsKnopDoorgaan);
 		eKnopDoorgaan.addEventListener("click", function(){alert('komt zo snel mogelijk')});
 		eTicketMandje.appendChild(eKnopDoorgaan);
 
@@ -245,6 +262,8 @@ function maakRij(producten, winkelmandje, i){
 	tekstRijPrijs = tekstRijPrijs.toFixed(2);
 	var tRijPrijs = document.createTextNode("€ " + tekstRijPrijs);
 	eRijPrijs.setAttribute("data-totaalPerStuk", totaalPerStuk);
+	totaalprijsMandje = parseFloat(totaalprijsMandje) + parseFloat(tekstRijPrijs);
+	totaalprijsMandje = totaalprijsMandje.toFixed(2);
 	eRijPrijs.appendChild(tRijPrijs);
 	eRij.appendChild(eRijPrijs);
 
@@ -384,7 +403,7 @@ function updateMandje(){
 			if(producten[winkelmandje[k]['productId']]['type'] == "drank"){
 				aantalBesteldeDrank = parseFloat(aantalBesteldeDrank);
 				winkelmandje[k]['aantal'] = parseFloat(winkelmandje[k]['aantal']);
-				aantalBesteldeDrank = aantalBesteldeDrank = winkelmandje[k]['aantal'];
+				aantalBesteldeDrank = aantalBesteldeDrank + winkelmandje[k]['aantal'];
 			}
 		}
 	var eAantalPizza = document.getElementById("aantalPizza");
@@ -441,6 +460,15 @@ function drankBestellen(){
 		besteldeDrank['lijstToppingIds'] = "geen";
 		winkelmandje.push(besteldeDrank);
 	}
+
+	var aantalBesteldeDrank = 0;
+	for(k=0; k<winkelmandje.length; k++){
+		if(producten[winkelmandje[k]['productId']]['type'] == "drank"){
+			aantalBesteldeDrank = aantalBesteldeDrank + 1;
+		}
+	}
+	drankMandje.setAttribute("data-aantalBesteldeDrank", aantalBesteldeDrank);
+
 	eWinkelmandje.style.display = "";
 	$(eDrankContainer).hide( "slide", { direction: "right" }, "slow" );
 	$(drankMandje).hide("slide", { direction: "right" }, "slow");
@@ -649,7 +677,7 @@ function toonAlleProducten(objArray){
 			}
 			eProductPrijs.appendChild(tProductPrijs);														// set tekst voor div prijs
 			eProductContainer.appendChild(eProductPrijs);													// zet div met prijs in div productcontainer
-			var preAfbeeldingLink = "http://localhost/WebLeren/oefeningen/php/";
+			var preAfbeeldingLink = "";
 			var eProductImageLink = document.createElement("a");
 			eProductImageLink.setAttribute("href", preAfbeeldingLink + objArray[i]['afbeelding']);
 				eProductImageLink.setAttribute("data-lightbox", objArray[i]['naam'] + "_" + dataLightboxHelper);
