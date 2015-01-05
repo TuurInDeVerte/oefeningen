@@ -90,7 +90,7 @@ function naarDeKassa(producten){
 		var tTotaalprijsKnopDoorgaan = document.createTextNode("Totaalprijs: € " + totaalprijsMandje);
 		eTotaalprijsKnopDoorgaan.appendChild(tTotaalprijsKnopDoorgaan);
 		eKnopDoorgaan.appendChild(eTotaalprijsKnopDoorgaan);
-		eKnopDoorgaan.addEventListener("click", function(){alert('komt zo snel mogelijk')});
+		eKnopDoorgaan.addEventListener("click", function(){bestellingAfrekenen()});
 		eTicketMandje.appendChild(eKnopDoorgaan);
 
 		eContentUitFocus.className += " toBlur";
@@ -105,6 +105,42 @@ function naarDeKassa(producten){
 		verderBestellen();
 	}
 }
+
+function bestellingAfrekenen(){
+	if(typeof(Storage) !== "undefined"){
+		console.log('geklikt');
+		var phpWinkelmandje = JSON.stringify(winkelmandje);
+		$.cookie('Winkelmandje', phpWinkelmandje);
+
+		//localStorage.setItem("winkelmandje", JSON.stringify(winkelmandje));
+
+		/*
+		var phpWinkelmandje = JSON.stringify(winkelmandje);
+		var url = "toonbestelling.php";
+		xmlhttp = new XMLHttpRequest();
+		xmlhttp.open("GET", url, true);
+		xmlhttp.send(phpWinkelmandje);
+		*/
+
+		/*$.ajax({
+			url: 'toonalleproducten.php',
+			type: 'GET',
+			data: {"phpWinkelmandje" : JSON.stringify(winkelmandje)},
+			succes: function(data) {
+				window.location.href = "toonbestelling.php" + data;
+				console.log('ajax ok');
+				console.log(data);
+			}
+		})
+*/
+
+
+	}
+	else {
+		alert("U gebruikt een antieke browser. Update uw browser om het internet te kunnen blijven gebruiken!");
+	}
+}
+
 
 function verderBestellen(){
 	var eContentUitFocus = document.getElementById("productenlijst");
