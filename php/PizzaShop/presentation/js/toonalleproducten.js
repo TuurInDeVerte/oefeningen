@@ -503,7 +503,7 @@ function drankBestellen(){
 			besteldeDrank['databaseProductId'] = productIdTeBestellen;
 			besteldeDrank['aantal'] = 1;
 			besteldeDrank['lijstToppingIds'] = "geen";
-			besteldePizza['lijstToppingDBids'] = "geen";
+			besteldeDrank['lijstToppingDBids'] = "geen";
 			winkelmandje.push(besteldeDrank)
 		}
 	}
@@ -512,7 +512,7 @@ function drankBestellen(){
 		besteldeDrank['databaseProductId'] = productIdTeBestellen;
 		besteldeDrank['aantal'] = 1;
 		besteldeDrank['lijstToppingIds'] = "geen";
-		besteldePizza['lijstToppingDBids'] = "geen";
+		besteldeDrank['lijstToppingDBids'] = "geen";
 		winkelmandje.push(besteldeDrank);
 	}
 

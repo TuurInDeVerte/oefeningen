@@ -47,7 +47,12 @@
 					<?php
 					$toppingLijst = $product->lijstToppingIds;
 					if($toppingLijst == "geen"){
-						print("Geen extra toppings");
+						if($type == "pizza"){
+							print("Geen extra toppings");
+						}
+						if($type == "drank"){
+							print("nvt");
+						}
 					}
 					else{
 						foreach ($toppingLijst as $topping) {
@@ -69,10 +74,24 @@
 					<td><?php print($product->aantal);?></td>
 
 					<!-- kolom met stukprijs -->
-					<td><?php print("€ " . $product->prijs);?></td>
+					<td>
+					<?php
+					$stukprijs = floatval($product->prijs);
+					$stukprijs = number_format($stukprijs, 2, ",", ".");
+					print("€ " . $stukprijs);
+					?>
+					</td>
 
 					<!-- kolom met stubtotaal -->
-					<td><?php print("€ " . $product->prijs * $product->aantal);?></td>
+
+					<td>
+					<?php
+					$subtotaal = $product->prijs * $product->aantal;
+					$subtotaal = floatval($subtotaal);
+					$subtotaal = number_format($subtotaal, 2, ",", ".");
+					print("€ " . $subtotaal);
+					?>
+					</td>
 
 				</tr>
 			<?php
