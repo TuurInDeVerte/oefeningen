@@ -53,6 +53,12 @@
 						foreach ($toppingLijst as $topping) {
 							$topping = ProductDAO::getProductById($topping);
 							print(($topping->getNaam()) . "<br>");
+							if($topping->getInPromotie() == "0"){
+								$product->prijs = $product->prijs + $topping->getEenheidsprijsStandaard();
+							}
+							if($topping->getInPromotie() == "1"){
+								$product->prijs = $product->prijs + $topping->getEenheidsprijsKorting();
+							}
 						}
 					}
 
