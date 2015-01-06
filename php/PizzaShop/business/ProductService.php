@@ -8,6 +8,11 @@ class ProductService{
 		return $producten;
 	}
 
+	public static function getProductById($id){
+		$product = ProductDAO::getProductById($id);
+		return $product;
+	}
+
 }
 
 
