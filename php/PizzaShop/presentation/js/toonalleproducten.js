@@ -320,6 +320,7 @@ function pizzaBestellen(){
 	aantalBesteldePizza = aantalBesteldePizza + 1;
 	var deKnop = event.target || event.srcElement;
 	var pizzaIdTeBestellen = deKnop.getAttribute("data-pizzaid");
+	var productIdTeBestellen = producten[pizzaIdTeBestellen]['productId'];
 	var toppingContainer = document.getElementById("containerPizzaID_" + pizzaIdTeBestellen);
 	var pizzaBestellenKnop = document.getElementById("pizzaBestellenKnop_" + pizzaIdTeBestellen);
 	var pizzaMandje = document.getElementById("pizzaMandje");
@@ -344,6 +345,7 @@ function pizzaBestellen(){
 			if(nogNietInMandje){
 				//console.log('nieuwe pizza zat nog niet in mandje (in mandje stoppen)');
 				besteldePizza['productId'] = pizzaIdTeBestellen;
+				besteldePizza['databaseProductId'] = productIdTeBestellen;
 				besteldePizza['aantal'] = 1;
 				besteldePizza['lijstToppingIds'] = "geen";
 				winkelmandje.push(besteldePizza)
@@ -352,6 +354,7 @@ function pizzaBestellen(){
 		else {
 			//console.log('nog niets in mandje');
 			besteldePizza['productId'] = pizzaIdTeBestellen;
+			besteldePizza['databaseProductId'] = productIdTeBestellen;
 			besteldePizza['aantal'] = 1;
 			besteldePizza['lijstToppingIds'] = "geen";
 			winkelmandje.push(besteldePizza);
@@ -395,6 +398,7 @@ function pizzaBestellen(){
 			if(nogNietInMandje){
 				//console.log('nieuwe pizza zat nog niet in mandje (in mandje stoppen)');
 				besteldePizza['productId'] = pizzaIdTeBestellen;
+				besteldePizza['databaseProductId'] = productIdTeBestellen;
 				besteldePizza['aantal'] = 1;
 				besteldePizza['lijstToppingIds'] = lijstBesteldeToppings;
 				winkelmandje.push(besteldePizza)
@@ -403,6 +407,7 @@ function pizzaBestellen(){
 		else {
 			//console.log('nog niets in mandje');
 			besteldePizza['productId'] = pizzaIdTeBestellen;
+			besteldePizza['databaseProductId'] = productIdTeBestellen;
 			besteldePizza['aantal'] = 1;
 			besteldePizza['lijstToppingIds'] = lijstBesteldeToppings;
 			winkelmandje.push(besteldePizza);
@@ -468,11 +473,12 @@ function updateMandje(){
 function drankBestellen(){
 	deKnop = event.target || event.srcElement;
 	var besteldeDrankId = deKnop.getAttribute("data-productID");
+	var productIdTeBestellen = producten[besteldeDrankId]['productId'];
 	var eWinkelmandje = document.getElementById("winkelmandje");
 	var eDrankMandje = document.getElementById("drankMandje");
 	var eDrankContainer = document.getElementById("arrayID_" + besteldeDrankId);
 	var eAantalDrank = document.getElementById("aantalDrank");
-	var besteldeDrank = [];
+	var besteldeDrank = {};
 
 	if(winkelmandje.length > 0){
 		var nogNietInMandje = true;
@@ -486,6 +492,7 @@ function drankBestellen(){
 		}
 		if(nogNietInMandje){
 			besteldeDrank['productId'] = besteldeDrankId;
+			besteldeDrank['databaseProductId'] = productIdTeBestellen;
 			besteldeDrank['aantal'] = 1;
 			besteldeDrank['lijstToppingIds'] = "geen";
 			winkelmandje.push(besteldeDrank)
@@ -493,6 +500,7 @@ function drankBestellen(){
 	}
 	else {
 		besteldeDrank['productId'] = besteldeDrankId;
+		besteldeDrank['databaseProductId'] = productIdTeBestellen;
 		besteldeDrank['aantal'] = 1;
 		besteldeDrank['lijstToppingIds'] = "geen";
 		winkelmandje.push(besteldeDrank);
@@ -514,7 +522,7 @@ function drankBestellen(){
 	setTimeout(updateMandje(), 500);
 	$(eDrankContainer).show( "slide", { direction: "left" }, "slow" );
 
-	//console.log(winkelmandje);
+	console.log(winkelmandje);
 }
 
 
