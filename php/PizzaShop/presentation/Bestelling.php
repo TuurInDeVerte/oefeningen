@@ -19,6 +19,8 @@
 				<th>Type</th>
 				<th>Extra toppings</th>
 				<th>Aantal</th>
+				<th>Stukprijs</th>
+				<th>Subtotaal</th>
 			</tr>
 			<?php
 			foreach ($teBestellenProducten as $product) {
@@ -41,10 +43,30 @@
 					</td>
 
 					<!-- kolom met lijst toppings -->
-					<td><?php print($product->lijstToppingIds);?></td>
+					<td>
+					<?php
+					$toppingLijst = $product->lijstToppingIds;
+					if($toppingLijst == "geen"){
+						print("Geen extra toppings");
+					}
+					else{
+						foreach ($toppingLijst as $topping) {
+							$topping = ProductDAO::getProductById($topping);
+							print(($topping->getNaam()) . "<br>");
+						}
+					}
+
+					?>
+					</td>
 
 					<!-- kolom met aantal -->
 					<td><?php print($product->aantal);?></td>
+
+					<!-- kolom met stukprijs -->
+					<td><?php print("€ " . $product->prijs);?></td>
+
+					<!-- kolom met stubtotaal -->
+					<td><?php print("€ " . $product->prijs * $product->aantal);?></td>
 
 				</tr>
 			<?php

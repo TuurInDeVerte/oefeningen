@@ -9,3 +9,7 @@ td, th {
 th {
 	background-color: #ddd;
 }
+img {
+	width: 75%;
+	max-width: 40px;
+}

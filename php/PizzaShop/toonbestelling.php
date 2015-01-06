@@ -12,7 +12,13 @@ else {
 	for($i=0; $i < $aantalProductenInMandje; $i++){
 		$product = ProductService::getProductById($winkelmandje[$i]->databaseProductId);
 		$product->aantal = $winkelmandje[$i]->aantal;
-		$product->lijstToppingIds = $winkelmandje[$i]->lijstToppingIds;
+		if($product->getInPromotie() == '1'){
+			$product->prijs = $product->getEenheidsprijsKorting();
+		}
+		if($product->getInPromotie() == '0'){
+			$product->prijs = $product->getEenheidsprijsStandaard();
+		}
+		$product->lijstToppingIds = $winkelmandje[$i]->lijstToppingDBids;
 		array_push($teBestellenProducten, $product);
 	}
 	//var_dump($teBestellenProducten);

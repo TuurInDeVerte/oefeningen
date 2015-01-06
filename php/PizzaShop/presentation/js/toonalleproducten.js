@@ -348,6 +348,7 @@ function pizzaBestellen(){
 				besteldePizza['databaseProductId'] = productIdTeBestellen;
 				besteldePizza['aantal'] = 1;
 				besteldePizza['lijstToppingIds'] = "geen";
+				besteldePizza['lijstToppingDBids'] = "geen";
 				winkelmandje.push(besteldePizza)
 			}
 		}
@@ -357,16 +358,19 @@ function pizzaBestellen(){
 			besteldePizza['databaseProductId'] = productIdTeBestellen;
 			besteldePizza['aantal'] = 1;
 			besteldePizza['lijstToppingIds'] = "geen";
+			besteldePizza['lijstToppingDBids'] = "geen";
 			winkelmandje.push(besteldePizza);
 		}
 	}
 	if(pizzaHeeftToppings == "welTopping"){
 		var lijstBesteldeToppings = [];
+		var lijstDBidsBesteldeToppings = [];
 		var toppingRijen = document.getElementById("toppingRijen_" + pizzaIdTeBestellen);
 		var besteldeToppings = toppingRijen.childNodes;
 		var aantalToppings = besteldeToppings.length;
 		for (i=0; i<aantalToppings; i++) {
 			var besteldeToppingId = besteldeToppings[i].getAttribute("data-toppingID");
+			lijstDBidsBesteldeToppings.push(producten[besteldeToppingId]['productId']);
 			lijstBesteldeToppings.push(besteldeToppingId);
 		}
 		lijstBesteldeToppings.sort();
@@ -401,6 +405,8 @@ function pizzaBestellen(){
 				besteldePizza['databaseProductId'] = productIdTeBestellen;
 				besteldePizza['aantal'] = 1;
 				besteldePizza['lijstToppingIds'] = lijstBesteldeToppings;
+				besteldePizza['lijstToppingDBids'] = lijstDBidsBesteldeToppings;
+				besteldePizza['TEST']= "TEST";
 				winkelmandje.push(besteldePizza)
 			}
 		}
@@ -410,6 +416,8 @@ function pizzaBestellen(){
 			besteldePizza['databaseProductId'] = productIdTeBestellen;
 			besteldePizza['aantal'] = 1;
 			besteldePizza['lijstToppingIds'] = lijstBesteldeToppings;
+			besteldePizza['lijstToppingDBids'] = lijstDBidsBesteldeToppings;
+			besteldePizza['TEST']= "TEST";
 			winkelmandje.push(besteldePizza);
 		}
 	}
@@ -495,6 +503,7 @@ function drankBestellen(){
 			besteldeDrank['databaseProductId'] = productIdTeBestellen;
 			besteldeDrank['aantal'] = 1;
 			besteldeDrank['lijstToppingIds'] = "geen";
+			besteldePizza['lijstToppingDBids'] = "geen";
 			winkelmandje.push(besteldeDrank)
 		}
 	}
@@ -503,6 +512,7 @@ function drankBestellen(){
 		besteldeDrank['databaseProductId'] = productIdTeBestellen;
 		besteldeDrank['aantal'] = 1;
 		besteldeDrank['lijstToppingIds'] = "geen";
+		besteldePizza['lijstToppingDBids'] = "geen";
 		winkelmandje.push(besteldeDrank);
 	}
 
