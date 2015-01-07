@@ -14,8 +14,8 @@
 	<body>
 	<section class="content">
 		<h1>Uw bestelling</h1>
-		<table>
-			<tr class="zetInBox">
+		<table border-spacing="0" cellspacing="0" cellpadding="0">
+			<tr class="rondeHoekenTop">
 				<th>Naam</th>
 				<th>Type</th>
 				<th>Extra toppings</th>
@@ -27,7 +27,7 @@
 			$totaalprijsBestelling = 0;
 			foreach ($teBestellenProducten as $product) {
 				?>
-				<tr class="zetInBox">
+				<tr class="">
 					<!-- kolom met naam -->
 					<td><?php print($product->getNaam());?></td>
 
@@ -101,7 +101,7 @@
 			<?php
 			}
 			?>
-				<tr>
+				<tr class="rondeHoekenBottom">
 					<td colspan="5">Totaalprijs:</td>
 					<td>
 						<?php
@@ -112,8 +112,8 @@
 				</tr>
 		</table>
 		<br>
-		<form class="zetLinks" action="toonalleproducten.php" method="post"><input type="submit" value="Terug naar de shop"></form>
-		<form class="zetRechts" action="nogaantevullen.php" method="post"><input type="submit" value="Bevestigen"></form>
+		<form class="zetLinks" action="toonalleproducten.php" method="post"><input class="rodeKnop" type="submit" value="Terug naar de shop"></form>
+		<form class="zetRechts" action="nogaantevullen.php" method="post"><input class="groeneKnop" id="bevestigenKnop" type="submit" value="Bevestigen"></form>
 		<br>
 	</section>
 	</body>

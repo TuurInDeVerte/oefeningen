@@ -532,8 +532,8 @@ function drankBestellen(){
 	$(drankMandje).hide("slide", { direction: "right" }, "slow");
 
 	$(drankMandje).show( "bounce", { times: 3 }, "slow");
-	setTimeout(updateMandje(), 500);
-	$(eDrankContainer).show( "slide", { direction: "left" }, "slow" );
+	setTimeout(function(){updateMandje()}, 500);
+	$(eDrankContainer).show( "slide", { direction: "left" }, "fast");
 
 	console.log(winkelmandje);
 }
@@ -979,10 +979,10 @@ window.onload = function(){
 		eWinkelmandje.style.display = "block";
 		for(i=0; i<winkelmandje.length; i++){
 			if(producten[winkelmandje[i]['productId']]['type'] == "pizza"){
-				aantalPizzaInMandje += winkelmandje[i]['aantal'];
+				aantalPizzaInMandje += parseFloat(winkelmandje[i]['aantal']);
 			}
 			if(producten[winkelmandje[i]['productId']]['type'] == "drank"){
-				aantalDrankInMandje += winkelmandje[i]['aantal'];
+				aantalDrankInMandje += parseFloat(winkelmandje[i]['aantal']);
 			}
 		}
 		if(aantalPizzaInMandje != 0){
