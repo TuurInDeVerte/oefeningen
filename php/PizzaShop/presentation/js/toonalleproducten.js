@@ -36,10 +36,12 @@ function valideerAantal(){
 function winkelmandjeLeegmaken(){
 	var leegmaken = confirm("Wilt u het winkelmandje leegmaken?");
 	if (leegmaken == true){
+		$.removeCookie('Winkelmandje', { path: '/'});
 		while(winkelmandje.length > 0){
 			winkelmandje.pop();
 		}
 		naarDeKassa();
+		//console.log($.cookie('Winkelmandje'));
 	}
 }
 
@@ -110,7 +112,7 @@ function bestellingAfrekenen(){
 	if(typeof(Storage) !== "undefined"){
 		console.log('geklikt');
 		//var phpWinkelmandje = JSON.stringify(winkelmandje);
-		$.cookie('Winkelmandje', JSON.stringify(winkelmandje));
+		$.cookie('Winkelmandje', JSON.stringify(winkelmandje), {path: '/'});
 		window.location.href = "toonbestelling.php";
 
 		//localStorage.setItem("winkelmandje", JSON.stringify(winkelmandje));
@@ -966,10 +968,35 @@ function toonAlleProducten(objArray){
 
 window.onload = function(){
 
+
+	if($.cookie('Winkelmandje') != undefined){
+		winkelmandje = JSON.parse($.cookie('Winkelmandje'));
+		var aantalPizzaInMandje = 0;
+		var aantalDrankInMandje = 0;
+		var eWinkelmandje = document.getElementById('winkelmandje');
+		var eAantalPizza = document.getElementById('aantalPizza');
+		var eAantalDrank = document.getElementById('aantalDrank');
+		eWinkelmandje.style.display = "block";
+		for(i=0; i<winkelmandje.length; i++){
+			if(producten[winkelmandje[i]['productId']]['type'] == "pizza"){
+				aantalPizzaInMandje += winkelmandje[i]['aantal'];
+			}
+			if(producten[winkelmandje[i]['productId']]['type'] == "drank"){
+				aantalDrankInMandje += winkelmandje[i]['aantal'];
+			}
+		}
+		if(aantalPizzaInMandje != 0){
+			eAantalPizza.innerHTML = aantalPizzaInMandje;
+		}
+		if(aantalDrankInMandje != 0){
+			eAantalDrank.innerHTML = aantalDrankInMandje;
+		}
+	}
+
 	// toon alle producten
 	toonAlleProducten(producten);
 	var eProductFilter = document.querySelectorAll('.productFilter');							// selecteer alle radiobuttons
-	for(i=0; i<eProductFilter.length; i++){													// doorloop alle radiobuttons
+	for(i=0; i<eProductFilter.length; i++){														// doorloop alle radiobuttons
 		var eFilter = eProductFilter[i];														// selecteer 1 radiobutton
 		eFilter.addEventListener("click", function(){toonAlleProducten(producten)});			// set eventlistener voor radiobutton
 	}

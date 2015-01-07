@@ -47,12 +47,6 @@
 		</div>
 		<section id="productenlijst" class="content">
 		</section>
-		<?php
-		print("winkelmandje (session): <br>");
-		if(isset($_SESSION["winkelmandje"])){
-			var_dump($_SESSION["winkelmandje"]);
-		}
-		?>
 	</body>
 </html>
 

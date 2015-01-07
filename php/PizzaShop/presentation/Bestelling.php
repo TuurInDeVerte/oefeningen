@@ -1,7 +1,3 @@
-<?php
-session_start();
-?>
-
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -116,13 +112,9 @@ session_start();
 				</tr>
 		</table>
 		<br>
-		<form class="zetLinks" action="toonalleproducten.php" method="get"><input type="submit" value="Terug naar de shop"></form>
+		<form class="zetLinks" action="toonalleproducten.php" method="post"><input type="submit" value="Terug naar de shop"></form>
 		<form class="zetRechts" action="nogaantevullen.php" method="post"><input type="submit" value="Bevestigen"></form>
 		<br>
-		<?php
-		var_dump($_SESSION["winkelmandje"]);
-		?>
-
 	</section>
 	</body>
 </html>

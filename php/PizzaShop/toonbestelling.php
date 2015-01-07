@@ -1,7 +1,4 @@
 <?php
-
-session_start();
-
 require_once("business/ProductService.php");
 
 if(!isset($_COOKIE["Winkelmandje"])){
@@ -26,5 +23,5 @@ else {
 	}
 	//var_dump($teBestellenProducten);
 }
-$_SESSION["winkelmandje"] = $winkelmandje;
+
 include("presentation/Bestelling.php");
