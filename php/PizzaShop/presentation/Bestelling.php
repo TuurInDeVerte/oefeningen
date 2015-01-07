@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -12,9 +16,10 @@
 
 	</head>
 	<body>
+	<section class="content">
 		<h1>Uw bestelling</h1>
 		<table>
-			<tr>
+			<tr class="zetInBox">
 				<th>Naam</th>
 				<th>Type</th>
 				<th>Extra toppings</th>
@@ -26,7 +31,7 @@
 			$totaalprijsBestelling = 0;
 			foreach ($teBestellenProducten as $product) {
 				?>
-				<tr>
+				<tr class="zetInBox">
 					<!-- kolom met naam -->
 					<td><?php print($product->getNaam());?></td>
 
@@ -110,7 +115,14 @@
 					</td>
 				</tr>
 		</table>
+		<br>
+		<form class="zetLinks" action="toonalleproducten.php" method="get"><input type="submit" value="Terug naar de shop"></form>
+		<form class="zetRechts" action="nogaantevullen.php" method="post"><input type="submit" value="Bevestigen"></form>
+		<br>
+		<?php
+		var_dump($_SESSION["winkelmandje"]);
+		?>
 
-
+	</section>
 	</body>
 </html>

@@ -301,6 +301,7 @@ function maakRij(producten, winkelmandje, i){
 	eRijPrijs.setAttribute("data-totaalPerStuk", totaalPerStuk);
 	totaalprijsMandje = parseFloat(totaalprijsMandje) + parseFloat(tekstRijPrijs);
 	totaalprijsMandje = totaalprijsMandje.toFixed(2);
+	//console.log('update totaalprijsmandje: ' + totaalprijsMandje);
 	eRijPrijs.appendChild(tRijPrijs);
 	eRij.appendChild(eRijPrijs);
 
