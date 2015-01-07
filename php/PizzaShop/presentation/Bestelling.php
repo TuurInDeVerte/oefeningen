@@ -23,6 +23,7 @@
 				<th>Subtotaal</th>
 			</tr>
 			<?php
+			$totaalprijsBestelling = 0;
 			foreach ($teBestellenProducten as $product) {
 				?>
 				<tr>
@@ -88,15 +89,26 @@
 					<?php
 					$subtotaal = $product->prijs * $product->aantal;
 					$subtotaal = floatval($subtotaal);
+					$totaalprijsBestelling = $totaalprijsBestelling + $subtotaal;
 					$subtotaal = number_format($subtotaal, 2, ",", ".");
 					print("€ " . $subtotaal);
 					?>
 					</td>
 
 				</tr>
+
 			<?php
 			}
 			?>
+				<tr>
+					<td colspan="5">Totaalprijs:</td>
+					<td>
+						<?php
+						$totaalprijsBestelling = number_format($totaalprijsBestelling, 2, ",", ".");
+						print("€ " . $totaalprijsBestelling);
+						?>
+					</td>
+				</tr>
 		</table>
 
 
