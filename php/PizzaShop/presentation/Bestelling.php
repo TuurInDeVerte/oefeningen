@@ -14,7 +14,7 @@
 	<body>
 	<section class="content">
 		<h1>Uw bestelling</h1>
-		<table border-spacing="0" cellspacing="0" cellpadding="0">
+		<table border-spacing="0" cellspacing="0">
 			<tr class="rondeHoekenTop">
 				<th>Naam</th>
 				<th>Type</th>
