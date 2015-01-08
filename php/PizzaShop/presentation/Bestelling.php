@@ -43,7 +43,7 @@
 					}
 					?>">
 					</td>
-
+in
 					<!-- kolom met lijst toppings -->
 					<td>
 					<?php

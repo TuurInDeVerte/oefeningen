@@ -1,8 +1,8 @@
 <?php
 require_once("data/GemeenteDAO.php");
 
-$boek = GemeenteDAO::getById(1);
+$lijst = GemeenteDAO::getAll();
 print("<pre>");
-print_r($boek);
+print_r($lijst);
 print("</pre>");
 ?>
