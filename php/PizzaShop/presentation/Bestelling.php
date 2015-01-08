@@ -43,7 +43,7 @@
 					}
 					?>">
 					</td>
-in
+
 					<!-- kolom met lijst toppings -->
 					<td>
 					<?php
@@ -113,7 +113,7 @@ in
 		</table>
 		<br>
 		<form class="zetLinks" action="toonalleproducten.php" method="post"><input class="rodeKnop" type="submit" value="Terug naar de shop"></form>
-		<form class="zetRechts" action="nogaantevullen.php" method="post"><input class="groeneKnop" id="bevestigenKnop" type="submit" value="Bevestigen"></form>
+		<form class="zetRechts" action="VoegGebruikerToe.php" method="post"><input class="groeneKnop" id="bevestigenKnop" type="submit" value="Bevestigen"></form>
 		<br>
 	</section>
 	</body>
