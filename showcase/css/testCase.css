@@ -1,0 +1,34 @@
+// testing part of css (delete before launch)
+
+div, aside, header, footer, section, main, img, p {outline: 1px dashed red;}
+
+.text {
+	outline: 1px dashed red;
+}
+
+div, aside, header, footer, section, img, p {
+	outline: 1px dashed red;
+}
+
+// end of testing
+
+.content {
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+.inlineClass {
+	display: inline;
+}
+
+#broken_Image {
+	max-width: 100%;
+}
+
+.imageHolder {
+	width: 30%;
+	display: inline;
+}
