@@ -1,0 +1,23 @@
+{
+	"installed_packages":
+	[
+		"Alignment",
+		"AlignTab",
+		"BracketHighlighter",
+		"Can I Use",
+		"Color Highlighter",
+		"ColorPicker",
+		"Emmet",
+		"FileDiffs",
+		"Git",
+		"jQuery",
+		"Package Control",
+		"SideBarEnhancements",
+		"SublimeLinter",
+		"SublimeLinter-html-tidy",
+		"SublimeLinter-jshint",
+		"SublimeLinter-phplint",
+		"Theme - Soda",
+		"Trimmer"
+	]
+}
