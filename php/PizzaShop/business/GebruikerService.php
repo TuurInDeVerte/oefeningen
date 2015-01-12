@@ -8,9 +8,8 @@ class GebruikerService{
 		return $lijst;
 	}
 
-	public static function voegNieuweGebruikerToe($gebruikerId, $gebruikersnaam, $wachtwoord, $emailadres, $type, $familienaam, $voornaam, $telefoonnummer, $adres, $postId, $status){
+	public static function voegNieuweGebruikerToe($gebruikersnaam, $wachtwoord, $emailadres, $type, $familienaam, $voornaam, $telefoonnummer, $adres, $postId, $status){
 		GebruikerDAO::create(
-			$gebruikerId,
 			$gebruikersnaam,
 			$wachtwoord,
 			$emailadres,

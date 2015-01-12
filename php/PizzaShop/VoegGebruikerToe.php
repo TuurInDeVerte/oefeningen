@@ -9,14 +9,14 @@ if($_GET){
 			$_POST["txtGebruikersnaam"],
 			$_POST["txtWachtwoord"],
 			$_POST["txtEmailadres"],
-			"2",
+			2,
 			$_POST["txtFamilienaam"],
 			$_POST["txtVoornaam"],
 			$_POST["numberTelefoonnummer"],
 			$_POST["txtAdres"],
 			$_POST["selGemeente"],
-			"1"
-			);
+			1);
+
 		header("location: toonbestelling.php");
 		exit(0);
 	}
