@@ -80,13 +80,22 @@
 						<input type="number" name="numberTelefoonnummer">
 					</td>
 				</tr>
-<!-- postid -->
+<!-- LEVERING -->
 				<tr>
+					<td>
+						<label for="levering">Vink aan voor thuislevering</label>
+					</td>
+					<td>
+						<input id="checkLevering" type="checkbox" name="checkLevering">
+					</td>
+				</tr>
+<!-- postid -->
+				<tr id="gemeenteVeld">
 					<td>
 						<label for="selGemeente">Gemeente:</label>
 					</td>
 					<td>
-						<select name="selGemeente">
+						<select name="selGemeente"><option value="notGood">Selecteer uw gemeente...</option>
 							<?php
 							foreach ($gemeenteLijst as $gemeente) {
 								?>
@@ -99,7 +108,7 @@
 					</td>
 				</tr>
 <!-- adres -->
-				<tr>
+				<tr id="adresVeld">
 					<td>
 						<label for="txtAdres">Straat en huisnummer:</label>
 					</td>
@@ -115,7 +124,5 @@
 					</td>
 				</tr>
 			</table>
-
-
 	</body>
 </html>

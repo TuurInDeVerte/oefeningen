@@ -2,6 +2,24 @@ var winkelmandje = localStorage.getItem("winkelmandje");
 winkelmandje = JSON.parse(winkelmandje);
 winkelmandje = JSON.stringify(winkelmandje);
 
+function toonVerbergLeveringDetails(){
+	console.log('in toonVerbergLeveringDetails');
+	var checkbox = event.target || event.srcElement;
+	// var gemeenteVeld = document.getElementById("gemeenteVeld");
+	// var adresVeld = document.getElementById("adresVeld");
+	if(checkbox.checked){
+		$("#gemeenteVeld").show();
+		$("#adresVeld").show();
+		// adresVeld.style.display = "block";
+		// gemeenteVeld.style.display = "block";
+	}
+	else{
+		$("#gemeenteVeld").hide();
+		$("#adresVeld").hide();
+		// adresVeld.style.display = "none";
+		// gemeenteVeld.style.display = "none";
+	}
+}
 
 // form validation
 (function($, W, D)
@@ -13,7 +31,7 @@ winkelmandje = JSON.stringify(winkelmandje);
 		{
 			// form validation rules
 			$("#nieuweGebruikerForm").validate({
-				debug: false,
+				debug: true,
 				rules: {
 					txtGebruikersnaam: "required",
 					txtWachtwoord: {
@@ -27,9 +45,15 @@ winkelmandje = JSON.stringify(winkelmandje);
 						required: true,
 						email: true
 					},
-					txtTelefoonnummer: {
-						required: true,
-
+					numberTelefoonnummer: {
+						required: true
+					},
+					// indien "levering" aangevinkt
+					selGemeente: {
+						required: "#checkLevering:checked"
+					},
+					txtAdres: {
+						required: "#checkLevering:checked"
 					}
 				},
 				messages: {
@@ -42,8 +66,11 @@ winkelmandje = JSON.stringify(winkelmandje);
 						equalTo: " De ingegeven waarde is niet identiek aan het gekozen wachtwoord"
 					},
 					txtEmailadres: {
-						required: " Gelieve een emailadres in te voeren",
+						required: " Gelieve uw emailadres in te voeren",
 						email: " Het ingegeven emailadres is niet correct"
+					},
+					numberTelefoonnummer: {
+						required: " Gelieve uw telefoonnummer in te voeren"
 					}
 				},
 				submitHandler: function(form) {
@@ -57,3 +84,10 @@ winkelmandje = JSON.stringify(winkelmandje);
 	});
 
 })(jQuery, window, document);
+
+window.onload = function(){
+	var eCheckLevering = document.getElementById("checkLevering");
+		$("#gemeenteVeld").hide();
+		$("#adresVeld").hide();
+	eCheckLevering.addEventListener("change", toonVerbergLeveringDetails);
+}
