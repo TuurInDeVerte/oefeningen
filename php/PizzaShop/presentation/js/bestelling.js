@@ -50,7 +50,9 @@ function toonVerbergLeveringDetails(){
 					},
 					// indien "levering" aangevinkt
 					selGemeente: {
-						required: "#checkLevering:checked"
+						required: "#checkLevering:checked",
+						required: function kijken op
+						http://stackoverflow.com/questions/14896854/jquery-select-box-validation
 					},
 					txtAdres: {
 						required: "#checkLevering:checked"

@@ -625,7 +625,7 @@
 					"file": "/C/xampp/htdocs/oefeningen/php/PizzaShop/presentation/js/bestelling.js",
 					"settings":
 					{
-						"buffer_size": 2404,
+						"buffer_size": 2519,
 						"line_ending": "Windows"
 					}
 				},
@@ -1334,15 +1334,15 @@
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 2404,
+								"buffer_size": 2519,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										2330,
-										2330
+										1442,
+										1442
 									]
 								],
 								"settings":
