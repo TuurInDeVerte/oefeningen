@@ -2,7 +2,8 @@
 require_once("business/ProductService.php");
 
 if(!isset($_COOKIE["Winkelmandje"])){
-	print('geen cookie');
+	//print('geen cookie');
+	echo "Nog geen bestelling (no cookie is set)";
 }
 else {
 	$teBestellenProducten = array();

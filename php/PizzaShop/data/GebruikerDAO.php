@@ -62,11 +62,15 @@ class GebruikerDAO {
 	}
 
 	public static function create($gebruikerId, $gebruikersnaam, $wachtwoord, $emailadres, $type, $familienaam, $voornaam, $telefoonnummer, $adres, $postId, $status){
-		$sql =
-		"insert into gebruikers (gebruikerId, gebruikersnaam, wachtwoord, emailadres, type, familienaam, voornaam, telefoonnummer, adres, postId, status)
-		values ('" . $gebruikersnaam . "', " . $wachtwoord . "', " . $emailadres . "', " . $type . "', " . $familienaam . "', " . $voornaam . "', " . $telefoonnummer . "', " . $adres . "', " . $postId . "', " . $status . ")";
+		$sql = "insert into gebruikers (gebruikerId, gebruikersnaam, wachtwoord, emailadres, type, familienaam, voornaam, telefoonnummer, adres, postId, status) values ('" . $gebruikersnaam . "', " . $wachtwoord . "', " . $emailadres . "', " . $type . "', " . $familienaam . "', " . $voornaam . "', " . $telefoonnummer . "', " . $adres . "', " . $postId . "', " . $status . ")";
 		$dbh = new PDO(DBConfig::$DB_CONNSTRING, DBConfig::$DB_USERNAME, DBConfig::$DB_PASSWORD);
 		$dbh->exec($sql);
+/*		if($dbh->exec($sql)){
+			echo "ok";
+		}
+		else{
+			echo "geen nieuw record";
+		}*/
 		$gebruikerId = $dbh->lastInsertId();
 		$dbh = null;
 		$gemeente = GemeenteDAO::getById($postId);

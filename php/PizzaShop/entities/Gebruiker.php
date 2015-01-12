@@ -17,23 +17,24 @@ class Gebruiker {
 	private $status;
 
 	private function __construct($gebruikerId, $gebruikersnaam, $wachtwoord, $emailadres, $type, $familienaam, $voornaam, $telefoonnummer, $adres, $postId, $status){
-		$this->setGebruikerId($gebruikerId);
-		$this->setGebruikersnaam($gebruikersnaam);
-		$this->setWachtwoord($wachtwoord);
-		$this->setEmailadres($emailadres);
-		$this->setType($type);
-		$this->setFamilienaam($familienaam);
-		$this->setVoornaam($voornaam);
-		$this->setTelefoonnummer($telefoonnummer);
-		$this->setAdres($adres);
-		$this->setPostId($postId);
-		$this->setStatus($status);
+		$this->gebruikerId = $gebruikerId;
+		$this->gebruikersnaam = $gebruikersnaam;
+		$this->wachtwoord = $wachtwoord;
+		$this->emailadres = $emailadres;
+		$this->type = $type;
+		$this->familienaam = $familienaam;
+		$this->voornaam = $voornaam;
+		$this->telefoonnummer = $telefoonnummer;
+		$this->adres = $adres;
+		$this->postId = $postId;
+		$this->status = $status;
 	}
 
 	public static function create($gebruikerId, $gebruikersnaam, $wachtwoord, $emailadres, $type, $familienaam, $voornaam, $telefoonnummer, $adres, $postId, $status){
 		if(!isset(self::$idMap[$gebruikerId])){
 			self::$idMap[$gebruikerId] = new Gebruiker($gebruikerId, $gebruikersnaam, $wachtwoord, $emailadres, $type, $familienaam, $voornaam, $telefoonnummer, $adres, $postId, $status);
 		}
+		var_dump($idMap);
 		return self::$idMap[$gebruikerId];
 	}
 

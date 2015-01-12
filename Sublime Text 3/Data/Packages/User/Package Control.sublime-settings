@@ -10,14 +10,19 @@
 		"Emmet",
 		"FileDiffs",
 		"Git",
+		"JavaScript Completions",
+		"JavaScript Refactor",
 		"jQuery",
 		"Package Control",
 		"SideBarEnhancements",
 		"SublimeLinter",
 		"SublimeLinter-html-tidy",
 		"SublimeLinter-jshint",
+		"SublimeLinter-json",
+		"SublimeLinter-jsxhint",
 		"SublimeLinter-phplint",
 		"Theme - Soda",
+		"TrailingSpaces",
 		"Trimmer"
 	]
 }

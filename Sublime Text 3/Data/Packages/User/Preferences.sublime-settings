@@ -1,9 +1,9 @@
 {
 	"color_scheme": "Packages/User/SublimeLinter/Monokai (SL).tmTheme",
-	"font_size": 13,
+	"font_size": 10,
 	"ignored_packages":
 	[
-		"EditorConfig",
-		"Vintage"
+		"Vintage",
+		"EditorConfig"
 	]
 }
