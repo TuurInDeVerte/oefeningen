@@ -21,4 +21,5 @@ class GebruikerService{
 			$postId,
 			$status);
 	}
+
 }

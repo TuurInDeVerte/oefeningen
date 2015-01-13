@@ -15,7 +15,8 @@
 	</head>
 	<body>
 		<h1>Registreer nieuwe gebruiker</h1>
-		<form id="nieuweGebruikerForm" method="post" action="VoegGebruikerToe.php?action=process" novalidate="novalidate">
+		<!-- <form id="nieuweGebruikerForm" method="post" action="VoegGebruikerToe.php?action=process novalidate="novalidate""> -->
+		<form id="nieuweGebruikerForm" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) . "?action=process" ;?>">
 			<table>
 <!-- gebruikersnaam -->
 				<tr>
@@ -24,6 +25,7 @@
 					</td>
 					<td>
 						<input type="text" name="txtGebruikersnaam">
+						<span class="error"><?php if($_GET){if($_GET["action"] == "process"){echo $gebruikernaamErrorMsg;}} ?></span>
 					</td>
 				</tr>
 <!-- wachtwoord -->
@@ -33,6 +35,7 @@
 					</td>
 					<td>
 						<input id="wachtwoord" type="password" name="txtWachtwoord">
+						<span class="error"><?php if($_GET){if($_GET["action"] == "process"){echo $wachtwoordErrorMsg;}} ?></span>
 					</td>
 				</tr>
 <!-- herhaal wachtwoord -->
@@ -42,6 +45,7 @@
 					</td>
 					<td>
 						<input id="herhaalWachtwoord" type="password" name="txtHerhaalWachtwoord">
+						<span class="error"><?php if($_GET){if($_GET["action"] == "process"){echo $herhaalWachtwoordErrorMsg;}} ?></span>
 					</td>
 				</tr>
 <!-- emailadres -->
@@ -51,6 +55,7 @@
 					</td>
 					<td>
 						<input type="email" name="txtEmailadres">
+						<span class="error"><?php if($_GET){if($_GET["action"] == "process"){echo $emailadresErrorMsg;}} ?></span>
 					</td>
 				</tr>
 <!-- familienaam -->
@@ -78,6 +83,7 @@
 					</td>
 					<td>
 						<input type="number" name="numberTelefoonnummer">
+						<span class="error"><?php if($_GET){if($_GET["action"] == "process"){echo $telefoonnummerErrorMsg;}} ?></span>
 					</td>
 				</tr>
 <!-- LEVERING -->
@@ -105,6 +111,7 @@
 							}
 							?>
 						</select>
+						<span class="error"><?php if($_GET){if($_GET["action"] == "process"){echo $gemeenteErrorMsg;}} ?></span>
 					</td>
 				</tr>
 <!-- adres -->
@@ -114,13 +121,14 @@
 					</td>
 					<td>
 						<input type="text" name="txtAdres">
+						<span class="error"><?php if($_GET){if($_GET["action"] == "process"){echo $adresErrorMsg;}} ?></span>
 					</td>
 				</tr>
 <!-- verzendknop -->
 				<tr>
 					<td></td>
 					<td>
-						<input type="submit" value="Gebruiker maken">
+						<input type="submit" value="Gebruiker maken" name="submit">
 					</td>
 				</tr>
 			</table>

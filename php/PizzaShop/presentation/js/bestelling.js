@@ -1,7 +1,3 @@
-						//kijken op
-						//http://stackoverflow.com/questions/14896854/jquery-select-box-validation
-
-
 var winkelmandje = localStorage.getItem("winkelmandje");
 winkelmandje = JSON.parse(winkelmandje);
 winkelmandje = JSON.stringify(winkelmandje);
@@ -9,25 +5,19 @@ winkelmandje = JSON.stringify(winkelmandje);
 function toonVerbergLeveringDetails(){
 	console.log('in toonVerbergLeveringDetails');
 	var checkbox = event.target || event.srcElement;
-	// var gemeenteVeld = document.getElementById("gemeenteVeld");
-	// var adresVeld = document.getElementById("adresVeld");
 	if(checkbox.checked){
 		$("#gemeenteVeld").show();
 		$("#adresVeld").show();
-		// adresVeld.style.display = "block";
-		// gemeenteVeld.style.display = "block";
 	}
 	else{
 		$("#gemeenteVeld").hide();
 		$("#adresVeld").hide();
-		// adresVeld.style.display = "none";
-		// gemeenteVeld.style.display = "none";
 	}
 }
 
 
 // form validation
-(function($, W, D)
+/*(function($, W, D)
 {
 	var JQUERY4 = {};
 	JQUERY4.UTIL =
@@ -96,7 +86,8 @@ function toonVerbergLeveringDetails(){
 		JQUERY4.UTIL.setupFormValidation();
 	});
 
-})(jQuery, window, document);
+})(jQuery, window, document);*/
+// end form validation
 
 window.onload = function(){
 	var eCheckLevering = document.getElementById("checkLevering");
@@ -105,7 +96,14 @@ window.onload = function(){
 	eCheckLevering.addEventListener("change", toonVerbergLeveringDetails);
 }
 
+// validation checkbox
 jQuery.validator.addMethod('checkLevering', function(value){
-	return(value != "notGood");
+	if($("#checkLevering").prop("checked")){
+		return(value != "notGood");
+	}
+	else{
+		return(value == "notGood");
+	}
+
 }, "Kies uw gemeente");
 
