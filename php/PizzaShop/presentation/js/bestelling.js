@@ -1,3 +1,7 @@
+						//kijken op
+						//http://stackoverflow.com/questions/14896854/jquery-select-box-validation
+
+
 var winkelmandje = localStorage.getItem("winkelmandje");
 winkelmandje = JSON.parse(winkelmandje);
 winkelmandje = JSON.stringify(winkelmandje);
@@ -20,6 +24,7 @@ function toonVerbergLeveringDetails(){
 		// gemeenteVeld.style.display = "none";
 	}
 }
+
 
 // form validation
 (function($, W, D)
@@ -51,9 +56,7 @@ function toonVerbergLeveringDetails(){
 					// indien "levering" aangevinkt
 					selGemeente: {
 						required: "#checkLevering:checked",
-						required: function 
-						//kijken op
-						//http://stackoverflow.com/questions/14896854/jquery-select-box-validation
+						checkLevering: true
 					},
 					txtAdres: {
 						required: "#checkLevering:checked"
@@ -74,6 +77,13 @@ function toonVerbergLeveringDetails(){
 					},
 					numberTelefoonnummer: {
 						required: " Gelieve uw telefoonnummer in te voeren"
+					},
+					// indien levering aangevinkt
+					selGemeente: {
+						checkLevering: " Kies uw gemeente"
+					},
+					txtAdres: {
+						required: " Om uw pizza's thuis te kunnen leveren hebben we uw adres nodig..."
 					}
 				},
 				submitHandler: function(form) {
@@ -94,3 +104,8 @@ window.onload = function(){
 		$("#adresVeld").hide();
 	eCheckLevering.addEventListener("change", toonVerbergLeveringDetails);
 }
+
+jQuery.validator.addMethod('checkLevering', function(value){
+	return(value != "notGood");
+}, "Kies uw gemeente");
+
