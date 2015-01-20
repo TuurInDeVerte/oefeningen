@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>JS advanced project: Personeel</title>
+<style type="text/css">
+#output {
+	background-color:#CFC;
+	padding:1em;
+}
+td, th {
+	border:1px solid gray;
+	padding: 0.2em 1em;
+}
+tbody {
+	border:2px dashed #0CF;
+}
+table {
+	border:2px solid #900;
+	table-layout:auto;
+ 	border-collapse:collapse;
+	margin: 1em;
+}
+</style>
+
+
+</head>
+<body>
+<h1>JS advanced project: Personeel</h1>
+<p>Objecten in Javascript</p>
+
+
+<div id="output"></div>
+<script>
+'use strict';
+//===================== DOM =====================
+var eOutput = document.querySelector("#output");
+
+/* ++++++++++++++++++++ OBJECTEN ++++++++++++++++ */
+// literal
+var paul = {
+	naam:"Paul",
+	geslacht: "m",
+	leeftijd: 50,
+	geboorteDatum: new Date(1960,9,12),
+	hobbies:["tennis","zwemmen","videogames"],
+	gehuwd: true,
+	kinderen: [
+				{
+					naam: "Anthony",
+					gewicht: 36,
+					gehuwd: false,
+					geboorteDatum: new Date(1999,1,31)
+				},
+				{
+					naam: "Leen",
+					gewicht: 65,
+					gehuwd: false,
+					geboorteDatum: new Date(1989,11,77)
+				}
+			],
+	spreek: function(){
+		alert("Hallo, " + this.naam + " hier, ik heb " + this.kinderen.length + " kinderen");
+	}
+};
+// met constructor
+var veerle = new Object();
+veerle.naam = "Veerle";
+veerle.geslacht = "v";
+veerle.gehuwd = true;
+veerle.geboorteDatum = new Date(1964,5,11);
+
+/* ++++++++++++++++++++ FUNCTIES ++++++++++++++++ */
+
+function enumerate(obj){
+	// overloop alle eigenschappen van een object
+	// return string
+	var strProps = "";
+	for(var key in obj){
+		if(typeof obj[key] === "object"){
+			strProps += enumerate(obj[key]);
+		}
+		else{
+			strProps += key + "(" + typeof obj[key] + "): " + obj[key] + "\n";
+		}
+	}
+	return strProps;
+} // end function enumerate
+
+function enumerateHTML(obj){
+	// overloop alle eigenschappen van een object
+	// return string voor innerHTML
+	var strProps = "<ul>";
+	for(var key in obj){
+		if(typeof obj[key] === "object"){
+			strProps += "<li>";
+			strProps += key;
+			strProps += enumerateHTML(obj[key]);
+			strProps += "</li>";
+		}
+		else{
+			strProps += "<li>" + key + "(" + typeof obj[key] + "): " + obj[key] + "</li>\n";
+		}
+	}
+	strProps += "</ul>\n";
+	return strProps;
+} // end function enumerateHTML
+
+
+
+/* ++++++++++++++++++++ UITVOEREN ++++++++++++++++ */
+paul.functie = "webontwikkelaar";
+
+// paul.spreek();
+//console.log(enumerate(paul));
+
+eOutput.innerHTML = enumerateHTML(paul);
+
+var jsonPaul = JSON.stringify(paul);
+console.log(jsonPaul);
+
+var jsonVeerle = JSON.stringify(veerle);
+console.log(jsonVeerle);
+
+</script>
+</body>
+</html>
