@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>JS advanced project: Personeel</title>
+<!-- <script src="../frameworks/jquery/jquery-2.1.3.js"></script> -->
+</head>
+<body>
+
+
+<script>
+var mijnApp = (function(){
+	var naam = "mijnApp";
+	return {
+		zegIets: function(){
+			console.log(naam);
+		},
+		init: function(nieuweNaam){
+			naam = nieuweNaam;
+		}
+	};
+}());
+
+mijnApp.zegIets();
+console.log(mijnApp.naam);
+
+mijnApp.naam = "zijnApp";
+mijnApp.zegIets();
+
+mijnApp.init("ChocoladeFabriek");
+mijnApp.zegIets();
+
+</script>
+
+</body>
+</html>
