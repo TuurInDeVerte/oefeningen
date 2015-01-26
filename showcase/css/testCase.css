@@ -23,7 +23,11 @@ html, body {
 	margin: 0;
 	padding: 0;
 }
-
+/* 
+.main_bg {
+	max-height: 95%;
+}
+ */
 .sidebar {
 	padding-right: 1%;
 }

@@ -23,15 +23,16 @@
 				<div class="navButton" id="navButton_portfolio">	<div class="navButton_content">Portfolio</div></div>
 				<div class="navButton" id="navButton_contact">		<div class="navButton_content">Contact	</div></div>
 			</aside>
-<!--
-				<header>
-					<div class="imageHolder" id="imgageHolder_logo">
-						<img id="image_logo" src="images/logo_tinternet.png">
-					</div>
-				</header>
--->
+
+
+
 			<main class="main" id="main_home">
 				<div class="main_bg" id="main_bg_home">
+					<header>
+						<div class="imageHolder" id="imgageHolder_logo">
+							<img id="image_logo" src="images/logo_tinternet.png">
+						</div>
+					</header>
 					<div class="mainText">
 						<h1 class="mainText_h1">Home</h1>
 						<p class="mainText_p1">HOME - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -41,6 +42,11 @@
 
 			<main class="main" id="main_about">
 				<div class="main_bg" id="main_bg_about">
+					<header>
+						<div class="imageHolder" id="imgageHolder_logo">
+							<img id="image_logo" src="images/logo_tinternet.png">
+						</div>
+					</header>
 					<div class="mainText">
 						<h1 class="mainText_h1">About</h1>
 						<p class="mainText_p1">ABOUT - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -50,6 +56,11 @@
 
 			<main class="main" id="main_portfolio">
 				<div class="main_bg" id="main_bg_portfolio">
+					<header>
+						<div class="imageHolder" id="imgageHolder_logo">
+							<img id="image_logo" src="images/logo_tinternet.png">
+						</div>
+					</header>
 					<div class="mainText">
 						<h1 class="mainText_h1">Portfolio</h1>
 						<p class="mainText_p1">PORTFOLIO - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -59,6 +70,11 @@
 
 			<main class="main" id="main_contact">
 				<div class="main_bg" id="main_bg_contact">
+					<header>
+						<div class="imageHolder" id="imgageHolder_logo">
+							<img id="image_logo" src="images/logo_tinternet.png">
+						</div>
+					</header>
 					<div class="mainText">
 						<h1 class="mainText_h1">Contact</h1>
 						<p class="mainText_p1">CONTACT - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
