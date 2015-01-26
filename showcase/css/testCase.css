@@ -1,4 +1,4 @@
-// testing part of css (delete before launch)
+/* testing part of css (delete before launch) */
 
 /* div, aside, header, footer, section, main, img, p {outline: 1px dashed red;}
 
@@ -24,11 +24,25 @@ html, body {
 	padding: 0;
 }
 
+.sidebar {
+	padding-right: 1%;
+}
+
 body {
 	background-color: #005BB7;
 }
+
 #navButton_home {
-	box-shadow: inset -10px 0px 15px darkgrey;
+	box-shadow: inset -5px 0px 25px black;
+}
+#navButton_about {
+	box-shadow: 1px 0px 5px white;
+}
+#navButton_portfolio {
+	box-shadow: 1px 0px 5px white;
+}
+#navButton_contact {
+	box-shadow: 1px 0px 5px white;
 }
 
 .content {
@@ -43,7 +57,13 @@ body {
 
 .main {
 	float: left;
-	width: 90%;
+	width: 80%;
+}
+
+#imgageHolder_logo {
+	box-sizing: border-box;
+	padding-left: 15%;
+	padding-top: 2%;
 }
 
 .mainText {

@@ -215,16 +215,16 @@
 				"selected_items":
 				[
 					[
+						"padding",
+						"padding-top"
+					],
+					[
 						"navButton",
 						"navButton_contact"
 					],
 					[
 						"setTime",
 						"setTimeout(${0:func}, delay)	Window"
-					],
-					[
-						"padding",
-						"padding-right"
 					],
 					[
 						"styl",
@@ -326,7 +326,7 @@
 					"file": "/C/xampp/htdocs/oefeningen/showcase/testCase.php",
 					"settings":
 					{
-						"buffer_size": 3781,
+						"buffer_size": 3942,
 						"line_ending": "Windows"
 					}
 				},
@@ -334,7 +334,7 @@
 					"file": "/C/xampp/htdocs/oefeningen/showcase/css/testCase.css",
 					"settings":
 					{
-						"buffer_size": 1632,
+						"buffer_size": 1918,
 						"line_ending": "Windows"
 					}
 				},
@@ -342,7 +342,7 @@
 					"file": "/C/xampp/htdocs/oefeningen/showcase/js/testCase.js",
 					"settings":
 					{
-						"buffer_size": 2671,
+						"buffer_size": 3035,
 						"line_ending": "Windows"
 					}
 				}
@@ -517,7 +517,7 @@
 			"groups":
 			[
 				{
-					"selected": 1,
+					"selected": 2,
 					"sheets":
 					[
 						{
@@ -526,15 +526,15 @@
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 3781,
+								"buffer_size": 3942,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										3153,
-										3153
+										1047,
+										1047
 									]
 								],
 								"settings":
@@ -615,15 +615,15 @@
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 1632,
+								"buffer_size": 1918,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										461,
-										461
+										781,
+										781
 									]
 								],
 								"settings":
@@ -691,10 +691,10 @@
 									"syntax": "Packages/CSS/CSS.tmLanguage"
 								},
 								"translation.x": 0.0,
-								"translation.y": 135.0,
+								"translation.y": 570.0,
 								"zoom_level": 1.0
 							},
-							"stack_index": 0,
+							"stack_index": 1,
 							"type": "text"
 						},
 						{
@@ -703,15 +703,15 @@
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 2671,
+								"buffer_size": 3035,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										1050,
-										1079
+										48,
+										48
 									]
 								],
 								"settings":
@@ -779,10 +779,10 @@
 									"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 								},
 								"translation.x": 0.0,
-								"translation.y": 64.0,
+								"translation.y": 0.0,
 								"zoom_level": 1.0
 							},
-							"stack_index": 1,
+							"stack_index": 0,
 							"type": "text"
 						}
 					]

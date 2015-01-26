@@ -23,7 +23,13 @@
 				<div class="navButton" id="navButton_portfolio">	<div class="navButton_content">Portfolio</div></div>
 				<div class="navButton" id="navButton_contact">		<div class="navButton_content">Contact	</div></div>
 			</aside>
-
+<!--
+				<header>
+					<div class="imageHolder" id="imgageHolder_logo">
+						<img id="image_logo" src="images/logo_tinternet.png">
+					</div>
+				</header>
+-->
 			<main class="main" id="main_home">
 				<div class="main_bg" id="main_bg_home">
 					<div class="mainText">
