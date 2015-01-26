@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS advanced project: Personeel</title>
+<style type="text/css">
+.output {
+	background-color:#CFC;
+	padding:1em;
+}
+</style>
+
+</head>
+
+<body>
+<h1>JS adv project: Personeel</h1>
+<h2>Meer over JS objecten</h2>
+<div class="output"></div>
+
+<script>
+'use strict';
+//===================== DOM =====================
+var eOutput = document.querySelector("#output");
+
+/* ++++++++++++++++++++ FUNCTIES ++++++++++++++++ */
+
+function enumerate(obj){
+	// overloop alle eigenschappen van een object
+	// return string
+	var strProps = "";
+	for(var key in obj){
+		if(typeof obj[key] === "object"){
+			strProps += enumerate(obj[key]);
+		}
+		else{
+			strProps += key + "(" + typeof obj[key] + "): " + obj[key] + "\n";
+		}
+	}
+	return strProps;
+} // end function enumerate
+
+function enumerateHTML(obj){
+	// overloop alle eigenschappen van een object
+	// return string voor innerHTML
+	var strProps = "<ul>";
+	for(var key in obj){
+		if(typeof obj[key] === "object"){
+			strProps += "<li>";
+			strProps += key;
+			strProps += enumerateHTML(obj[key]);
+			strProps += "</li>";
+		}
+		else{
+			strProps += "<li>" + key + "(" + typeof obj[key] + "): " + obj[key] + "</li>\n";
+		}
+	}
+	strProps += "</ul>\n";
+	return strProps;
+} // end function enumerateHTML
+
+
+
+/***** Class constructor voert init method uit *****/
+var Class = function(){
+	var klas = function(){
+		this.init.apply(this,arguments);
+	}
+	klas.prototype.init = function(){};
+	// shortcut nr prototype
+	klas.fn = klas.prototype;
+	// shortcut nr class zelf
+	klas.fn.parent = klas;
+	return klas;
+}
+
+/***** Planeet Class *****/
+var Planeet = new Class();
+Planeet.fn.init = function(name, massa, diameter){
+	var me = this;
+	this.name = name;
+	this.massa = massa;
+	this.diameter = diameter; // km
+	this.volume = function(){
+		return ((Math.PI/6) * Math.pow(me.diameter,3));
+	} ()
+}
+
+var pluto = new Planeet('Pluto', 0.0021, 2390);
+console.log(enumerate(pluto));
+console.log(pluto.volume);
+
+</script>
+</body>
+</html>
