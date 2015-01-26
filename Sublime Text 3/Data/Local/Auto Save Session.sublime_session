@@ -330,7 +330,7 @@
 					"file": "/C/xampp/htdocs/oefeningen/showcase/testCase.php",
 					"settings":
 					{
-						"buffer_size": 4415,
+						"buffer_size": 4811,
 						"line_ending": "Windows"
 					}
 				},
@@ -338,7 +338,7 @@
 					"file": "/C/xampp/htdocs/oefeningen/showcase/css/testCase.css",
 					"settings":
 					{
-						"buffer_size": 1956,
+						"buffer_size": 1951,
 						"line_ending": "Windows"
 					}
 				},
@@ -530,7 +530,7 @@
 			"groups":
 			[
 				{
-					"selected": 0,
+					"selected": 1,
 					"sheets":
 					[
 						{
@@ -539,15 +539,15 @@
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 4415,
+								"buffer_size": 4811,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										3789,
-										3789
+										1199,
+										1199
 									]
 								],
 								"settings":
@@ -616,10 +616,10 @@
 									"translate_tabs_to_spaces": false
 								},
 								"translation.x": 0.0,
-								"translation.y": 315.0,
+								"translation.y": 0.0,
 								"zoom_level": 1.0
 							},
-							"stack_index": 0,
+							"stack_index": 1,
 							"type": "text"
 						},
 						{
@@ -628,15 +628,15 @@
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 1956,
+								"buffer_size": 1951,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										369,
-										369
+										362,
+										362
 									]
 								],
 								"settings":
@@ -704,10 +704,10 @@
 									"syntax": "Packages/CSS/CSS.tmLanguage"
 								},
 								"translation.x": -0.0,
-								"translation.y": 135.0,
+								"translation.y": 0.0,
 								"zoom_level": 1.0
 							},
-							"stack_index": 1,
+							"stack_index": 0,
 							"type": "text"
 						},
 						{

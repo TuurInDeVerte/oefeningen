@@ -1,6 +1,6 @@
 /* testing part of css (delete before launch) */
 
-/* div, aside, header, footer, section, main, img, p {outline: 1px dashed red;}
+div, aside, header, footer, section, main, img, p {outline: 1px dashed red;}
 
 .text {
 	outline: 1px dashed red;
@@ -13,7 +13,7 @@ div, aside, header, footer, section, img, p {
 p {
 	margin: 0;
 	padding: 0;
-} */
+}
 // end of testing
 
 
@@ -23,7 +23,9 @@ html, body {
 	margin: 0;
 	padding: 0;
 }
-/* 
+
+
+/*
 .main_bg {
 	max-height: 95%;
 }
