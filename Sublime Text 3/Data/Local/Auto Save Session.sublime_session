@@ -215,6 +215,26 @@
 				"selected_items":
 				[
 					[
+						"setTime",
+						"setTimeout(${0:func}, delay)	Window"
+					],
+					[
+						"padding",
+						"padding-right"
+					],
+					[
+						"styl",
+						"style	Style CSS"
+					],
+					[
+						"getElemen",
+						"getElementById(${0:id})	Element"
+					],
+					[
+						"padd",
+						"padding-left"
+					],
+					[
 						"max",
 						"max-width"
 					],
@@ -302,7 +322,7 @@
 					"file": "/C/xampp/htdocs/oefeningen/showcase/testCase.php",
 					"settings":
 					{
-						"buffer_size": 1426,
+						"buffer_size": 3781,
 						"line_ending": "Windows"
 					}
 				},
@@ -310,7 +330,7 @@
 					"file": "/C/xampp/htdocs/oefeningen/showcase/css/testCase.css",
 					"settings":
 					{
-						"buffer_size": 1235,
+						"buffer_size": 1562,
 						"line_ending": "Windows"
 					}
 				},
@@ -318,7 +338,7 @@
 					"file": "/C/xampp/htdocs/oefeningen/showcase/js/testCase.js",
 					"settings":
 					{
-						"buffer_size": 235,
+						"buffer_size": 1992,
 						"line_ending": "Windows"
 					}
 				}
@@ -500,15 +520,15 @@
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 1426,
+								"buffer_size": 3781,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										394,
-										394
+										3153,
+										3153
 									]
 								],
 								"settings":
@@ -580,7 +600,7 @@
 								"translation.y": 0.0,
 								"zoom_level": 1.0
 							},
-							"stack_index": 1,
+							"stack_index": 2,
 							"type": "text"
 						},
 						{
@@ -589,15 +609,15 @@
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 1235,
+								"buffer_size": 1562,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										793,
-										793
+										657,
+										657
 									]
 								],
 								"settings":
@@ -677,15 +697,15 @@
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 235,
+								"buffer_size": 1992,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										49,
-										49
+										1096,
+										1096
 									]
 								],
 								"settings":
@@ -753,10 +773,10 @@
 									"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 								},
 								"translation.x": 0.0,
-								"translation.y": 0.0,
+								"translation.y": 64.0,
 								"zoom_level": 1.0
 							},
-							"stack_index": 2,
+							"stack_index": 1,
 							"type": "text"
 						}
 					]

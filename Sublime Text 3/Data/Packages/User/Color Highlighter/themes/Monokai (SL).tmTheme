@@ -176,6 +176,23 @@
 </dict>
 
 
+<dict>
+<key>name</key>
+<string>mon_color</string>
+<key>scope</key>
+<string>mcol_005BB7FF</string>
+<key>settings</key>
+<dict>
+<key>background</key>
+<string>#005BB7FF</string>
+<key>caret</key>
+<string>#47A3FFFF</string>
+<key>foreground</key>
+<string>#47A3FFFF</string>
+</dict>
+</dict>
+
+
 		<dict>
 			<key>settings</key>
 			<dict>
