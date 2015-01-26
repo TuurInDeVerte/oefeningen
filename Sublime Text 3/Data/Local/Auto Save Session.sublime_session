@@ -215,6 +215,10 @@
 				"selected_items":
 				[
 					[
+						"navButton",
+						"navButton_contact"
+					],
+					[
 						"setTime",
 						"setTimeout(${0:func}, delay)	Window"
 					],
@@ -330,7 +334,7 @@
 					"file": "/C/xampp/htdocs/oefeningen/showcase/css/testCase.css",
 					"settings":
 					{
-						"buffer_size": 1562,
+						"buffer_size": 1632,
 						"line_ending": "Windows"
 					}
 				},
@@ -338,7 +342,7 @@
 					"file": "/C/xampp/htdocs/oefeningen/showcase/js/testCase.js",
 					"settings":
 					{
-						"buffer_size": 1992,
+						"buffer_size": 2671,
 						"line_ending": "Windows"
 					}
 				}
@@ -432,6 +436,7 @@
 				"case_sensitive": false,
 				"find_history":
 				[
+					"black",
 					")",
 					"(",
 					"set",
@@ -467,11 +472,12 @@
 					"{\"productId\":\""
 				],
 				"highlight": true,
-				"in_selection": false,
+				"in_selection": true,
 				"preserve_case": false,
 				"regex": false,
 				"replace_history":
 				[
+					"darkgrey",
 					"",
 					" = ",
 					"",
@@ -609,15 +615,15 @@
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 1562,
+								"buffer_size": 1632,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										657,
-										657
+										461,
+										461
 									]
 								],
 								"settings":
@@ -685,7 +691,7 @@
 									"syntax": "Packages/CSS/CSS.tmLanguage"
 								},
 								"translation.x": 0.0,
-								"translation.y": 180.0,
+								"translation.y": 135.0,
 								"zoom_level": 1.0
 							},
 							"stack_index": 0,
@@ -697,15 +703,15 @@
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 1992,
+								"buffer_size": 2671,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										1096,
-										1096
+										1050,
+										1079
 									]
 								],
 								"settings":
@@ -821,7 +827,7 @@
 			"project": "",
 			"replace":
 			{
-				"height": 42.0
+				"height": 62.0
 			},
 			"save_all_on_build": true,
 			"select_file":

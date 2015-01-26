@@ -29,20 +29,28 @@ function toonVerberg(eTeTonenElementText){
 
 	// toon
 		// toon achtergrond
-	$(".main_bg").show("slide", {direction: "down"}, 250);
+	$(".main_bg").show("slide", {direction: "right"}, 250);
 		// in het juiste kleur
 	setTimeout(function(){
 		if(eTeTonenElementText == "home"){
 			$("body").css('background-color', '#005BB7');
+			$("#navButton_home").css('box-shadow', 'inset -10px 0px 15px darkgrey');
+			$("#navButton_about, #navButton_portfolio, #navButton_contact").css('box-shadow', 'none');
 		}
 		if(eTeTonenElementText == "about"){
 			$("body").css('background-color', '#004080');
+			$("#navButton_about").css('box-shadow', 'inset -10px 0px 15px darkgrey');
+			$("#navButton_home, #navButton_portfolio, #navButton_contact").css('box-shadow', 'none');
 		}
 		if(eTeTonenElementText == "portfolio"){
 			$("body").css('background-color', '#8080C0');
+			$("#navButton_portfolio").css('box-shadow', 'inset -10px 0px 15px darkgrey');
+			$("#navButton_home, #navButton_about, #navButton_contact").css('box-shadow', 'none');
 		}
 		if(eTeTonenElementText == "contact"){
 			$("body").css('background-color', '#0080FF');
+			$("#navButton_contact").css('box-shadow', 'inset -10px 0px 15px darkgrey');
+			$("#navButton_home, #navButton_about, #navButton_portfolio").css('box-shadow', 'none');
 		}
 		}, 250);
 	setTimeout(function(){
@@ -51,8 +59,8 @@ function toonVerberg(eTeTonenElementText){
 
 		// toon tekst p1
 	setTimeout(function(){
-		$(".mainText_p1").show("slide", {direction: "left"}, 250);
-	}, 250);
+		$(".mainText_p1").show("slide", {direction: "up"}, 250);
+	}, 500);
 }
 
 

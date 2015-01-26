@@ -1,6 +1,6 @@
 // testing part of css (delete before launch)
 
-div, aside, header, footer, section, main, img, p {outline: 1px dashed red;}
+/* div, aside, header, footer, section, main, img, p {outline: 1px dashed red;}
 
 .text {
 	outline: 1px dashed red;
@@ -13,7 +13,7 @@ div, aside, header, footer, section, img, p {
 p {
 	margin: 0;
 	padding: 0;
-}
+} */
 // end of testing
 
 
@@ -26,6 +26,9 @@ html, body {
 
 body {
 	background-color: #005BB7;
+}
+#navButton_home {
+	box-shadow: inset -10px 0px 15px darkgrey;
 }
 
 .content {
