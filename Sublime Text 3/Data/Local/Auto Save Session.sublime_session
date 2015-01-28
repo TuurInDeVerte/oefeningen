@@ -484,7 +484,7 @@
 					"file": "/C/xampp/htdocs/oefeningen/showcase/index.html",
 					"settings":
 					{
-						"buffer_size": 7151,
+						"buffer_size": 7216,
 						"line_ending": "Windows"
 					}
 				},
@@ -722,15 +722,15 @@
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 7151,
+								"buffer_size": 7216,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										157,
-										157
+										1582,
+										1582
 									]
 								],
 								"settings":
@@ -799,7 +799,7 @@
 									"translate_tabs_to_spaces": false
 								},
 								"translation.x": 0.0,
-								"translation.y": 0.0,
+								"translation.y": 45.0,
 								"zoom_level": 1.0
 							},
 							"stack_index": 0,
