@@ -5,8 +5,6 @@ $(function(){
   $(window).resize(function(){
     $('.sidebar, .main, .main_bg').css({ height: $(window).innerHeight() });
   });
-  	console.log($(window).innerHeight());
-	console.log($(window).innerWidth());
 });
 
 // toon en verberg main containers (navigation)
@@ -118,6 +116,7 @@ window.onload = function(){
 	$("#navButton_portfolio").click(function(){toonVerberg("portfolio")});
 	$("#navButton_contact").click(function(){toonVerberg("contact")});
 
+	// highlight form element on select
 	$("input").focus(function(){
 		$(this).parent().addClass("focusFormField");
 	});
