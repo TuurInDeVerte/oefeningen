@@ -1,5 +1,5 @@
 /* testing part of css (delete before launch) */
-
+/* 
 
 div, aside, header, footer, section, main, img, p {outline: 1px dashed red;}
 
@@ -16,7 +16,7 @@ p {
 	padding: 0;
 }
 
-
+ */
 // end of testing
 
 
@@ -148,6 +148,7 @@ html, body {
 	clear: left;
 	width: 25%;
 	text-align: right;
+	padding-right: 1%;
 }
 .formInput {
 	border-radius: 2px;
@@ -155,11 +156,34 @@ html, body {
 	float: left;
 	width: 50%;
 }
-.formInput_button {
+#formInput_button {
+	background: #348536;
+	background: -moz-linear-gradient(top, #348536 0%, #266227 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, #348536), color-stop(100%, #266227));
+	background: -webkit-linear-gradient(top, #348536 0%, #266227 100%);
+	background: -o-linear-gradient(top, #348536 0%, #266227 100%);
+	background: -ms-linear-gradient(top, #348536 0%, #266227 100%);
+	background: linear-gradient(to bottom, #348536 0%, #266227 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#348536', endColorstr='#236b23', GradientType=0 );
+
+	border-radius: 5px;
+	border: 1px solid #266227;
 	display: inline-block;
 	float: left;
-	width: 25%;
-	margin-left: 25%;
+	width: 100%;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	margin-left: 105%;
+}
+#formInput_button:hover {
+	background: #215622;
+	background: -moz-linear-gradient(top, #215622 0%, #266227 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, #215622), color-stop(100%, #266227));
+	background: -webkit-linear-gradient(top, #215622 0%, #266227 100%);
+	background: -o-linear-gradient(top, #215622 0%, #266227 100%);
+	background: -ms-linear-gradient(top, #215622 0%, #266227 100%);
+	background: linear-gradient(to bottom, #215622 0%, #266227 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#215622', endColorstr='#236b23', GradientType=0 );
 }
 .focusFormField {
 	background: #771611;
