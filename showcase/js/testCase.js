@@ -7,6 +7,26 @@ $(function(){
   });
 });
 
+// form check function
+function validateForm(){
+	$("#contactForm").validate({
+		rules: {
+			voornaam: "required"
+		},
+		messages: {
+			voornaam: {
+				required: "Alle velden zijn verplicht"
+			}
+		}
+	});
+
+	var TEST = $(".error");
+	for( var i = 0; i < TEST.length; i++ ){
+		TEST[i].addClass('errorMsgField');
+		console.log(TEST[i]);
+	}
+}
+
 // toon en verberg main containers (navigation)
 function toonVerberg(eTeTonenElementText){
 	// variabelen

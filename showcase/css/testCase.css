@@ -66,11 +66,6 @@ html, body {
 	z-index: -5;
 }
 
-#contactForm {
-	position: relative;
-	z-index: 15;
-}
-
 .wit {
 	color: lightgray;
 }
@@ -132,12 +127,14 @@ html, body {
 /* ***** FORM ***** */
 #contactForm {
 	width: 100%;
+	position: relative;
+	z-index: 15;
 }
 .formField {
 	border-radius: 10px;
 	padding-top: 0.5%;
 	padding-bottom: 0.5%;
-	width: 60%;
+	width: 100%;
 	min-width: 240px;
 	display: block;
 	overflow: auto;
@@ -154,7 +151,7 @@ html, body {
 	border-radius: 2px;
 	display: inline-block;
 	float: left;
-	width: 50%;
+	width: 30%;
 }
 #formInput_button {
 	background: #348536;
@@ -190,6 +187,9 @@ html, body {
 }
 #formIntro {
 	padding-bottom: 1%;
+}
+.errorMsgField {
+	color: yellow;
 }
 
 

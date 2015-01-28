@@ -9,6 +9,7 @@
 		<link rel="stylesheet" type="text/css" href="css/testCase.css">
 		<script src="js/jquery-2.1.3.js"></script>
 		<script src="js/jquery-ui-1.11.2/jquery-ui.js"></script>
+		<script src="vendor/jquery-validation/dist/jquery.validate.js"></script>
 		<script src="js/testCase.js"></script>
 <!--
 		<link rel="stylesheet" type="text/css" href="css/normalize.css">
@@ -34,8 +35,8 @@
 					<header>
 						<div class="imageHolderLogo" id="imgageHolder_logo">
 							<img id="image_logo" src="images/logo_tinternet.png"><br>
-							<p>Join us for tea on the internet</p>
-						</div>
+							<!--<p>Join us for tea on the internet</p>-->
+				</div>
 					</header>
 					<div class="mainText">
 						<h1 class="mainText_h1">Home</h1>
@@ -82,11 +83,30 @@
 						<div class="mainText_p1">
 							<p id="formIntro">Contact opnemen kan eenvoudig via onderstaand formulier, of via mail (<a class="wit" href="mailto:info@t-internet.be">info@t-internet.be</a>)</p>
 							<form id="contactForm" action="MAILTO:tuurwalleyn@gmail.com" method="post" enctype="text/plain">
-								<div class="formField"><label class="formLabel" for="voornaam">Voornaam:</label>		<input class="formInput" type="text" name="voornaam"></div>
-								<div class="formField"><label class="formLabel" for="familienaam">Familienaam:</label>	<input class="formInput" type="text" name="familienaam"></div>
-								<div class="formField"><label class="formLabel" for="email">E-mailadres:</label>		<input class="formInput" type="text" name="email"></div>
-								<div class="formField"><label class="formLabel" for="bericht">Bericht:</label>			<textarea class="formInput" name="bericht" rows="3" cols="25"></textarea></div>
-								<div class="formField"><label class="formLabel"</label><button id="formInput_button" type="submit" value="Versturen">Versturen</div>
+								<div class="formField">
+									<label class="formLabel" for="voornaam">Voornaam:</label>
+									<input class="formInput" id="voornaam" type="text" name="voornaam">
+									<label class="errorMsgField"></label>
+								</div>
+								<div class="formField">
+									<label class="formLabel" for="familienaam">Familienaam:</label>
+									<input class="formInput" id="familienaam" type="text" name="familienaam">
+									<label class="errorMsgField"></label>
+								</div>
+								<div class="formField">
+									<label class="formLabel" for="email">E-mailadres:</label>
+									<input class="formInput" id="email" type="text" name="email">
+									<label class="errorMsgField"></label>
+								</div>
+								<div class="formField">
+									<label class="formLabel" for="bericht">Bericht:</label>
+									<textarea class="formInput" id="bericht" name="bericht" rows="3" cols="25"></textarea>
+									<label class="errorMsgField"></label>
+								</div>
+								<div class="formField">
+									<label class="formLabel"</label>
+									<button id="formInput_button" onclick="validateForm()" type="submit" value="Versturen">Versturen</button>
+								</div>
 							</form>
 						</div>
 					</div>

@@ -341,6 +341,18 @@
 				"selected_items":
 				[
 					[
+						"paddin",
+						"padding-left"
+					],
+					[
+						"inline",
+						"inline-block"
+					],
+					[
+						"mar",
+						"margin-right"
+					],
+					[
 						"backgrou",
 						"background-color"
 					],
@@ -355,10 +367,6 @@
 					[
 						"padd",
 						"padding-bottom"
-					],
-					[
-						"paddin",
-						"padding-top"
 					],
 					[
 						"in",
@@ -484,7 +492,7 @@
 					"file": "/C/xampp/htdocs/oefeningen/showcase/index.html",
 					"settings":
 					{
-						"buffer_size": 7216,
+						"buffer_size": 7710,
 						"line_ending": "Windows"
 					}
 				},
@@ -492,15 +500,7 @@
 					"file": "/C/xampp/htdocs/oefeningen/showcase/css/testCase.css",
 					"settings":
 					{
-						"buffer_size": 4547,
-						"line_ending": "Windows"
-					}
-				},
-				{
-					"file": "/C/xampp/htdocs/oefeningen/php/PizzaShop/presentation/css/toonalleproducten.css",
-					"settings":
-					{
-						"buffer_size": 9572,
+						"buffer_size": 4565,
 						"line_ending": "Windows"
 					}
 				},
@@ -508,7 +508,15 @@
 					"file": "/C/xampp/htdocs/oefeningen/showcase/js/testCase.js",
 					"settings":
 					{
-						"buffer_size": 4551,
+						"buffer_size": 4889,
+						"line_ending": "Windows"
+					}
+				},
+				{
+					"file": "/C/xampp/htdocs/oefeningen/php/PizzaShop/presentation/js/bestelling.js",
+					"settings":
+					{
+						"buffer_size": 2614,
 						"line_ending": "Windows"
 					}
 				},
@@ -572,7 +580,7 @@
 				"/C/xampp/htdocs/oefeningen/php",
 				"/C/xampp/htdocs/oefeningen/php/PizzaShop",
 				"/C/xampp/htdocs/oefeningen/php/PizzaShop/presentation",
-				"/C/xampp/htdocs/oefeningen/php/PizzaShop/presentation/css",
+				"/C/xampp/htdocs/oefeningen/php/PizzaShop/presentation/js",
 				"/C/xampp/htdocs/oefeningen/showcase",
 				"/C/xampp/htdocs/oefeningen/showcase/js"
 			],
@@ -622,6 +630,7 @@
 				"case_sensitive": false,
 				"find_history":
 				[
+					"<div class=\"errorMsgField\"></div>",
 					"#348536",
 					"rgba(35,107,35,1)",
 					"rgba(52,133,54,1)",
@@ -665,11 +674,12 @@
 					"{\"productId\":\""
 				],
 				"highlight": true,
-				"in_selection": true,
+				"in_selection": false,
 				"preserve_case": false,
 				"regex": false,
 				"replace_history":
 				[
+					"<label class=\"errorMsgField\"></label>",
 					"#215622",
 					"#266227",
 					"#348536",
@@ -713,7 +723,7 @@
 			"groups":
 			[
 				{
-					"selected": 0,
+					"selected": 2,
 					"sheets":
 					[
 						{
@@ -722,15 +732,15 @@
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 7216,
+								"buffer_size": 7710,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										1582,
-										1582
+										6711,
+										6711
 									]
 								],
 								"settings":
@@ -799,10 +809,10 @@
 									"translate_tabs_to_spaces": false
 								},
 								"translation.x": 0.0,
-								"translation.y": 45.0,
+								"translation.y": 855.0,
 								"zoom_level": 1.0
 							},
-							"stack_index": 0,
+							"stack_index": 1,
 							"type": "text"
 						},
 						{
@@ -811,15 +821,15 @@
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 4547,
+								"buffer_size": 4565,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										3569,
-										3569
+										3623,
+										3623
 									]
 								],
 								"settings":
@@ -888,116 +898,27 @@
 									"translate_tabs_to_spaces": false
 								},
 								"translation.x": 0.0,
-								"translation.y": 2059.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 1,
-							"type": "text"
-						},
-						{
-							"buffer": 2,
-							"file": "/C/xampp/htdocs/oefeningen/php/PizzaShop/presentation/css/toonalleproducten.css",
-							"semi_transient": true,
-							"settings":
-							{
-								"buffer_size": 9572,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										6006,
-										5981
-									]
-								],
-								"settings":
-								{
-									"BracketHighlighterBusy": false,
-									"bh_regions":
-									[
-										"bh_c_define",
-										"bh_c_define_center",
-										"bh_c_define_open",
-										"bh_c_define_close",
-										"bh_c_define_content",
-										"bh_single_quote",
-										"bh_single_quote_center",
-										"bh_single_quote_open",
-										"bh_single_quote_close",
-										"bh_single_quote_content",
-										"bh_default",
-										"bh_default_center",
-										"bh_default_open",
-										"bh_default_close",
-										"bh_default_content",
-										"bh_square",
-										"bh_square_center",
-										"bh_square_open",
-										"bh_square_close",
-										"bh_square_content",
-										"bh_round",
-										"bh_round_center",
-										"bh_round_open",
-										"bh_round_close",
-										"bh_round_content",
-										"bh_regex",
-										"bh_regex_center",
-										"bh_regex_open",
-										"bh_regex_close",
-										"bh_regex_content",
-										"bh_curly",
-										"bh_curly_center",
-										"bh_curly_open",
-										"bh_curly_close",
-										"bh_curly_content",
-										"bh_double_quote",
-										"bh_double_quote_center",
-										"bh_double_quote_open",
-										"bh_double_quote_close",
-										"bh_double_quote_content",
-										"bh_angle",
-										"bh_angle_center",
-										"bh_angle_open",
-										"bh_angle_close",
-										"bh_angle_content",
-										"bh_unmatched",
-										"bh_unmatched_center",
-										"bh_unmatched_open",
-										"bh_unmatched_close",
-										"bh_unmatched_content",
-										"bh_tag",
-										"bh_tag_center",
-										"bh_tag_open",
-										"bh_tag_close",
-										"bh_tag_content"
-									],
-									"color_scheme": "Packages/User/Color Highlighter/themes/Monokai (SL).tmTheme",
-									"syntax": "Packages/CSS/CSS.tmLanguage",
-									"translate_tabs_to_spaces": false
-								},
-								"translation.x": -0.0,
-								"translation.y": 3062.0,
+								"translation.y": 2064.0,
 								"zoom_level": 1.0
 							},
 							"stack_index": 2,
 							"type": "text"
 						},
 						{
-							"buffer": 3,
+							"buffer": 2,
 							"file": "/C/xampp/htdocs/oefeningen/showcase/js/testCase.js",
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 4551,
+								"buffer_size": 4889,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										251,
-										251
+										486,
+										486
 									]
 								],
 								"settings":
@@ -1064,8 +985,97 @@
 									"color_scheme": "Packages/User/Color Highlighter/themes/Monokai (SL).tmTheme",
 									"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 								},
-								"translation.x": 0.0,
-								"translation.y": 0.0,
+								"translation.x": -0.0,
+								"translation.y": 90.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 0,
+							"type": "text"
+						},
+						{
+							"buffer": 3,
+							"file": "/C/xampp/htdocs/oefeningen/php/PizzaShop/presentation/js/bestelling.js",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 2614,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										0,
+										0
+									]
+								],
+								"settings":
+								{
+									"BracketHighlighterBusy": false,
+									"bh_regions":
+									[
+										"bh_c_define",
+										"bh_c_define_center",
+										"bh_c_define_open",
+										"bh_c_define_close",
+										"bh_c_define_content",
+										"bh_single_quote",
+										"bh_single_quote_center",
+										"bh_single_quote_open",
+										"bh_single_quote_close",
+										"bh_single_quote_content",
+										"bh_default",
+										"bh_default_center",
+										"bh_default_open",
+										"bh_default_close",
+										"bh_default_content",
+										"bh_square",
+										"bh_square_center",
+										"bh_square_open",
+										"bh_square_close",
+										"bh_square_content",
+										"bh_round",
+										"bh_round_center",
+										"bh_round_open",
+										"bh_round_close",
+										"bh_round_content",
+										"bh_regex",
+										"bh_regex_center",
+										"bh_regex_open",
+										"bh_regex_close",
+										"bh_regex_content",
+										"bh_curly",
+										"bh_curly_center",
+										"bh_curly_open",
+										"bh_curly_close",
+										"bh_curly_content",
+										"bh_double_quote",
+										"bh_double_quote_center",
+										"bh_double_quote_open",
+										"bh_double_quote_close",
+										"bh_double_quote_content",
+										"bh_angle",
+										"bh_angle_center",
+										"bh_angle_open",
+										"bh_angle_close",
+										"bh_angle_content",
+										"bh_unmatched",
+										"bh_unmatched_center",
+										"bh_unmatched_open",
+										"bh_unmatched_close",
+										"bh_unmatched_content",
+										"bh_tag",
+										"bh_tag_center",
+										"bh_tag_open",
+										"bh_tag_close",
+										"bh_tag_content"
+									],
+									"color_scheme": "Packages/User/Color Highlighter/themes/Monokai (SL).tmTheme",
+									"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+									"translate_tabs_to_spaces": false
+								},
+								"translation.x": -0.0,
+								"translation.y": 225.0,
 								"zoom_level": 1.0
 							},
 							"stack_index": 3,
