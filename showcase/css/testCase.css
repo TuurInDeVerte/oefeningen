@@ -188,7 +188,7 @@ html, body {
 #formIntro {
 	padding-bottom: 1%;
 }
-.errorMsgField {
+.error {
 	color: yellow;
 }
 

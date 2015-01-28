@@ -9,6 +9,14 @@ $(function(){
 
 // form check function
 function validateForm(){
+	jqueryValidation();
+/*	setTimeout(function(){
+		var TEST = $(".error").addClass('errorMsgField');
+	}, 100);*/
+
+}
+
+function jqueryValidation(){
 	$("#contactForm").validate({
 		rules: {
 			voornaam: "required"
@@ -19,12 +27,6 @@ function validateForm(){
 			}
 		}
 	});
-
-	var TEST = $(".error");
-	for( var i = 0; i < TEST.length; i++ ){
-		TEST[i].addClass('errorMsgField');
-		console.log(TEST[i]);
-	}
 }
 
 // toon en verberg main containers (navigation)

@@ -500,7 +500,7 @@
 					"file": "/C/xampp/htdocs/oefeningen/showcase/css/testCase.css",
 					"settings":
 					{
-						"buffer_size": 4565,
+						"buffer_size": 4557,
 						"line_ending": "Windows"
 					}
 				},
@@ -508,7 +508,7 @@
 					"file": "/C/xampp/htdocs/oefeningen/showcase/js/testCase.js",
 					"settings":
 					{
-						"buffer_size": 4889,
+						"buffer_size": 4902,
 						"line_ending": "Windows"
 					}
 				},
@@ -812,7 +812,7 @@
 								"translation.y": 855.0,
 								"zoom_level": 1.0
 							},
-							"stack_index": 1,
+							"stack_index": 2,
 							"type": "text"
 						},
 						{
@@ -821,15 +821,15 @@
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 4565,
+								"buffer_size": 4557,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										3623,
-										3623
+										1902,
+										1902
 									]
 								],
 								"settings":
@@ -898,10 +898,10 @@
 									"translate_tabs_to_spaces": false
 								},
 								"translation.x": 0.0,
-								"translation.y": 2064.0,
+								"translation.y": 2055.0,
 								"zoom_level": 1.0
 							},
-							"stack_index": 2,
+							"stack_index": 1,
 							"type": "text"
 						},
 						{
@@ -910,15 +910,15 @@
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 4889,
+								"buffer_size": 4902,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										486,
-										486
+										413,
+										328
 									]
 								],
 								"settings":
