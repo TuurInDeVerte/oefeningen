@@ -1,6 +1,6 @@
 /* testing part of css (delete before launch) */
 
-/*div, aside, header, footer, section, main, img, p {outline: 1px dashed red;}
+/* div, aside, header, footer, section, main, img, p {outline: 1px dashed red;}
 
 .text {
 	outline: 1px dashed red;
@@ -13,7 +13,9 @@ div, aside, header, footer, section, img, p {
 p {
 	margin: 0;
 	padding: 0;
-}*/
+}
+ */
+
 // end of testing
 
 
@@ -56,15 +58,16 @@ html, body {
 
 
 .main {
+	position: relative;
 	float: left;
 	width: 80%;
 	min-width: 540px;
-	z-index: 1;
+	z-index: -5;
 }
 
 #contactForm {
 	position: relative;
-	z-index: 1;
+	z-index: 15;
 }
 
 .wit {
@@ -75,11 +78,17 @@ html, body {
 	padding-left: 2%;
 	padding-right: 2%;
 }
+.mainText_p1 {
+	position: relative;
+	z-index: 1
+}
+
+
 .main_bg {
 	width: 100%;
 	height: 100%;
 	position: relative;
-	z-index: -5;
+	z-index: -10;
 }
 
 #main_bg_home {
@@ -121,6 +130,27 @@ html, body {
 	background: #348536;
 }
 
+/* ***** FORM ***** */
+#contactForm {
+	width: 100%;
+}
+.formField {
+	padding-top: 2%;
+	width: 100%;
+	min-width: 240px;
+}
+.formLabel {
+	display: inline-block;
+	float: left;
+	clear: left;
+	width: 25%;
+	text-align: right;
+}
+.formInput {
+	display: inline-block;
+	float: left;
+	width: 20%;
+}
 
 /* ***** IMAGES ***** */
 	/* logo */
