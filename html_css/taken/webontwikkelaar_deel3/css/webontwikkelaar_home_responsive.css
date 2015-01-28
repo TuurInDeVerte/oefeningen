@@ -45,7 +45,7 @@
 /* Tekst opmaak */
   .tekst-gr {
     font-size: 1.2em;
-  }  
+  }
 
 /* hoofdmenu (mobile) - header */
 #hoofdmenu {
@@ -56,7 +56,7 @@
 #hoofdmenu ul {
   list-style: none;
 }
-#hoofdmenu li a {        
+#hoofdmenu li a {
   border-bottom: 1px solid #16295a;
   border-left: 1px solid #16295a;
   border-right: 1px solid #16295a;

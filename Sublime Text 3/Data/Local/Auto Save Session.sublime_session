@@ -7,208 +7,12 @@
 		"/C/Users/Tuur/Desktop/WebLeren/oefeningen/php/PizzaShop"
 	],
 	"last_version": 3065,
-	"last_window_id": 8,
+	"last_window_id": 9,
 	"log_indexing": false,
 	"settings":
 	{
 		"new_window_height": 480.0,
 		"new_window_settings":
-		{
-			"auto_complete":
-			{
-				"selected_items":
-				[
-				]
-			},
-			"build_system": "",
-			"command_palette":
-			{
-				"height": 311.0,
-				"selected_items":
-				[
-					[
-						"Package Control: ",
-						"Package Control: List Packages"
-					],
-					[
-						"Package Control: ins",
-						"Package Control: Install Package"
-					],
-					[
-						"Package Cont",
-						"Package Control: Install Package"
-					]
-				],
-				"width": 528.0
-			},
-			"console":
-			{
-				"height": 160.0,
-				"history":
-				[
-					"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
-				]
-			},
-			"distraction_free":
-			{
-				"menu_visible": true,
-				"show_minimap": false,
-				"show_open_files": false,
-				"show_tabs": false,
-				"side_bar_visible": false,
-				"status_bar_visible": false
-			},
-			"file_history":
-			[
-				"/D/xampp/htdocs/WebLeren/oefeningen/php/PizzaShop/presentation/ProductenLijst.php",
-				"/D/xampp/htdocs/WebLeren/oefeningen/php/PizzaShop/presentation/css/toonalleproducten.css",
-				"/D/xampp/htdocs/WebLeren/oefeningen/showcase/js/testCase.js",
-				"/D/xampp/htdocs/WebLeren/oefeningen/showcase/testCase.php",
-				"/D/xampp/htdocs/WebLeren/oefeningen/showcase/css/testCase.css",
-				"/D/xampp/htdocs/WebLeren/oefeningen/php/PizzaShop/presentation/js/toonalleproducten.js",
-				"/C/Users/Tuur/Desktop/producten.sql"
-			],
-			"find":
-			{
-				"height": 23.0
-			},
-			"find_in_files":
-			{
-				"height": 0.0,
-				"where_history":
-				[
-				]
-			},
-			"find_state":
-			{
-				"case_sensitive": false,
-				"find_history":
-				[
-					")",
-					"(",
-					"set",
-					"drank",
-					"max",
-					"event.target",
-					"drankBestellenKnop_",
-					"naarDeKassa",
-					"'beschrijving':",
-					"\\/oefeningen\\/php\\/PizzaShop\\/presentation\\/images\\/",
-					"'},",
-					"','inPromotie':'",
-					"','eenheidsprijsKorting':'",
-					"'eenheidsprijsStandaard':'",
-					"'afbeelding':",
-					",'naam':",
-					"','type':",
-					"{'productId':'",
-					"\"",
-					"\\/oefeningen\\/php\\/PizzaShop\\/presentation\\/images\\/",
-					"'},",
-					"', 'inPromotie':'",
-					"', 'eenheidsprijsKorting':'",
-					"'eenheidsprijsStandaard':'",
-					" ', ''",
-					"'beschrijving':",
-					"','",
-					"''",
-					"'afbeelding':",
-					"'naam':",
-					"'type':",
-					"\"",
-					"{\"productId\":\""
-				],
-				"highlight": true,
-				"in_selection": false,
-				"preserve_case": false,
-				"regex": false,
-				"replace_history":
-				[
-					"",
-					" = ",
-					"",
-					" ",
-					"\\\\/PizzaShop\\\\/presentation\\\\/images\\\\/",
-					"",
-					", ",
-					" ",
-					", ",
-					"(",
-					"'",
-					"\\\\/PizzaShop\\\\/presentation\\\\/images\\\\/",
-					")",
-					", ",
-					"",
-					" '",
-					"', '",
-					" '",
-					"'",
-					"",
-					"'",
-					""
-				],
-				"reverse": false,
-				"show_context": true,
-				"use_buffer2": true,
-				"whole_word": false,
-				"wrap": true
-			},
-			"incremental_find":
-			{
-				"height": 23.0
-			},
-			"input":
-			{
-				"height": 36.0
-			},
-			"menu_visible": true,
-			"output.find_results":
-			{
-				"height": 0.0
-			},
-			"replace":
-			{
-				"height": 42.0
-			},
-			"save_all_on_build": true,
-			"select_file":
-			{
-				"height": 0.0,
-				"selected_items":
-				[
-				],
-				"width": 0.0
-			},
-			"select_project":
-			{
-				"height": 0.0,
-				"selected_items":
-				[
-				],
-				"width": 0.0
-			},
-			"select_symbol":
-			{
-				"height": 0.0,
-				"selected_items":
-				[
-				],
-				"width": 0.0
-			},
-			"show_minimap": true,
-			"show_open_files": false,
-			"show_tabs": true,
-			"side_bar_visible": true,
-			"side_bar_width": 386.0,
-			"status_bar_visible": true,
-			"template_settings":
-			{
-			}
-		},
-		"new_window_width": 640.0
-	},
-	"windows":
-	[
 		{
 			"auto_complete":
 			{
@@ -324,41 +128,6 @@
 					]
 				]
 			},
-			"buffers":
-			[
-				{
-					"file": "/C/xampp/htdocs/oefeningen/showcase/testCase.php",
-					"settings":
-					{
-						"buffer_size": 4811,
-						"line_ending": "Windows"
-					}
-				},
-				{
-					"file": "/C/xampp/htdocs/oefeningen/showcase/css/testCase.css",
-					"settings":
-					{
-						"buffer_size": 1951,
-						"line_ending": "Windows"
-					}
-				},
-				{
-					"file": "/C/xampp/htdocs/oefeningen/javascript/js_advanced/js/vormen.js",
-					"settings":
-					{
-						"buffer_size": 3626,
-						"line_ending": "Windows"
-					}
-				},
-				{
-					"file": "/C/xampp/htdocs/oefeningen/showcase/js/testCase.js",
-					"settings":
-					{
-						"buffer_size": 3035,
-						"line_ending": "Windows"
-					}
-				}
-			],
 			"build_system": "",
 			"command_palette":
 			{
@@ -397,16 +166,6 @@
 				"side_bar_visible": false,
 				"status_bar_visible": false
 			},
-			"expanded_folders":
-			[
-				"/C/xampp/htdocs/oefeningen",
-				"/C/xampp/htdocs/oefeningen/javascript",
-				"/C/xampp/htdocs/oefeningen/javascript/js_advanced",
-				"/C/xampp/htdocs/oefeningen/javascript/js_advanced/js",
-				"/C/xampp/htdocs/oefeningen/showcase",
-				"/C/xampp/htdocs/oefeningen/showcase/css",
-				"/C/xampp/htdocs/oefeningen/showcase/js"
-			],
 			"file_history":
 			[
 				"/C/xampp/htdocs/oefeningen/showcase/css/normalize.css",
@@ -520,6 +279,407 @@
 				"whole_word": false,
 				"wrap": true
 			},
+			"incremental_find":
+			{
+				"height": 23.0
+			},
+			"input":
+			{
+				"height": 36.0
+			},
+			"menu_visible": true,
+			"output.find_results":
+			{
+				"height": 0.0
+			},
+			"replace":
+			{
+				"height": 62.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 0.0,
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_symbol":
+			{
+				"height": 0.0,
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"show_minimap": true,
+			"show_open_files": false,
+			"show_tabs": true,
+			"side_bar_visible": true,
+			"side_bar_width": 386.0,
+			"status_bar_visible": true,
+			"template_settings":
+			{
+			}
+		},
+		"new_window_width": 640.0
+	},
+	"windows":
+	[
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+					[
+						"font",
+						"font-size"
+					],
+					[
+						"fon",
+						"font-weight"
+					],
+					[
+						"fl",
+						"float"
+					],
+					[
+						"max",
+						"max-width"
+					],
+					[
+						"wid",
+						"width"
+					],
+					[
+						"inner",
+						"innerWidth	Window"
+					],
+					[
+						"z",
+						"z-index"
+					],
+					[
+						"margin",
+						"margin-bottom"
+					],
+					[
+						"padding",
+						"padding-top"
+					],
+					[
+						"navButton",
+						"navButton_contact"
+					],
+					[
+						"setTime",
+						"setTimeout(${0:func}, delay)	Window"
+					],
+					[
+						"styl",
+						"style	Style CSS"
+					],
+					[
+						"getElemen",
+						"getElementById(${0:id})	Element"
+					],
+					[
+						"padd",
+						"padding-left"
+					],
+					[
+						"paddin",
+						"padding-bottom"
+					],
+					[
+						"pa",
+						"padding-top"
+					],
+					[
+						"back",
+						"background-color"
+					],
+					[
+						"ba",
+						"background-color"
+					],
+					[
+						"wi",
+						"width"
+					],
+					[
+						"pos",
+						"position"
+					],
+					[
+						"unde",
+						"undefined"
+					],
+					[
+						"weergegevens",
+						"weergegevens2009"
+					],
+					[
+						"middelpunt",
+						"middelpunt_y"
+					],
+					[
+						"middelpun",
+						"middelpunt_y"
+					],
+					[
+						"middelpu",
+						"middelpunt_y"
+					],
+					[
+						"P",
+						"Math.PI	Math"
+					],
+					[
+						"getElem",
+						"getElementById(${0:id})	Element"
+					],
+					[
+						"Mat",
+						"Math.PI	Math"
+					],
+					[
+						"define",
+						"defineProperty(${0:Object}, prop, descriptor)	Object"
+					],
+					[
+						"cons",
+						"console.log('$0');"
+					],
+					[
+						"proto",
+						"prototype"
+					],
+					[
+						"qu",
+						"querySelector(${0:selectors})	Element"
+					]
+				]
+			},
+			"buffers":
+			[
+				{
+					"file": "/C/xampp/htdocs/oefeningen/showcase/index.html",
+					"settings":
+					{
+						"buffer_size": 6696,
+						"line_ending": "Windows"
+					}
+				},
+				{
+					"file": "/C/xampp/htdocs/oefeningen/showcase/css/testCase.css",
+					"settings":
+					{
+						"buffer_size": 2653,
+						"line_ending": "Windows"
+					}
+				},
+				{
+					"file": "/C/xampp/htdocs/oefeningen/showcase/js/testCase.js",
+					"settings":
+					{
+						"buffer_size": 4593,
+						"line_ending": "Windows"
+					}
+				},
+				{
+					"contents": "\n// set main class & sidebar class to fit window\n$(function(){\n  $('.sidebar, .main, .main_bg').css({ height: $(window).innerHeight() });\n  $(window).resize(function(){\n    $('.sidebar, .main, .main_bg').css({ height: $(window).innerHeight() });\n  });\n  	console.log($(window).innerHeight());\n	console.log($(window).innerWidth());\n});\n\n// toon en verberg main containers (navigation)\nfunction toonVerberg(eTeTonenElementText){\n	// variabelen\n	var buttonShadowActive = \"1px 0px 5px black\";\n	var buttonShadowInactive = \"inset -5px 0px 25px black\";\n	// colors\n	var bgColor_home = $(\"#main_bg_home\").css(\"background-color\");\n	var bgColor_about = $(\"#main_bg_about\").css(\"background-color\");\n	var bgColor_portfolio = $(\"#main_bg_portfolio\").css(\"background-color\");\n	var bgColor_contact = $(\"#main_bg_contact\").css(\"background-color\");\n\n	// selecteer te tonen element\n	var eTeTonenElement = document.getElementById(\"main_\" + eTeTonenElementText);\n\n// verberg alle containers\n	$(\"#main_home\").hide();\n	$(\"#main_about\").hide();\n	$(\"#main_portfolio\").hide();\n	$(\"#main_contact\").hide();\n\n	// toon het te tonen element\n	$(eTeTonenElement).show();\n\n	// verberg zijn children en toon ze opnieuw (met effect)\n	// verberg\n	$(\".main_bg\").hide();\n	$(\".mainText_h1\").hide();\n	$(\".mainText_p1\").hide();\n	$(\".imageHolder\").hide();\n\n	// toon\n	$(\".imgageHolder_logo\").effect(\"shake\");\n		// verander button\n	if(eTeTonenElementText == \"home\"){\n		$(\"#navButton_home\").css('box-shadow', buttonShadowActive);\n		$(\"#navButton_about, #navButton_portfolio, #navButton_contact\").css('box-shadow', buttonShadowInactive);\n	}\n	if(eTeTonenElementText == \"about\"){\n		$(\"#navButton_about\").css('box-shadow', buttonShadowActive);\n		$(\"#navButton_home, #navButton_portfolio, #navButton_contact\").css('box-shadow', buttonShadowInactive);\n	}\n	if(eTeTonenElementText == \"portfolio\"){\n		$(\"#navButton_portfolio\").css('box-shadow', buttonShadowActive);\n		$(\"#navButton_home, #navButton_about, #navButton_contact\").css('box-shadow', buttonShadowInactive);\n	}\n	if(eTeTonenElementText == \"contact\"){\n		$(\"#navButton_contact\").css('box-shadow', buttonShadowActive);\n		$(\"#navButton_home, #navButton_about, #navButton_portfolio\").css('box-shadow', buttonShadowInactive);\n	}\n		// toon achtergrond\n	$(\".main_bg\").show(\"slide\", {direction: \"right\"});\n		// in het juiste kleur\n		if(eTeTonenElementText == \"home\"){\n			$(\"body\").css('background-color', bgColor_home);\n		}\n		if(eTeTonenElementText == \"about\"){\n			$(\"body\").css('background-color', bgColor_about);\n		}\n		if(eTeTonenElementText == \"portfolio\"){\n			$(\"body\").css('background-color', bgColor_portfolio);\n		}\n		if(eTeTonenElementText == \"contact\"){\n			$(\"body\").css('background-color', bgColor_contact);\n		}\n\n		// toon titel h1\n		$(\".mainText_h1\").show(\"slide\", {direction: \"up\"});\n\n		// toon tekst p1\n		$(\".mainText_p1\").show(\"slide\", {direction: \"up\"});\n\n		// toon watermark\n		$(\".imageHolder\").show(\"slide\", {direction: \"right\");\n\n}\n\n\n// START WINDOW ONLOAD\nwindow.onload = function(){\n	// colors\n	var bgColor_home = $(\"#main_bg_home\").css(\"background-color\");\n	var bgColor_about = $(\"#main_bg_about\").css(\"background-color\");\n	var bgColor_portfolio = $(\"#main_bg_portfolio\").css(\"background-color\");\n	var bgColor_contact = $(\"#main_bg_contact\").css(\"background-color\");\n\n	// set buttons in juiste kleur\n	$(\"#navButton_home\").css('background-color', bgColor_home);\n	$(\"#navButton_about\").css('background-color', bgColor_about);\n	$(\"#navButton_portfolio\").css('background-color', bgColor_portfolio);\n	$(\"#navButton_contact\").css('background-color', bgColor_contact);\n	// set body in juiste kleur (1ste load)\n	$(\"body\").css('background-color', bgColor_home);\n\n	// show & hide main elements\n	$(\"#main_home\").show();\n	$(\"#main_about\").hide();\n	$(\"#main_portfolio\").hide();\n	$(\"#main_contact\").hide();\n\n	$(\"#navButton_home\").click(function(){toonVerberg(\"home\")});\n	$(\"#navButton_about\").click(function(){toonVerberg(\"about\")});\n	$(\"#navButton_portfolio\").click(function(){toonVerberg(\"portfolio\")});\n	$(\"#navButton_contact\").click(function(){toonVerberg(\"contact\")});\n\n	$(\"input\").focus(function(){\n		$(this).parent().addClass(\"focusFormField\");\n	});\n	$(\"input\").blur(function(){\n		$(this).parent().removeClass(\"focusFormField\");\n	});\n	$(\"textarea\").focus(function(){\n		$(this).parent().addClass(\"focusFormField\");\n	});\n	$(\"textarea\").blur(function(){\n		$(this).parent().removeClass(\"focusFormField\");\n	});\n\n} // END WINDOW ONLOAD\n",
+					"file": "/C/xampp/htdocs/oefeningen/showcase/js/testCase2.js",
+					"file_size": 4568,
+					"file_write_time": 130668443048115977,
+					"settings":
+					{
+						"buffer_size": 4438,
+						"line_ending": "Windows"
+					}
+				}
+			],
+			"build_system": "",
+			"command_palette":
+			{
+				"height": 311.0,
+				"selected_items":
+				[
+					[
+						"Package Control: ",
+						"Package Control: List Packages"
+					],
+					[
+						"Package Control: ins",
+						"Package Control: Install Package"
+					],
+					[
+						"Package Cont",
+						"Package Control: Install Package"
+					]
+				],
+				"width": 528.0
+			},
+			"console":
+			{
+				"height": 160.0,
+				"history":
+				[
+					"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+				]
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"expanded_folders":
+			[
+				"/C/xampp/htdocs/oefeningen",
+				"/C/xampp/htdocs/oefeningen/html_css",
+				"/C/xampp/htdocs/oefeningen/html_css/taken",
+				"/C/xampp/htdocs/oefeningen/html_css/taken/webontwikkelaar_deel3",
+				"/C/xampp/htdocs/oefeningen/html_css/taken/webontwikkelaar_deel3/css",
+				"/C/xampp/htdocs/oefeningen/html_css/taken/webontwikkelaar_deel3/pages",
+				"/C/xampp/htdocs/oefeningen/javascript",
+				"/C/xampp/htdocs/oefeningen/javascript/js_advanced",
+				"/C/xampp/htdocs/oefeningen/javascript/js_advanced/js",
+				"/C/xampp/htdocs/oefeningen/showcase",
+				"/C/xampp/htdocs/oefeningen/showcase/css",
+				"/C/xampp/htdocs/oefeningen/showcase/js"
+			],
+			"file_history":
+			[
+				"/C/xampp/htdocs/oefeningen/showcase/js/testCase3.js",
+				"/C/xampp/htdocs/oefeningen/showcase/testCase.php",
+				"/C/xampp/htdocs/oefeningen/html_css/taken/webontwikkelaar_deel3/pages/webontwikkelaar_home.html",
+				"/C/xampp/htdocs/oefeningen/html_css/taken/webontwikkelaar_deel3/css/webontwikkelaar_home_responsive.css",
+				"/C/xampp/htdocs/oefeningen/showcase/css/normalize.css",
+				"/C/xampp/htdocs/oefeningen/javascript/js_advanced/cookiebank_applic.html",
+				"/C/xampp/htdocs/oefeningen/javascript/js_advanced/JS_taak_grafiek.html",
+				"/C/xampp/htdocs/oefeningen/javascript/personeel_advanced.html",
+				"/C/xampp/htdocs/oefeningen/javascript/js_advanced/js/grafiek.js",
+				"/C/xampp/htdocs/oefeningen/javascript/js_advanced/js/cookieBank.js",
+				"/C/xampp/htdocs/oefeningen/javascript/personeel_adv.html",
+				"/C/xampp/htdocs/oefeningen/javascript/js_advanced/canvas.html",
+				"/C/xampp/htdocs/oefeningen/javascript/js_advanced/js/vormen.js",
+				"/C/xampp/htdocs/oefeningen/javascript/js_advanced/test.html",
+				"/C/xampp/htdocs/oefeningen/javascript_startbestanden/projecten_advanced_oud/cookiebank_applic.html",
+				"/C/xampp/htdocs/oefeningen/javascript/js advanced/JS_taak_Vormen.html",
+				"/C/xampp/htdocs/oefeningen/javascript/js advanced/js/vormen.js",
+				"/C/xampp/htdocs/oefeningen/javascript_startbestanden/js/nuttig_lib.js",
+				"/C/xampp/htdocs/oefeningen/Sublime Text 3/Data/Packages/User/HTML.sublime-settings",
+				"/C/xampp/htdocs/oefeningen/javascript_startbestanden/projecten_advanced/personeel_adv.html",
+				"/D/xampp/htdocs/WebLeren/oefeningen/php/PizzaShop/presentation/ProductenLijst.php",
+				"/D/xampp/htdocs/WebLeren/oefeningen/php/PizzaShop/presentation/css/toonalleproducten.css",
+				"/D/xampp/htdocs/WebLeren/oefeningen/showcase/js/testCase.js",
+				"/D/xampp/htdocs/WebLeren/oefeningen/showcase/testCase.php",
+				"/D/xampp/htdocs/WebLeren/oefeningen/showcase/css/testCase.css",
+				"/D/xampp/htdocs/WebLeren/oefeningen/php/PizzaShop/presentation/js/toonalleproducten.js",
+				"/C/Users/Tuur/Desktop/producten.sql"
+			],
+			"find":
+			{
+				"height": 34.0
+			},
+			"find_in_files":
+			{
+				"height": 0.0,
+				"where_history":
+				[
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+					"imageHolder ",
+					"navButton",
+					"black",
+					")",
+					"(",
+					"set",
+					"drank",
+					"max",
+					"event.target",
+					"drankBestellenKnop_",
+					"naarDeKassa",
+					"'beschrijving':",
+					"\\/oefeningen\\/php\\/PizzaShop\\/presentation\\/images\\/",
+					"'},",
+					"','inPromotie':'",
+					"','eenheidsprijsKorting':'",
+					"'eenheidsprijsStandaard':'",
+					"'afbeelding':",
+					",'naam':",
+					"','type':",
+					"{'productId':'",
+					"\"",
+					"\\/oefeningen\\/php\\/PizzaShop\\/presentation\\/images\\/",
+					"'},",
+					"', 'inPromotie':'",
+					"', 'eenheidsprijsKorting':'",
+					"'eenheidsprijsStandaard':'",
+					" ', ''",
+					"'beschrijving':",
+					"','",
+					"''",
+					"'afbeelding':",
+					"'naam':",
+					"'type':",
+					"\"",
+					"{\"productId\":\""
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": false,
+				"replace_history":
+				[
+					"darkgrey",
+					"",
+					" = ",
+					"",
+					" ",
+					"\\\\/PizzaShop\\\\/presentation\\\\/images\\\\/",
+					"",
+					", ",
+					" ",
+					", ",
+					"(",
+					"'",
+					"\\\\/PizzaShop\\\\/presentation\\\\/images\\\\/",
+					")",
+					", ",
+					"",
+					" '",
+					"', '",
+					" '",
+					"'",
+					"",
+					"'",
+					""
+				],
+				"reverse": false,
+				"show_context": true,
+				"use_buffer2": true,
+				"whole_word": false,
+				"wrap": true
+			},
 			"folders":
 			[
 				{
@@ -535,19 +695,19 @@
 					[
 						{
 							"buffer": 0,
-							"file": "/C/xampp/htdocs/oefeningen/showcase/testCase.php",
+							"file": "/C/xampp/htdocs/oefeningen/showcase/index.html",
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 4811,
+								"buffer_size": 6696,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										1199,
-										1199
+										344,
+										344
 									]
 								],
 								"settings":
@@ -555,46 +715,36 @@
 									"BracketHighlighterBusy": false,
 									"bh_regions":
 									[
-										"bh_c_define",
-										"bh_c_define_center",
-										"bh_c_define_open",
-										"bh_c_define_close",
-										"bh_c_define_content",
-										"bh_unmatched",
-										"bh_unmatched_center",
-										"bh_unmatched_open",
-										"bh_unmatched_close",
-										"bh_unmatched_content",
-										"bh_double_quote",
-										"bh_double_quote_center",
-										"bh_double_quote_open",
-										"bh_double_quote_close",
-										"bh_double_quote_content",
-										"bh_default",
-										"bh_default_center",
-										"bh_default_open",
-										"bh_default_close",
-										"bh_default_content",
-										"bh_round",
-										"bh_round_center",
-										"bh_round_open",
-										"bh_round_close",
-										"bh_round_content",
-										"bh_tag",
-										"bh_tag_center",
-										"bh_tag_open",
-										"bh_tag_close",
-										"bh_tag_content",
-										"bh_square",
-										"bh_square_center",
-										"bh_square_open",
-										"bh_square_close",
-										"bh_square_content",
 										"bh_single_quote",
 										"bh_single_quote_center",
 										"bh_single_quote_open",
 										"bh_single_quote_close",
 										"bh_single_quote_content",
+										"bh_unmatched",
+										"bh_unmatched_center",
+										"bh_unmatched_open",
+										"bh_unmatched_close",
+										"bh_unmatched_content",
+										"bh_c_define",
+										"bh_c_define_center",
+										"bh_c_define_open",
+										"bh_c_define_close",
+										"bh_c_define_content",
+										"bh_square",
+										"bh_square_center",
+										"bh_square_open",
+										"bh_square_close",
+										"bh_square_content",
+										"bh_regex",
+										"bh_regex_center",
+										"bh_regex_open",
+										"bh_regex_close",
+										"bh_regex_content",
+										"bh_double_quote",
+										"bh_double_quote_center",
+										"bh_double_quote_open",
+										"bh_double_quote_close",
+										"bh_double_quote_content",
 										"bh_curly",
 										"bh_curly_center",
 										"bh_curly_open",
@@ -605,21 +755,31 @@
 										"bh_angle_open",
 										"bh_angle_close",
 										"bh_angle_content",
-										"bh_regex",
-										"bh_regex_center",
-										"bh_regex_open",
-										"bh_regex_close",
-										"bh_regex_content"
+										"bh_tag",
+										"bh_tag_center",
+										"bh_tag_open",
+										"bh_tag_close",
+										"bh_tag_content",
+										"bh_round",
+										"bh_round_center",
+										"bh_round_open",
+										"bh_round_close",
+										"bh_round_content",
+										"bh_default",
+										"bh_default_center",
+										"bh_default_open",
+										"bh_default_close",
+										"bh_default_content"
 									],
 									"color_scheme": "Packages/User/Color Highlighter/themes/Monokai (SL).tmTheme",
-									"syntax": "Packages/PHP/PHP.tmLanguage",
+									"syntax": "Packages/HTML/HTML.tmLanguage",
 									"translate_tabs_to_spaces": false
 								},
 								"translation.x": 0.0,
 								"translation.y": 0.0,
 								"zoom_level": 1.0
 							},
-							"stack_index": 1,
+							"stack_index": 3,
 							"type": "text"
 						},
 						{
@@ -628,15 +788,15 @@
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 1951,
+								"buffer_size": 2653,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										362,
-										362
+										728,
+										728
 									]
 								],
 								"settings":
@@ -649,61 +809,62 @@
 										"bh_c_define_open",
 										"bh_c_define_close",
 										"bh_c_define_content",
-										"bh_unmatched",
-										"bh_unmatched_center",
-										"bh_unmatched_open",
-										"bh_unmatched_close",
-										"bh_unmatched_content",
-										"bh_double_quote",
-										"bh_double_quote_center",
-										"bh_double_quote_open",
-										"bh_double_quote_close",
-										"bh_double_quote_content",
-										"bh_default",
-										"bh_default_center",
-										"bh_default_open",
-										"bh_default_close",
-										"bh_default_content",
-										"bh_round",
-										"bh_round_center",
-										"bh_round_open",
-										"bh_round_close",
-										"bh_round_content",
-										"bh_tag",
-										"bh_tag_center",
-										"bh_tag_open",
-										"bh_tag_close",
-										"bh_tag_content",
-										"bh_square",
-										"bh_square_center",
-										"bh_square_open",
-										"bh_square_close",
-										"bh_square_content",
 										"bh_single_quote",
 										"bh_single_quote_center",
 										"bh_single_quote_open",
 										"bh_single_quote_close",
 										"bh_single_quote_content",
+										"bh_default",
+										"bh_default_center",
+										"bh_default_open",
+										"bh_default_close",
+										"bh_default_content",
+										"bh_square",
+										"bh_square_center",
+										"bh_square_open",
+										"bh_square_close",
+										"bh_square_content",
+										"bh_round",
+										"bh_round_center",
+										"bh_round_open",
+										"bh_round_close",
+										"bh_round_content",
+										"bh_regex",
+										"bh_regex_center",
+										"bh_regex_open",
+										"bh_regex_close",
+										"bh_regex_content",
 										"bh_curly",
 										"bh_curly_center",
 										"bh_curly_open",
 										"bh_curly_close",
 										"bh_curly_content",
+										"bh_double_quote",
+										"bh_double_quote_center",
+										"bh_double_quote_open",
+										"bh_double_quote_close",
+										"bh_double_quote_content",
 										"bh_angle",
 										"bh_angle_center",
 										"bh_angle_open",
 										"bh_angle_close",
 										"bh_angle_content",
-										"bh_regex",
-										"bh_regex_center",
-										"bh_regex_open",
-										"bh_regex_close",
-										"bh_regex_content"
+										"bh_unmatched",
+										"bh_unmatched_center",
+										"bh_unmatched_open",
+										"bh_unmatched_close",
+										"bh_unmatched_content",
+										"bh_tag",
+										"bh_tag_center",
+										"bh_tag_open",
+										"bh_tag_close",
+										"bh_tag_content"
 									],
 									"color_scheme": "Packages/User/Color Highlighter/themes/Monokai (SL).tmTheme",
-									"syntax": "Packages/CSS/CSS.tmLanguage"
+									"syntax": "Packages/CSS/CSS.tmLanguage",
+									"translate_tabs_to_spaces": false
 								},
-								"translation.x": -0.0,
+								"translation.x": 0.0,
 								"translation.y": 0.0,
 								"zoom_level": 1.0
 							},
@@ -712,19 +873,19 @@
 						},
 						{
 							"buffer": 2,
-							"file": "/C/xampp/htdocs/oefeningen/javascript/js_advanced/js/vormen.js",
-							"semi_transient": true,
+							"file": "/C/xampp/htdocs/oefeningen/showcase/js/testCase.js",
+							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 3626,
+								"buffer_size": 4593,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										0,
-										0
+										1229,
+										1229
 									]
 								],
 								"settings":
@@ -732,46 +893,36 @@
 									"BracketHighlighterBusy": false,
 									"bh_regions":
 									[
-										"bh_c_define",
-										"bh_c_define_center",
-										"bh_c_define_open",
-										"bh_c_define_close",
-										"bh_c_define_content",
-										"bh_unmatched",
-										"bh_unmatched_center",
-										"bh_unmatched_open",
-										"bh_unmatched_close",
-										"bh_unmatched_content",
-										"bh_double_quote",
-										"bh_double_quote_center",
-										"bh_double_quote_open",
-										"bh_double_quote_close",
-										"bh_double_quote_content",
-										"bh_default",
-										"bh_default_center",
-										"bh_default_open",
-										"bh_default_close",
-										"bh_default_content",
-										"bh_round",
-										"bh_round_center",
-										"bh_round_open",
-										"bh_round_close",
-										"bh_round_content",
-										"bh_tag",
-										"bh_tag_center",
-										"bh_tag_open",
-										"bh_tag_close",
-										"bh_tag_content",
-										"bh_square",
-										"bh_square_center",
-										"bh_square_open",
-										"bh_square_close",
-										"bh_square_content",
 										"bh_single_quote",
 										"bh_single_quote_center",
 										"bh_single_quote_open",
 										"bh_single_quote_close",
 										"bh_single_quote_content",
+										"bh_unmatched",
+										"bh_unmatched_center",
+										"bh_unmatched_open",
+										"bh_unmatched_close",
+										"bh_unmatched_content",
+										"bh_c_define",
+										"bh_c_define_center",
+										"bh_c_define_open",
+										"bh_c_define_close",
+										"bh_c_define_content",
+										"bh_square",
+										"bh_square_center",
+										"bh_square_open",
+										"bh_square_close",
+										"bh_square_content",
+										"bh_regex",
+										"bh_regex_center",
+										"bh_regex_open",
+										"bh_regex_close",
+										"bh_regex_content",
+										"bh_double_quote",
+										"bh_double_quote_center",
+										"bh_double_quote_open",
+										"bh_double_quote_close",
+										"bh_double_quote_content",
 										"bh_curly",
 										"bh_curly_center",
 										"bh_curly_open",
@@ -782,18 +933,27 @@
 										"bh_angle_open",
 										"bh_angle_close",
 										"bh_angle_content",
-										"bh_regex",
-										"bh_regex_center",
-										"bh_regex_open",
-										"bh_regex_close",
-										"bh_regex_content"
+										"bh_tag",
+										"bh_tag_center",
+										"bh_tag_open",
+										"bh_tag_close",
+										"bh_tag_content",
+										"bh_round",
+										"bh_round_center",
+										"bh_round_open",
+										"bh_round_close",
+										"bh_round_content",
+										"bh_default",
+										"bh_default_center",
+										"bh_default_open",
+										"bh_default_close",
+										"bh_default_content"
 									],
 									"color_scheme": "Packages/User/Color Highlighter/themes/Monokai (SL).tmTheme",
-									"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-									"translate_tabs_to_spaces": false
+									"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 								},
 								"translation.x": 0.0,
-								"translation.y": 1095.0,
+								"translation.y": 279.0,
 								"zoom_level": 1.0
 							},
 							"stack_index": 2,
@@ -801,19 +961,19 @@
 						},
 						{
 							"buffer": 3,
-							"file": "/C/xampp/htdocs/oefeningen/showcase/js/testCase.js",
+							"file": "/C/xampp/htdocs/oefeningen/showcase/js/testCase2.js",
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 3035,
+								"buffer_size": 4438,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										1399,
-										1399
+										2938,
+										2938
 									]
 								],
 								"settings":
@@ -826,65 +986,66 @@
 										"bh_c_define_open",
 										"bh_c_define_close",
 										"bh_c_define_content",
-										"bh_unmatched",
-										"bh_unmatched_center",
-										"bh_unmatched_open",
-										"bh_unmatched_close",
-										"bh_unmatched_content",
-										"bh_double_quote",
-										"bh_double_quote_center",
-										"bh_double_quote_open",
-										"bh_double_quote_close",
-										"bh_double_quote_content",
-										"bh_default",
-										"bh_default_center",
-										"bh_default_open",
-										"bh_default_close",
-										"bh_default_content",
-										"bh_round",
-										"bh_round_center",
-										"bh_round_open",
-										"bh_round_close",
-										"bh_round_content",
-										"bh_tag",
-										"bh_tag_center",
-										"bh_tag_open",
-										"bh_tag_close",
-										"bh_tag_content",
-										"bh_square",
-										"bh_square_center",
-										"bh_square_open",
-										"bh_square_close",
-										"bh_square_content",
 										"bh_single_quote",
 										"bh_single_quote_center",
 										"bh_single_quote_open",
 										"bh_single_quote_close",
 										"bh_single_quote_content",
+										"bh_default",
+										"bh_default_center",
+										"bh_default_open",
+										"bh_default_close",
+										"bh_default_content",
+										"bh_square",
+										"bh_square_center",
+										"bh_square_open",
+										"bh_square_close",
+										"bh_square_content",
+										"bh_round",
+										"bh_round_center",
+										"bh_round_open",
+										"bh_round_close",
+										"bh_round_content",
+										"bh_regex",
+										"bh_regex_center",
+										"bh_regex_open",
+										"bh_regex_close",
+										"bh_regex_content",
 										"bh_curly",
 										"bh_curly_center",
 										"bh_curly_open",
 										"bh_curly_close",
 										"bh_curly_content",
+										"bh_double_quote",
+										"bh_double_quote_center",
+										"bh_double_quote_open",
+										"bh_double_quote_close",
+										"bh_double_quote_content",
 										"bh_angle",
 										"bh_angle_center",
 										"bh_angle_open",
 										"bh_angle_close",
 										"bh_angle_content",
-										"bh_regex",
-										"bh_regex_center",
-										"bh_regex_open",
-										"bh_regex_close",
-										"bh_regex_content"
+										"bh_unmatched",
+										"bh_unmatched_center",
+										"bh_unmatched_open",
+										"bh_unmatched_close",
+										"bh_unmatched_content",
+										"bh_tag",
+										"bh_tag_center",
+										"bh_tag_open",
+										"bh_tag_close",
+										"bh_tag_content"
 									],
 									"color_scheme": "Packages/User/Color Highlighter/themes/Monokai (SL).tmTheme",
-									"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+									"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+									"translate_tabs_to_spaces": false
 								},
 								"translation.x": 0.0,
-								"translation.y": 0.0,
+								"translation.y": 435.0,
 								"zoom_level": 1.0
 							},
-							"stack_index": 3,
+							"stack_index": 1,
 							"type": "text"
 						}
 					]

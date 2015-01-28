@@ -59,9 +59,8 @@ function toonVerberg(eTeTonenElementText){
 		$("#navButton_home, #navButton_about, #navButton_portfolio").css('box-shadow', buttonShadowInactive);
 	}
 		// toon achtergrond
-	$(".main_bg").show("slide", {direction: "right"}, 250);
+	$(".main_bg").show("slide", {direction: "right"});
 		// in het juiste kleur
-	setTimeout(function(){
 		if(eTeTonenElementText == "home"){
 			$("body").css('background-color', bgColor_home);
 		}
@@ -74,20 +73,16 @@ function toonVerberg(eTeTonenElementText){
 		if(eTeTonenElementText == "contact"){
 			$("body").css('background-color', bgColor_contact);
 		}
-		}, 250);
+
 		// toon titel h1
-	setTimeout(function(){
-		$(".mainText_h1").show("slide", {direction: "up"}, 250);
-	}, 250);
+		$(".mainText_h1").show("slide", {direction: "up"});
 
 		// toon tekst p1
-	setTimeout(function(){
-		$(".mainText_p1").show("slide", {direction: "up"}, 250);
-	}, 500);
+		$(".mainText_p1").show("slide", {direction: "up"});
+
 		// toon watermark
-	setTimeout(function(){
-		$(".imageHolder").show("slide", {direction: "right"}, 250);
-	}, 750);
+		$(".imageHolder").show("slide", {direction: "right"});
+
 }
 
 
