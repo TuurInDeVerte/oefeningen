@@ -341,6 +341,10 @@
 				"selected_items":
 				[
 					[
+						"padding",
+						"padding-right"
+					],
+					[
 						"paddin",
 						"padding-left"
 					],
@@ -359,10 +363,6 @@
 					[
 						"margin",
 						"margin-left"
-					],
-					[
-						"padding",
-						"padding-bottom"
 					],
 					[
 						"padd",
@@ -530,21 +530,25 @@
 			"expanded_folders":
 			[
 				"/C/xampp/htdocs/oefeningen",
-				"/C/xampp/htdocs/oefeningen/html_css/taken/webontwikkelaar_deel3",
-				"/C/xampp/htdocs/oefeningen/html_css/taken/webontwikkelaar_deel3/css",
-				"/C/xampp/htdocs/oefeningen/html_css/taken/webontwikkelaar_deel3/pages",
 				"/C/xampp/htdocs/oefeningen/php",
-				"/C/xampp/htdocs/oefeningen/php/PizzaShop",
-				"/C/xampp/htdocs/oefeningen/php/PizzaShop/presentation",
-				"/C/xampp/htdocs/oefeningen/php/PizzaShop/presentation/js",
 				"/C/xampp/htdocs/oefeningen/showcase",
-				"/C/xampp/htdocs/oefeningen/showcase/js"
+				"/C/xampp/htdocs/oefeningen/showcase/PizzaShop/business",
+				"/C/xampp/htdocs/oefeningen/showcase/PizzaShop/data",
+				"/C/xampp/htdocs/oefeningen/showcase/PizzaShop/entities",
+				"/C/xampp/htdocs/oefeningen/showcase/PizzaShop/presentation",
+				"/C/xampp/htdocs/oefeningen/showcase/PizzaShop/presentation/js"
 			],
 			"file_history":
 			[
-				"/C/xampp/htdocs/oefeningen/showcase/index.html",
-				"/C/xampp/htdocs/oefeningen/showcase/css/testCase.css",
 				"/C/xampp/htdocs/oefeningen/showcase/js/testCase.js",
+				"/C/xampp/htdocs/oefeningen/showcase/css/testCase.css",
+				"/C/xampp/htdocs/oefeningen/showcase/index.html",
+				"/C/xampp/htdocs/oefeningen/showcase/PizzaShop/presentation/ProductenLijst.php",
+				"/C/xampp/htdocs/oefeningen/showcase/PizzaShop/toonalleproducten.php",
+				"/C/xampp/htdocs/oefeningen/showcase/PizzaShop/entities/Product.php",
+				"/C/xampp/htdocs/oefeningen/showcase/PizzaShop/data/ProductDAO.php",
+				"/C/xampp/htdocs/oefeningen/showcase/PizzaShop/data/DBConfig.php",
+				"/C/xampp/htdocs/oefeningen/showcase/PizzaShop/pizzashop.sql",
 				"/C/xampp/htdocs/oefeningen/php/PizzaShop/presentation/js/bestelling.js",
 				"/C/xampp/htdocs/oefeningen/showcase/js/testCase2.js",
 				"/C/xampp/htdocs/oefeningen/showcase/js/testCase3.js",

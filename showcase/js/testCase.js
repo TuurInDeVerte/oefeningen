@@ -35,7 +35,7 @@ function jqueryValidation(){
 				required: "Gelieve uw e-mailadres in te vullen"
 			},
 			bericht: {
-				required: "Niets te zeggen? Dan is contact opnemen niet nodig..."
+				required: "Ook bericht is een verplicht veld"
 			}
 		}
 	});
