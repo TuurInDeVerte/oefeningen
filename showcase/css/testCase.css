@@ -167,10 +167,9 @@ html, body {
 	border: 1px solid #266227;
 	display: inline-block;
 	float: left;
-	width: 100%;
-	padding-top: 5%;
-	padding-bottom: 5%;
-	margin-left: 105%;
+	width: 10%;
+	padding-top: 1%;
+	padding-bottom: 1%;
 }
 #formInput_button:hover {
 	background: #215622;
@@ -181,6 +180,14 @@ html, body {
 	background: -ms-linear-gradient(top, #215622 0%, #266227 100%);
 	background: linear-gradient(to bottom, #215622 0%, #266227 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#215622', endColorstr='#236b23', GradientType=0 );
+}
+#marginForButton {
+	display: inline-block;
+	float: left;
+	clear: left;
+	min-width: 1px;
+	width: 25%;
+	padding-right: 1%;
 }
 .focusFormField {
 	background: #771611;

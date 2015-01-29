@@ -341,6 +341,10 @@
 				"selected_items":
 				[
 					[
+						"padding",
+						"padding-right"
+					],
+					[
 						"paddin",
 						"padding-left"
 					],
@@ -359,10 +363,6 @@
 					[
 						"margin",
 						"margin-left"
-					],
-					[
-						"padding",
-						"padding-bottom"
 					],
 					[
 						"padd",
@@ -492,7 +492,39 @@
 					"file": "/C/xampp/htdocs/oefeningen/showcase/index.html",
 					"settings":
 					{
-						"buffer_size": 7710,
+						"buffer_size": 7840,
+						"line_ending": "Windows"
+					}
+				},
+				{
+					"file": "/C/xampp/htdocs/oefeningen/showcase/PizzaShop/data/DBConfig.php",
+					"settings":
+					{
+						"buffer_size": 193,
+						"line_ending": "Windows"
+					}
+				},
+				{
+					"file": "/C/xampp/htdocs/oefeningen/showcase/PizzaShop/data/ProductDAO.php",
+					"settings":
+					{
+						"buffer_size": 1433,
+						"line_ending": "Windows"
+					}
+				},
+				{
+					"file": "/C/xampp/htdocs/oefeningen/showcase/PizzaShop/toonalleproducten.php",
+					"settings":
+					{
+						"buffer_size": 143,
+						"line_ending": "Windows"
+					}
+				},
+				{
+					"file": "/C/xampp/htdocs/oefeningen/showcase/PizzaShop/presentation/ProductenLijst.php",
+					"settings":
+					{
+						"buffer_size": 2210,
 						"line_ending": "Windows"
 					}
 				},
@@ -500,7 +532,7 @@
 					"file": "/C/xampp/htdocs/oefeningen/showcase/css/testCase.css",
 					"settings":
 					{
-						"buffer_size": 4557,
+						"buffer_size": 4659,
 						"line_ending": "Windows"
 					}
 				},
@@ -508,26 +540,7 @@
 					"file": "/C/xampp/htdocs/oefeningen/showcase/js/testCase.js",
 					"settings":
 					{
-						"buffer_size": 4902,
-						"line_ending": "Windows"
-					}
-				},
-				{
-					"file": "/C/xampp/htdocs/oefeningen/php/PizzaShop/presentation/js/bestelling.js",
-					"settings":
-					{
-						"buffer_size": 2614,
-						"line_ending": "Windows"
-					}
-				},
-				{
-					"contents": "\n// set main class & sidebar class to fit window\n$(function(){\n  $('.sidebar, .main, .main_bg').css({ height: $(window).innerHeight() });\n  $(window).resize(function(){\n    $('.sidebar, .main, .main_bg').css({ height: $(window).innerHeight() });\n  });\n  	console.log($(window).innerHeight());\n	console.log($(window).innerWidth());\n});\n\n// toon en verberg main containers (navigation)\nfunction toonVerberg(eTeTonenElementText){\n	// variabelen\n	var buttonShadowActive = \"1px 0px 5px black\";\n	var buttonShadowInactive = \"inset -5px 0px 25px black\";\n	// colors\n	var bgColor_home = $(\"#main_bg_home\").css(\"background-color\");\n	var bgColor_about = $(\"#main_bg_about\").css(\"background-color\");\n	var bgColor_portfolio = $(\"#main_bg_portfolio\").css(\"background-color\");\n	var bgColor_contact = $(\"#main_bg_contact\").css(\"background-color\");\n\n	// selecteer te tonen element\n	var eTeTonenElement = document.getElementById(\"main_\" + eTeTonenElementText);\n\n// verberg alle containers\n	$(\"#main_home\").hide();\n	$(\"#main_about\").hide();\n	$(\"#main_portfolio\").hide();\n	$(\"#main_contact\").hide();\n\n	// toon het te tonen element\n	$(eTeTonenElement).show();\n\n	// verberg zijn children en toon ze opnieuw (met effect)\n	// verberg\n	$(\".main_bg\").hide();\n	$(\".mainText_h1\").hide();\n	$(\".mainText_p1\").hide();\n	$(\".imageHolder\").hide();\n\n	// toon\n	$(\".imgageHolder_logo\").effect(\"shake\");\n		// verander button\n	if(eTeTonenElementText == \"home\"){\n		$(\"#navButton_home\").css('box-shadow', buttonShadowActive);\n		$(\"#navButton_about, #navButton_portfolio, #navButton_contact\").css('box-shadow', buttonShadowInactive);\n	}\n	if(eTeTonenElementText == \"about\"){\n		$(\"#navButton_about\").css('box-shadow', buttonShadowActive);\n		$(\"#navButton_home, #navButton_portfolio, #navButton_contact\").css('box-shadow', buttonShadowInactive);\n	}\n	if(eTeTonenElementText == \"portfolio\"){\n		$(\"#navButton_portfolio\").css('box-shadow', buttonShadowActive);\n		$(\"#navButton_home, #navButton_about, #navButton_contact\").css('box-shadow', buttonShadowInactive);\n	}\n	if(eTeTonenElementText == \"contact\"){\n		$(\"#navButton_contact\").css('box-shadow', buttonShadowActive);\n		$(\"#navButton_home, #navButton_about, #navButton_portfolio\").css('box-shadow', buttonShadowInactive);\n	}\n		// toon achtergrond\n	$(\".main_bg\").show(\"slide\", {direction: \"right\"});\n		// in het juiste kleur\n		if(eTeTonenElementText == \"home\"){\n			$(\"body\").css('background-color', bgColor_home);\n		}\n		if(eTeTonenElementText == \"about\"){\n			$(\"body\").css('background-color', bgColor_about);\n		}\n		if(eTeTonenElementText == \"portfolio\"){\n			$(\"body\").css('background-color', bgColor_portfolio);\n		}\n		if(eTeTonenElementText == \"contact\"){\n			$(\"body\").css('background-color', bgColor_contact);\n		}\n\n		// toon titel h1\n		$(\".mainText_h1\").show(\"slide\", {direction: \"up\"});\n\n		// toon tekst p1\n		$(\".mainText_p1\").show(\"slide\", {direction: \"up\"});\n\n		// toon watermark\n		$(\".imageHolder\").show(\"slide\", {direction: \"right\");\n\n}\n\n\n// START WINDOW ONLOAD\nwindow.onload = function(){\n	// colors\n	var bgColor_home = $(\"#main_bg_home\").css(\"background-color\");\n	var bgColor_about = $(\"#main_bg_about\").css(\"background-color\");\n	var bgColor_portfolio = $(\"#main_bg_portfolio\").css(\"background-color\");\n	var bgColor_contact = $(\"#main_bg_contact\").css(\"background-color\");\n\n	// set buttons in juiste kleur\n	$(\"#navButton_home\").css('background-color', bgColor_home);\n	$(\"#navButton_about\").css('background-color', bgColor_about);\n	$(\"#navButton_portfolio\").css('background-color', bgColor_portfolio);\n	$(\"#navButton_contact\").css('background-color', bgColor_contact);\n	// set body in juiste kleur (1ste load)\n	$(\"body\").css('background-color', bgColor_home);\n\n	// show & hide main elements\n	$(\"#main_home\").show();\n	$(\"#main_about\").hide();\n	$(\"#main_portfolio\").hide();\n	$(\"#main_contact\").hide();\n\n	$(\"#navButton_home\").click(function(){toonVerberg(\"home\")});\n	$(\"#navButton_about\").click(function(){toonVerberg(\"about\")});\n	$(\"#navButton_portfolio\").click(function(){toonVerberg(\"portfolio\")});\n	$(\"#navButton_contact\").click(function(){toonVerberg(\"contact\")});\n\n	$(\"input\").focus(function(){\n		$(this).parent().addClass(\"focusFormField\");\n	});\n	$(\"input\").blur(function(){\n		$(this).parent().removeClass(\"focusFormField\");\n	});\n	$(\"textarea\").focus(function(){\n		$(this).parent().addClass(\"focusFormField\");\n	});\n	$(\"textarea\").blur(function(){\n		$(this).parent().removeClass(\"focusFormField\");\n	});\n\n} // END WINDOW ONLOAD\n",
-					"file": "/C/xampp/htdocs/oefeningen/showcase/js/testCase2.js",
-					"file_size": 4568,
-					"file_write_time": 130668443048115977,
-					"settings":
-					{
-						"buffer_size": 4438,
+						"buffer_size": 5218,
 						"line_ending": "Windows"
 					}
 				}
@@ -573,19 +586,21 @@
 			"expanded_folders":
 			[
 				"/C/xampp/htdocs/oefeningen",
-				"/C/xampp/htdocs/oefeningen/html_css/taken/webontwikkelaar_deel3",
-				"/C/xampp/htdocs/oefeningen/html_css/taken/webontwikkelaar_deel3/css",
-				"/C/xampp/htdocs/oefeningen/html_css/taken/webontwikkelaar_deel3/pages",
-				"/C/xampp/htdocs/oefeningen/javascript/js_advanced/js",
 				"/C/xampp/htdocs/oefeningen/php",
-				"/C/xampp/htdocs/oefeningen/php/PizzaShop",
-				"/C/xampp/htdocs/oefeningen/php/PizzaShop/presentation",
-				"/C/xampp/htdocs/oefeningen/php/PizzaShop/presentation/js",
 				"/C/xampp/htdocs/oefeningen/showcase",
-				"/C/xampp/htdocs/oefeningen/showcase/js"
+				"/C/xampp/htdocs/oefeningen/showcase/PizzaShop",
+				"/C/xampp/htdocs/oefeningen/showcase/PizzaShop/data",
+				"/C/xampp/htdocs/oefeningen/showcase/PizzaShop/presentation"
 			],
 			"file_history":
 			[
+				"/C/xampp/htdocs/oefeningen/showcase/PizzaShop/data/DBConfig.php",
+				"/C/xampp/htdocs/oefeningen/showcase/PizzaShop/pizzashop.sql",
+				"/C/xampp/htdocs/oefeningen/showcase/index.html",
+				"/C/xampp/htdocs/oefeningen/showcase/css/testCase.css",
+				"/C/xampp/htdocs/oefeningen/showcase/js/testCase.js",
+				"/C/xampp/htdocs/oefeningen/php/PizzaShop/presentation/js/bestelling.js",
+				"/C/xampp/htdocs/oefeningen/showcase/js/testCase2.js",
 				"/C/xampp/htdocs/oefeningen/showcase/js/testCase3.js",
 				"/C/xampp/htdocs/oefeningen/showcase/testCase.php",
 				"/C/xampp/htdocs/oefeningen/html_css/taken/webontwikkelaar_deel3/pages/webontwikkelaar_home.html",
@@ -723,7 +738,7 @@
 			"groups":
 			[
 				{
-					"selected": 2,
+					"selected": 1,
 					"sheets":
 					[
 						{
@@ -732,15 +747,15 @@
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 7710,
+								"buffer_size": 7840,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										6711,
-										6711
+										5036,
+										5036
 									]
 								],
 								"settings":
@@ -748,21 +763,31 @@
 									"BracketHighlighterBusy": false,
 									"bh_regions":
 									[
+										"bh_angle",
+										"bh_angle_center",
+										"bh_angle_open",
+										"bh_angle_close",
+										"bh_angle_content",
+										"bh_curly",
+										"bh_curly_center",
+										"bh_curly_open",
+										"bh_curly_close",
+										"bh_curly_content",
 										"bh_c_define",
 										"bh_c_define_center",
 										"bh_c_define_open",
 										"bh_c_define_close",
 										"bh_c_define_content",
-										"bh_single_quote",
-										"bh_single_quote_center",
-										"bh_single_quote_open",
-										"bh_single_quote_close",
-										"bh_single_quote_content",
 										"bh_default",
 										"bh_default_center",
 										"bh_default_open",
 										"bh_default_close",
 										"bh_default_content",
+										"bh_double_quote",
+										"bh_double_quote_center",
+										"bh_double_quote_open",
+										"bh_double_quote_close",
+										"bh_double_quote_content",
 										"bh_square",
 										"bh_square_center",
 										"bh_square_open",
@@ -773,43 +798,33 @@
 										"bh_round_open",
 										"bh_round_close",
 										"bh_round_content",
-										"bh_regex",
-										"bh_regex_center",
-										"bh_regex_open",
-										"bh_regex_close",
-										"bh_regex_content",
-										"bh_curly",
-										"bh_curly_center",
-										"bh_curly_open",
-										"bh_curly_close",
-										"bh_curly_content",
-										"bh_double_quote",
-										"bh_double_quote_center",
-										"bh_double_quote_open",
-										"bh_double_quote_close",
-										"bh_double_quote_content",
-										"bh_angle",
-										"bh_angle_center",
-										"bh_angle_open",
-										"bh_angle_close",
-										"bh_angle_content",
+										"bh_tag",
+										"bh_tag_center",
+										"bh_tag_open",
+										"bh_tag_close",
+										"bh_tag_content",
+										"bh_single_quote",
+										"bh_single_quote_center",
+										"bh_single_quote_open",
+										"bh_single_quote_close",
+										"bh_single_quote_content",
 										"bh_unmatched",
 										"bh_unmatched_center",
 										"bh_unmatched_open",
 										"bh_unmatched_close",
 										"bh_unmatched_content",
-										"bh_tag",
-										"bh_tag_center",
-										"bh_tag_open",
-										"bh_tag_close",
-										"bh_tag_content"
+										"bh_regex",
+										"bh_regex_center",
+										"bh_regex_open",
+										"bh_regex_close",
+										"bh_regex_content"
 									],
 									"color_scheme": "Packages/User/Color Highlighter/themes/Monokai (SL).tmTheme",
 									"syntax": "Packages/HTML/HTML.tmLanguage",
 									"translate_tabs_to_spaces": false
 								},
 								"translation.x": 0.0,
-								"translation.y": 855.0,
+								"translation.y": 637.0,
 								"zoom_level": 1.0
 							},
 							"stack_index": 2,
@@ -817,19 +832,19 @@
 						},
 						{
 							"buffer": 1,
-							"file": "/C/xampp/htdocs/oefeningen/showcase/css/testCase.css",
+							"file": "/C/xampp/htdocs/oefeningen/showcase/PizzaShop/data/DBConfig.php",
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 4557,
+								"buffer_size": 193,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										1902,
-										1902
+										193,
+										193
 									]
 								],
 								"settings":
@@ -837,21 +852,31 @@
 									"BracketHighlighterBusy": false,
 									"bh_regions":
 									[
+										"bh_angle",
+										"bh_angle_center",
+										"bh_angle_open",
+										"bh_angle_close",
+										"bh_angle_content",
+										"bh_curly",
+										"bh_curly_center",
+										"bh_curly_open",
+										"bh_curly_close",
+										"bh_curly_content",
 										"bh_c_define",
 										"bh_c_define_center",
 										"bh_c_define_open",
 										"bh_c_define_close",
 										"bh_c_define_content",
-										"bh_single_quote",
-										"bh_single_quote_center",
-										"bh_single_quote_open",
-										"bh_single_quote_close",
-										"bh_single_quote_content",
 										"bh_default",
 										"bh_default_center",
 										"bh_default_open",
 										"bh_default_close",
 										"bh_default_content",
+										"bh_double_quote",
+										"bh_double_quote_center",
+										"bh_double_quote_open",
+										"bh_double_quote_close",
+										"bh_double_quote_content",
 										"bh_square",
 										"bh_square_center",
 										"bh_square_open",
@@ -862,143 +887,133 @@
 										"bh_round_open",
 										"bh_round_close",
 										"bh_round_content",
-										"bh_regex",
-										"bh_regex_center",
-										"bh_regex_open",
-										"bh_regex_close",
-										"bh_regex_content",
-										"bh_curly",
-										"bh_curly_center",
-										"bh_curly_open",
-										"bh_curly_close",
-										"bh_curly_content",
-										"bh_double_quote",
-										"bh_double_quote_center",
-										"bh_double_quote_open",
-										"bh_double_quote_close",
-										"bh_double_quote_content",
-										"bh_angle",
-										"bh_angle_center",
-										"bh_angle_open",
-										"bh_angle_close",
-										"bh_angle_content",
+										"bh_tag",
+										"bh_tag_center",
+										"bh_tag_open",
+										"bh_tag_close",
+										"bh_tag_content",
+										"bh_single_quote",
+										"bh_single_quote_center",
+										"bh_single_quote_open",
+										"bh_single_quote_close",
+										"bh_single_quote_content",
 										"bh_unmatched",
 										"bh_unmatched_center",
 										"bh_unmatched_open",
 										"bh_unmatched_close",
 										"bh_unmatched_content",
-										"bh_tag",
-										"bh_tag_center",
-										"bh_tag_open",
-										"bh_tag_close",
-										"bh_tag_content"
+										"bh_regex",
+										"bh_regex_center",
+										"bh_regex_open",
+										"bh_regex_close",
+										"bh_regex_content"
 									],
 									"color_scheme": "Packages/User/Color Highlighter/themes/Monokai (SL).tmTheme",
-									"syntax": "Packages/CSS/CSS.tmLanguage",
-									"translate_tabs_to_spaces": false
+									"syntax": "Packages/PHP/PHP.tmLanguage"
 								},
 								"translation.x": 0.0,
-								"translation.y": 2055.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 1,
-							"type": "text"
-						},
-						{
-							"buffer": 2,
-							"file": "/C/xampp/htdocs/oefeningen/showcase/js/testCase.js",
-							"semi_transient": false,
-							"settings":
-							{
-								"buffer_size": 4902,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										413,
-										328
-									]
-								],
-								"settings":
-								{
-									"BracketHighlighterBusy": false,
-									"bh_regions":
-									[
-										"bh_c_define",
-										"bh_c_define_center",
-										"bh_c_define_open",
-										"bh_c_define_close",
-										"bh_c_define_content",
-										"bh_single_quote",
-										"bh_single_quote_center",
-										"bh_single_quote_open",
-										"bh_single_quote_close",
-										"bh_single_quote_content",
-										"bh_default",
-										"bh_default_center",
-										"bh_default_open",
-										"bh_default_close",
-										"bh_default_content",
-										"bh_square",
-										"bh_square_center",
-										"bh_square_open",
-										"bh_square_close",
-										"bh_square_content",
-										"bh_round",
-										"bh_round_center",
-										"bh_round_open",
-										"bh_round_close",
-										"bh_round_content",
-										"bh_regex",
-										"bh_regex_center",
-										"bh_regex_open",
-										"bh_regex_close",
-										"bh_regex_content",
-										"bh_curly",
-										"bh_curly_center",
-										"bh_curly_open",
-										"bh_curly_close",
-										"bh_curly_content",
-										"bh_double_quote",
-										"bh_double_quote_center",
-										"bh_double_quote_open",
-										"bh_double_quote_close",
-										"bh_double_quote_content",
-										"bh_angle",
-										"bh_angle_center",
-										"bh_angle_open",
-										"bh_angle_close",
-										"bh_angle_content",
-										"bh_unmatched",
-										"bh_unmatched_center",
-										"bh_unmatched_open",
-										"bh_unmatched_close",
-										"bh_unmatched_content",
-										"bh_tag",
-										"bh_tag_center",
-										"bh_tag_open",
-										"bh_tag_close",
-										"bh_tag_content"
-									],
-									"color_scheme": "Packages/User/Color Highlighter/themes/Monokai (SL).tmTheme",
-									"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-								},
-								"translation.x": -0.0,
-								"translation.y": 90.0,
+								"translation.y": 0.0,
 								"zoom_level": 1.0
 							},
 							"stack_index": 0,
 							"type": "text"
 						},
 						{
-							"buffer": 3,
-							"file": "/C/xampp/htdocs/oefeningen/php/PizzaShop/presentation/js/bestelling.js",
+							"buffer": 2,
+							"file": "/C/xampp/htdocs/oefeningen/showcase/PizzaShop/data/ProductDAO.php",
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 2614,
+								"buffer_size": 1433,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										314,
+										314
+									]
+								],
+								"settings":
+								{
+									"BracketHighlighterBusy": false,
+									"bh_regions":
+									[
+										"bh_angle",
+										"bh_angle_center",
+										"bh_angle_open",
+										"bh_angle_close",
+										"bh_angle_content",
+										"bh_curly",
+										"bh_curly_center",
+										"bh_curly_open",
+										"bh_curly_close",
+										"bh_curly_content",
+										"bh_c_define",
+										"bh_c_define_center",
+										"bh_c_define_open",
+										"bh_c_define_close",
+										"bh_c_define_content",
+										"bh_default",
+										"bh_default_center",
+										"bh_default_open",
+										"bh_default_close",
+										"bh_default_content",
+										"bh_double_quote",
+										"bh_double_quote_center",
+										"bh_double_quote_open",
+										"bh_double_quote_close",
+										"bh_double_quote_content",
+										"bh_square",
+										"bh_square_center",
+										"bh_square_open",
+										"bh_square_close",
+										"bh_square_content",
+										"bh_round",
+										"bh_round_center",
+										"bh_round_open",
+										"bh_round_close",
+										"bh_round_content",
+										"bh_tag",
+										"bh_tag_center",
+										"bh_tag_open",
+										"bh_tag_close",
+										"bh_tag_content",
+										"bh_single_quote",
+										"bh_single_quote_center",
+										"bh_single_quote_open",
+										"bh_single_quote_close",
+										"bh_single_quote_content",
+										"bh_unmatched",
+										"bh_unmatched_center",
+										"bh_unmatched_open",
+										"bh_unmatched_close",
+										"bh_unmatched_content",
+										"bh_regex",
+										"bh_regex_center",
+										"bh_regex_open",
+										"bh_regex_close",
+										"bh_regex_content"
+									],
+									"color_scheme": "Packages/User/Color Highlighter/themes/Monokai (SL).tmTheme",
+									"syntax": "Packages/PHP/PHP.tmLanguage",
+									"translate_tabs_to_spaces": false
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 1,
+							"type": "text"
+						},
+						{
+							"buffer": 3,
+							"file": "/C/xampp/htdocs/oefeningen/showcase/PizzaShop/toonalleproducten.php",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 143,
 								"regions":
 								{
 								},
@@ -1014,21 +1029,31 @@
 									"BracketHighlighterBusy": false,
 									"bh_regions":
 									[
+										"bh_angle",
+										"bh_angle_center",
+										"bh_angle_open",
+										"bh_angle_close",
+										"bh_angle_content",
+										"bh_curly",
+										"bh_curly_center",
+										"bh_curly_open",
+										"bh_curly_close",
+										"bh_curly_content",
 										"bh_c_define",
 										"bh_c_define_center",
 										"bh_c_define_open",
 										"bh_c_define_close",
 										"bh_c_define_content",
-										"bh_single_quote",
-										"bh_single_quote_center",
-										"bh_single_quote_open",
-										"bh_single_quote_close",
-										"bh_single_quote_content",
 										"bh_default",
 										"bh_default_center",
 										"bh_default_open",
 										"bh_default_close",
 										"bh_default_content",
+										"bh_double_quote",
+										"bh_double_quote_center",
+										"bh_double_quote_open",
+										"bh_double_quote_close",
+										"bh_double_quote_content",
 										"bh_square",
 										"bh_square_center",
 										"bh_square_open",
@@ -1039,63 +1064,52 @@
 										"bh_round_open",
 										"bh_round_close",
 										"bh_round_content",
-										"bh_regex",
-										"bh_regex_center",
-										"bh_regex_open",
-										"bh_regex_close",
-										"bh_regex_content",
-										"bh_curly",
-										"bh_curly_center",
-										"bh_curly_open",
-										"bh_curly_close",
-										"bh_curly_content",
-										"bh_double_quote",
-										"bh_double_quote_center",
-										"bh_double_quote_open",
-										"bh_double_quote_close",
-										"bh_double_quote_content",
-										"bh_angle",
-										"bh_angle_center",
-										"bh_angle_open",
-										"bh_angle_close",
-										"bh_angle_content",
+										"bh_tag",
+										"bh_tag_center",
+										"bh_tag_open",
+										"bh_tag_close",
+										"bh_tag_content",
+										"bh_single_quote",
+										"bh_single_quote_center",
+										"bh_single_quote_open",
+										"bh_single_quote_close",
+										"bh_single_quote_content",
 										"bh_unmatched",
 										"bh_unmatched_center",
 										"bh_unmatched_open",
 										"bh_unmatched_close",
 										"bh_unmatched_content",
-										"bh_tag",
-										"bh_tag_center",
-										"bh_tag_open",
-										"bh_tag_close",
-										"bh_tag_content"
+										"bh_regex",
+										"bh_regex_center",
+										"bh_regex_open",
+										"bh_regex_close",
+										"bh_regex_content"
 									],
 									"color_scheme": "Packages/User/Color Highlighter/themes/Monokai (SL).tmTheme",
-									"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-									"translate_tabs_to_spaces": false
+									"syntax": "Packages/PHP/PHP.tmLanguage"
 								},
-								"translation.x": -0.0,
-								"translation.y": 225.0,
+								"translation.x": 0.0,
+								"translation.y": 0.0,
 								"zoom_level": 1.0
 							},
-							"stack_index": 3,
+							"stack_index": 4,
 							"type": "text"
 						},
 						{
 							"buffer": 4,
-							"file": "/C/xampp/htdocs/oefeningen/showcase/js/testCase2.js",
+							"file": "/C/xampp/htdocs/oefeningen/showcase/PizzaShop/presentation/ProductenLijst.php",
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 4438,
+								"buffer_size": 2210,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										2938,
-										2938
+										1049,
+										1049
 									]
 								],
 								"settings":
@@ -1103,21 +1117,31 @@
 									"BracketHighlighterBusy": false,
 									"bh_regions":
 									[
+										"bh_angle",
+										"bh_angle_center",
+										"bh_angle_open",
+										"bh_angle_close",
+										"bh_angle_content",
+										"bh_curly",
+										"bh_curly_center",
+										"bh_curly_open",
+										"bh_curly_close",
+										"bh_curly_content",
 										"bh_c_define",
 										"bh_c_define_center",
 										"bh_c_define_open",
 										"bh_c_define_close",
 										"bh_c_define_content",
-										"bh_single_quote",
-										"bh_single_quote_center",
-										"bh_single_quote_open",
-										"bh_single_quote_close",
-										"bh_single_quote_content",
 										"bh_default",
 										"bh_default_center",
 										"bh_default_open",
 										"bh_default_close",
 										"bh_default_content",
+										"bh_double_quote",
+										"bh_double_quote_center",
+										"bh_double_quote_open",
+										"bh_double_quote_close",
+										"bh_double_quote_content",
 										"bh_square",
 										"bh_square_center",
 										"bh_square_open",
@@ -1128,46 +1152,214 @@
 										"bh_round_open",
 										"bh_round_close",
 										"bh_round_content",
-										"bh_regex",
-										"bh_regex_center",
-										"bh_regex_open",
-										"bh_regex_close",
-										"bh_regex_content",
-										"bh_curly",
-										"bh_curly_center",
-										"bh_curly_open",
-										"bh_curly_close",
-										"bh_curly_content",
-										"bh_double_quote",
-										"bh_double_quote_center",
-										"bh_double_quote_open",
-										"bh_double_quote_close",
-										"bh_double_quote_content",
-										"bh_angle",
-										"bh_angle_center",
-										"bh_angle_open",
-										"bh_angle_close",
-										"bh_angle_content",
+										"bh_tag",
+										"bh_tag_center",
+										"bh_tag_open",
+										"bh_tag_close",
+										"bh_tag_content",
+										"bh_single_quote",
+										"bh_single_quote_center",
+										"bh_single_quote_open",
+										"bh_single_quote_close",
+										"bh_single_quote_content",
 										"bh_unmatched",
 										"bh_unmatched_center",
 										"bh_unmatched_open",
 										"bh_unmatched_close",
 										"bh_unmatched_content",
+										"bh_regex",
+										"bh_regex_center",
+										"bh_regex_open",
+										"bh_regex_close",
+										"bh_regex_content"
+									],
+									"color_scheme": "Packages/User/Color Highlighter/themes/Monokai (SL).tmTheme",
+									"syntax": "Packages/PHP/PHP.tmLanguage",
+									"translate_tabs_to_spaces": false
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 3,
+							"type": "text"
+						},
+						{
+							"buffer": 5,
+							"file": "/C/xampp/htdocs/oefeningen/showcase/css/testCase.css",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 4659,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										894,
+										897
+									]
+								],
+								"settings":
+								{
+									"BracketHighlighterBusy": false,
+									"bh_regions":
+									[
+										"bh_angle",
+										"bh_angle_center",
+										"bh_angle_open",
+										"bh_angle_close",
+										"bh_angle_content",
+										"bh_curly",
+										"bh_curly_center",
+										"bh_curly_open",
+										"bh_curly_close",
+										"bh_curly_content",
+										"bh_c_define",
+										"bh_c_define_center",
+										"bh_c_define_open",
+										"bh_c_define_close",
+										"bh_c_define_content",
+										"bh_default",
+										"bh_default_center",
+										"bh_default_open",
+										"bh_default_close",
+										"bh_default_content",
+										"bh_double_quote",
+										"bh_double_quote_center",
+										"bh_double_quote_open",
+										"bh_double_quote_close",
+										"bh_double_quote_content",
+										"bh_square",
+										"bh_square_center",
+										"bh_square_open",
+										"bh_square_close",
+										"bh_square_content",
+										"bh_round",
+										"bh_round_center",
+										"bh_round_open",
+										"bh_round_close",
+										"bh_round_content",
 										"bh_tag",
 										"bh_tag_center",
 										"bh_tag_open",
 										"bh_tag_close",
-										"bh_tag_content"
+										"bh_tag_content",
+										"bh_single_quote",
+										"bh_single_quote_center",
+										"bh_single_quote_open",
+										"bh_single_quote_close",
+										"bh_single_quote_content",
+										"bh_unmatched",
+										"bh_unmatched_center",
+										"bh_unmatched_open",
+										"bh_unmatched_close",
+										"bh_unmatched_content",
+										"bh_regex",
+										"bh_regex_center",
+										"bh_regex_open",
+										"bh_regex_close",
+										"bh_regex_content"
+									],
+									"color_scheme": "Packages/User/Color Highlighter/themes/Monokai (SL).tmTheme",
+									"syntax": "Packages/CSS/CSS.tmLanguage",
+									"translate_tabs_to_spaces": false
+								},
+								"translation.x": 0.0,
+								"translation.y": 514.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 5,
+							"type": "text"
+						},
+						{
+							"buffer": 6,
+							"file": "/C/xampp/htdocs/oefeningen/showcase/js/testCase.js",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 5218,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										920,
+										920
+									]
+								],
+								"settings":
+								{
+									"BracketHighlighterBusy": false,
+									"bh_regions":
+									[
+										"bh_angle",
+										"bh_angle_center",
+										"bh_angle_open",
+										"bh_angle_close",
+										"bh_angle_content",
+										"bh_curly",
+										"bh_curly_center",
+										"bh_curly_open",
+										"bh_curly_close",
+										"bh_curly_content",
+										"bh_c_define",
+										"bh_c_define_center",
+										"bh_c_define_open",
+										"bh_c_define_close",
+										"bh_c_define_content",
+										"bh_default",
+										"bh_default_center",
+										"bh_default_open",
+										"bh_default_close",
+										"bh_default_content",
+										"bh_double_quote",
+										"bh_double_quote_center",
+										"bh_double_quote_open",
+										"bh_double_quote_close",
+										"bh_double_quote_content",
+										"bh_square",
+										"bh_square_center",
+										"bh_square_open",
+										"bh_square_close",
+										"bh_square_content",
+										"bh_round",
+										"bh_round_center",
+										"bh_round_open",
+										"bh_round_close",
+										"bh_round_content",
+										"bh_tag",
+										"bh_tag_center",
+										"bh_tag_open",
+										"bh_tag_close",
+										"bh_tag_content",
+										"bh_single_quote",
+										"bh_single_quote_center",
+										"bh_single_quote_open",
+										"bh_single_quote_close",
+										"bh_single_quote_content",
+										"bh_unmatched",
+										"bh_unmatched_center",
+										"bh_unmatched_open",
+										"bh_unmatched_close",
+										"bh_unmatched_content",
+										"bh_regex",
+										"bh_regex_center",
+										"bh_regex_open",
+										"bh_regex_close",
+										"bh_regex_content"
 									],
 									"color_scheme": "Packages/User/Color Highlighter/themes/Monokai (SL).tmTheme",
 									"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 									"translate_tabs_to_spaces": false
 								},
 								"translation.x": 0.0,
-								"translation.y": 435.0,
+								"translation.y": 0.0,
 								"zoom_level": 1.0
 							},
-							"stack_index": 4,
+							"stack_index": 6,
 							"type": "text"
 						}
 					]

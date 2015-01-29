@@ -19,11 +19,23 @@ function validateForm(){
 function jqueryValidation(){
 	$("#contactForm").validate({
 		rules: {
-			voornaam: "required"
+			voornaam: "required",
+			familienaam: "required",
+			email: "required",
+			bericht: "required"
 		},
 		messages: {
 			voornaam: {
-				required: "Alle velden zijn verplicht"
+				required: "Gelieve uw voornaam in te vullen"
+			},
+			familienaam: {
+				required: "Gelieve uw familienaam in te vullen"
+			},
+			email: {
+				required: "Gelieve uw e-mailadres in te vullen"
+			},
+			bericht: {
+				required: "Niets te zeggen? Dan is contact opnemen niet nodig..."
 			}
 		}
 	});
