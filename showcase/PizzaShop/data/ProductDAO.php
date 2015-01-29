@@ -1,6 +1,6 @@
 <?php
-require_once("entities/product.php");
-include("DBConfig.php");
+require_once($_SERVER['DOCUMENT_ROOT']."/PizzaShop/entities/Product.php54");
+require_once("DBConfig.php");
 
 class ProductDAO {
 	public static function getAlleProducten(){
