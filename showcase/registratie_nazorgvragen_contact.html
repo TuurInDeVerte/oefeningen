@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<link href='http://fonts.googleapis.com/css?family=Roboto:500,400italic,700,500italic,400' rel='stylesheet' type='text/css'>
+		<meta charset='utf-8'>
+		<title>T-internet</title>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="registratie_nazorgvragen.css">
+<!--
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="js/jquery-ui-1.11.2/jquery-ui.css">
+		<script src="js/jquery-2.1.3.js"></script>
+		<script src="js/jquery-ui-1.11.2/jquery-ui.js"></script>
+		<script src="vendor/jquery-validation/dist/jquery.validate.js"></script>
+		<script src="js/testCase.js"></script>
+-->
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="/favicon.ico" type="image/x-icon">
+	</head>
+	<body>
+		<section class="content">
+				<div class="imageHolderLogo" id="imgageHolder_logo">
+					<img id="image_logo" src="logo_sa.png"><br>
+				</div>
+			<main class="main" id="main_contact">
+				<div class="main_bg" id="main_bg_contact">
+					<div class="mainText">
+						<h1 class="mainText_h1">Gegevens contactpersoon</h1>
+						<div class="mainText_p1">
+							<div class="contactgegevens">
+							Naam: Humpty Dumpty<br>
+							Adres: Vandemuur 1<br>
+							Tel: 050 000 000<br>
+							E-mail: humpty@dumpty.com<br>
+
+							<h2>Gegevens kind of geadopteerde</h2>
+							Naam: Tkindje van familie Dumpty<br>
+							Herkomstland: USA<br>
+							Geboortedatum: 07/08/1982<br>
+							Aankomstleeftijd: 6 jaar<br>
+							Via dienst: Leger des heils<br>
+							Opmerkingen: -- GEEN --<br>
+							</div>
+							<br>
+							<form id="contactForm" action="registratie_nazorgvragen_contact.html" method="post" enctype="text/plain">
+								<fieldset><legend>Nieuw contact:</legend>
+									<div class="formField">
+										<label class="formLabel" for="datum_contact">Datum:</label>
+										<input class="formInput" id="datum_contact" type="date" name="datum_contact">
+										<label class="errorMsgField"></label>
+									</div>
+									<div class="formField">
+										<label class="formLabel" for="via">Contact via:</label>
+										<select class="formInput" id="via" name="via">
+										<option>Kies wijze van contact</option>
+										<option>Telefoon</option>
+										<option>Mail</option>
+										<option>Gesprek</option>
+										<option>Anders (holografische projectie of zo...)</option>
+										</select>
+										<label class="errorMsgField"></label>
+									</div>
+									<div class="formField">
+										<label class="formLabel" for="door">Opgevolgd:</label>
+										<select class="formInput" id="door" name="door">
+										<option>door...</option>
+										<option>Katherine</option>
+										<option>Nele</option>
+										<option>Frouke</option>
+										<option>Pia</option>
+										<option>Carole</option>
+										<option>Inge</option>
+										</select>
+										<label class="errorMsgField"></label>
+									</div>
+									<div class="formField">
+										<label class="formLabel" for="opmerkingen">Opmerkingen:</label>
+										<textarea id="opmerkingen" name="bericht" rows="25" cols="80"></textarea>
+										<label class="errorMsgField"></label>
+									</div>
+									<div class="formField">
+										<label class="formLabel" for="datum_contact">Gebruikerstevredenheid:</label>
+										<input class="" type="radio">
+										<input class="" type="radio">
+										<input class="" type="radio">
+										<input class="" type="radio">
+										<input class="" type="radio">&nbsp;&nbsp;(<a href="">Voeg tekst toe</a>)
+										<label class="errorMsgField"></label>
+									</div>
+								</fieldset>
+									<div class="formField">
+										<div id="marginForButton">&nbsp;</div>
+										<button id="formInput_button" type="submit" value="toevoegen">Voeg nieuw contact toe</button>
+									</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</main>
+		</section>
+	</body>
+</html>
